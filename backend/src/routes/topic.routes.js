@@ -6,6 +6,7 @@ const validate = require('../middlewares/validate.middleware');
 const { uploadExcelSchema } = require('../schemas/topic.schema');
 
 router.post('/topics/import', authenticateToken, validate(uploadExcelSchema), topicController.uploadExcel);
+router.get('/vocabularies/meanings-map', authenticateToken, topicController.getAllMeaningsMap);
 router.get('/topics', authenticateToken, topicController.getTopics);
 router.get('/topics/:topicId/vocabularies', authenticateToken, topicController.getVocabularies);
 router.delete('/topics/:topicId', authenticateToken, topicController.deleteTopic);

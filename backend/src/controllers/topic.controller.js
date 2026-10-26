@@ -90,3 +90,21 @@ exports.deleteVocab = async (req, res) => {
     res.status(500).json({ success: false, message: error.message });
   }
 };
+async (req, res) => {
+  try {
+    const [rows] = await pool.query('SELECT LOWER(TRIM(word)) as word, TRIM(meaning) as meaning FROM vocabularies WHERE word IS NOT NULL AND meaning IS NOT NULL');
+    const map = {};
+    for (const r of rows) {
+      const w = r.word;
+      const m = r.meaning;
+      if (!w || !m) continue;
+      if (!map[w]) map[w] = [];
+      if (!map[w].includes(m)) {
+        map[w].push(m);
+      }
+    }
+    res.json({ success: true, data: map });
+  } catch (error) {
+    res.status(500).json({ success: false, message: error.message });
+  }
+}

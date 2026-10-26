@@ -13,6 +13,33 @@ import { playSound, speakWord } from "../utils/audio.js";
 import { showToast, ToastContainer } from "../utils/toast.jsx";
 import useDarkMode from "../hooks/useDarkMode.js";
 
+// Chuẩn hóa chuỗi: lowercase, xóa dấu tiếng Việt, ký tự đặc biệt
+const normalizeStr = (s) => s ? String(s).toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/đ/g, 'd').replace(/[^\p{L}\p{N}\s]/gu, ' ').replace(/\s+/g, ' ').trim() : '';
+
+// So khớp linh hoạt 2 nghĩa tiếng Việt
+const isMeaningMatch = (targetMeaning, optMeaning) => {
+  if (!targetMeaning || !optMeaning) return false;
+  const cleanTarget = String(targetMeaning).trim().toLowerCase();
+  const cleanOpt = String(optMeaning).trim().toLowerCase();
+  if (cleanTarget === cleanOpt) return true;
+
+  const nTarget = normalizeStr(cleanTarget);
+  const nOpt = normalizeStr(cleanOpt);
+  if (nTarget === nOpt) return true;
+
+  // Tách các phần theo dấu phẩy, chấm phẩy, gạch chéo hoặc ngoặc
+  const targetParts = cleanTarget.split(/[,|;/()]/).map(s => s.trim().toLowerCase()).filter(Boolean);
+  const optParts = cleanOpt.split(/[,|;/()]/).map(s => s.trim().toLowerCase()).filter(Boolean);
+
+  if (targetParts.includes(cleanOpt) || optParts.includes(cleanTarget)) return true;
+
+  const nTargetParts = targetParts.map(normalizeStr);
+  const nOptParts = optParts.map(normalizeStr);
+  if (nTargetParts.includes(nOpt) || nOptParts.includes(nTarget)) return true;
+
+  return false;
+};
+
 export default function IntegratedQuizView({ vocabList, setIsQuizOngoing, onBack, addXP, updateSRS, onComplete }) {
   const [questions, setQuestions] = useState([]);
   const [index, setIndex] = useState(0);
@@ -42,16 +69,97 @@ export default function IntegratedQuizView({ vocabList, setIsQuizOngoing, onBack
   ];
   const [selectedMode, setSelectedMode] = useState('multiple-choice');
 
+  // Map tất cả các nghĩa của từ tiếng Anh trong vocabList hiện tại
+  const localMeaningsMap = useMemo(() => {
+    const map = {};
+    if (!vocabList || !Array.isArray(vocabList)) return map;
+    vocabList.forEach(v => {
+      const w = (v.word || "").trim().toLowerCase();
+      if (!w) return;
+      if (!map[w]) map[w] = [];
+      const m = (v.meaning || "").trim();
+      if (m && !map[w].includes(m)) {
+        map[w].push(m);
+      }
+    });
+    return map;
+  }, [vocabList]);
+
+  // Tải bảng tra cứu nghĩa từ toàn bộ database (nếu có kết nối API)
+  const [globalMeaningsMap, setGlobalMeaningsMap] = useState({});
+  useEffect(() => {
+    let isMounted = true;
+    axios.get(`${API_BASE}/vocabularies/meanings-map`)
+      .then(res => {
+        if (isMounted && res.data?.success && res.data?.data) {
+          setGlobalMeaningsMap(res.data.data);
+        }
+      })
+      .catch(() => {
+        // Tự động dùng localMeaningsMap nếu offline hoặc lỗi mạng
+      });
+    return () => { isMounted = false; };
+  }, []);
+
+  // Hàm tra cứu toàn bộ các nghĩa hợp lệ của một từ tiếng Anh
+  const getValidMeaningsForWord = useCallback((wordStr, currentMeaning) => {
+    const w = (wordStr || "").trim().toLowerCase();
+    const set = new Set();
+    if (currentMeaning && String(currentMeaning).trim()) {
+      set.add(String(currentMeaning).trim());
+    }
+    (localMeaningsMap[w] || []).forEach(m => set.add(m));
+    (globalMeaningsMap[w] || []).forEach(m => set.add(m));
+    return Array.from(set);
+  }, [localMeaningsMap, globalMeaningsMap]);
+
   const startQuiz = () => {
     const mixed = [...vocabList].sort(() => 0.5 - Math.random()).map(w => {
       const qType = selectedMode;
+      const validMeanings = getValidMeaningsForWord(w.word, w.meaning);
       
       let options = [];
       if (qType === 'multiple-choice') {
-        const wrong = vocabList.filter(x => x.vocabulary_id !== w.vocabulary_id).sort(() => 0.5 - Math.random()).slice(0, 3).map(x => x.meaning);
-        options = [...wrong, w.meaning].sort(() => 0.5 - Math.random());
+        // Lấy danh sách các đáp án sai (thuộc từ khác và không phải nghĩa hợp lệ của từ này)
+        const wrongPool = vocabList
+          .filter(x => {
+            const isSameWord = (x.word || "").trim().toLowerCase() === (w.word || "").trim().toLowerCase();
+            const isValid = validMeanings.some(vm => isMeaningMatch(vm, x.meaning));
+            return !isSameWord && !isValid;
+          })
+          .map(x => (x.meaning || "").trim())
+          .filter(Boolean);
+
+        const uniqueWrong = Array.from(new Set(wrongPool)).sort(() => 0.5 - Math.random());
+        const chosenOptions = [(w.meaning || "").trim()];
+
+        // Nếu trong danh sách từ có mục khác cùng từ tiếng Anh nhưng khác nghĩa tiếng Việt:
+        // Đôi khi cho xuất hiện cùng câu trắc nghiệm (theo yêu cầu của user)
+        const otherEntriesSameWord = vocabList.filter(x => 
+          x.vocabulary_id !== w.vocabulary_id && 
+          (x.word || "").trim().toLowerCase() === (w.word || "").trim().toLowerCase() &&
+          (x.meaning || "").trim().toLowerCase() !== (w.meaning || "").trim().toLowerCase()
+        );
+
+        if (otherEntriesSameWord.length > 0 && Math.random() < 0.6) {
+          const randOther = otherEntriesSameWord[Math.floor(Math.random() * otherEntriesSameWord.length)];
+          const m = (randOther.meaning || "").trim();
+          if (m && !chosenOptions.includes(m)) {
+            chosenOptions.push(m);
+          }
+        }
+
+        // Điền các phương án sai cho đủ 4 lựa chọn không trùng lặp
+        for (const wr of uniqueWrong) {
+          if (chosenOptions.length >= 4) break;
+          if (!chosenOptions.includes(wr)) {
+            chosenOptions.push(wr);
+          }
+        }
+
+        options = chosenOptions.sort(() => 0.5 - Math.random());
       }
-      return { ...w, qType, options };
+      return { ...w, qType, options, validMeanings };
     });
     setQuestions(mixed); setIndex(0); setScore(0); setGameState('playing'); 
     setSelected(null); setFeedback(null); setInput(""); setMistakes([]);
@@ -111,7 +219,12 @@ export default function IntegratedQuizView({ vocabList, setIsQuizOngoing, onBack
       setStreak(0);
       setMistakes(prev => {
         if (prev.find(m => m.vocabulary_id === q.vocabulary_id)) return prev;
-        return [...prev, { ...q, userAnswer: resultFeedback.userAnswer || "Không rõ", reason: resultFeedback.reason }];
+        return [...prev, { 
+          ...q, 
+          userAnswer: resultFeedback.userAnswer || "Không rõ", 
+          reason: resultFeedback.reason,
+          validMeanings: resultFeedback.validOptions || q.validMeanings 
+        }];
       });
     }
 
@@ -122,7 +235,7 @@ export default function IntegratedQuizView({ vocabList, setIsQuizOngoing, onBack
     }
   };
 
-  // Tự động chuyển câu sau 3 giây khi có kết quả
+  // Tự động chuyển câu sau khi có kết quả
   const autoNextRef = useRef(null);
   useEffect(() => {
     autoNextRef.current = () => nextQuestion();
@@ -133,7 +246,7 @@ export default function IntegratedQuizView({ vocabList, setIsQuizOngoing, onBack
     if (feedback && gameState === 'playing') {
       timer = setTimeout(() => {
         if (autoNextRef.current) autoNextRef.current();
-      }, feedback.isCorrect ? 800 : 1500);
+      }, feedback.isCorrect ? 800 : 1800);
     }
     return () => clearTimeout(timer);
   }, [feedback, gameState]);
@@ -142,8 +255,43 @@ export default function IntegratedQuizView({ vocabList, setIsQuizOngoing, onBack
     if (selected || feedback) return;
     setSelected(opt);
     const q = questions[index];
-    const isCorrect = opt === q.meaning;
-    const resultFeedback = { isCorrect, reason: isCorrect ? "Chính xác!" : `Sai rồi. Đáp án đúng là: ${q.meaning}`, userAnswer: opt };
+    
+    // Tìm tất cả các nghĩa hợp lệ của từ tiếng Anh này (kết hợp cả local và database)
+    const allValidMeanings = q.validMeanings || getValidMeaningsForWord(q.word, q.meaning);
+    
+    // Tìm các lựa chọn đang xuất hiện trong câu hỏi này mà là nghĩa hợp lệ
+    const validOptionsInQuestion = (q.options || []).filter(o => 
+      allValidMeanings.some(vm => isMeaningMatch(vm, o))
+    );
+    if (validOptionsInQuestion.length === 0 && q.meaning) {
+      validOptionsInQuestion.push(q.meaning);
+    }
+
+    // Chọn bất kỳ nghĩa nào trong danh sách nghĩa hợp lệ của từ đều được tính là ĐÚNG
+    const isCorrect = allValidMeanings.some(vm => isMeaningMatch(vm, opt));
+
+    let reason = "";
+    if (isCorrect) {
+      if (validOptionsInQuestion.length > 1) {
+        reason = `Chính xác! (Từ "${q.word}" có ${validOptionsInQuestion.length} nghĩa đúng trong câu này)`;
+      } else {
+        reason = "Chính xác!";
+      }
+    } else {
+      if (validOptionsInQuestion.length > 1) {
+        reason = `Sai rồi. Đáp án đúng là: ${validOptionsInQuestion.join(" HOẶC ")}`;
+      } else {
+        reason = `Sai rồi. Đáp án đúng là: ${q.meaning}`;
+      }
+    }
+
+    const resultFeedback = { 
+      isCorrect, 
+      reason, 
+      userAnswer: opt,
+      validOptions: validOptionsInQuestion 
+    };
+
     await processResult(isCorrect, resultFeedback, q);
   };
 
@@ -154,9 +302,6 @@ export default function IntegratedQuizView({ vocabList, setIsQuizOngoing, onBack
     const q = questions[index];
     let isCorrect = false;
     let resultFeedback = null;
-
-    // Chuẩn hóa chuỗi: lowercase, xóa dấu tiếng Việt, xóa MỌI loại dấu câu, ký tự đặc biệt
-    const normalizeStr = (s) => s ? String(s).toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/đ/g, 'd').replace(/[^\p{L}\p{N}\s]/gu, ' ').replace(/\s+/g, ' ').trim() : '';
     
     const isEnglishInput = (q.qType === 'typing-vi-en' || q.qType === 'listen-vi');
     const targetStr = isEnglishInput ? q.word : q.meaning;
@@ -166,7 +311,7 @@ export default function IntegratedQuizView({ vocabList, setIsQuizOngoing, onBack
     if (isEnglishInput) {
       validTargets = vocabList.filter(v => normalizeStr(v.meaning) === normalizeStr(q.meaning)).map(v => v.word);
     } else {
-      validTargets = vocabList.filter(v => normalizeStr(v.word) === normalizeStr(q.word)).map(v => v.meaning);
+      validTargets = getValidMeaningsForWord(q.word, q.meaning);
     }
     if (!validTargets.includes(targetStr)) validTargets.push(targetStr);
 
@@ -298,20 +443,16 @@ export default function IntegratedQuizView({ vocabList, setIsQuizOngoing, onBack
                   {React.cloneElement(icon, { size: 18 })}
                 </div>
                 <div className="flex-1">
-                  <span className={`block text-base sm:text-lg ${isSelected ? 'font-bold' : 'font-semibold'}`}>{m.label}</span>
-                </div>
-                <div className={`w-4 h-4 sm:w-5 sm:h-5 rounded-full border-2 flex items-center justify-center ${isSelected ? 'border-brand-500 bg-brand-500' : 'border-slate-300 dark:border-slate-600'}`}>
-                   {isSelected && <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-white" />}
+                  <p className={`font-bold text-base ${isSelected ? 'text-brand-700 dark:text-brand-300' : 'text-slate-700 dark:text-slate-200'}`}>{m.label}</p>
                 </div>
               </button>
-            )
+            );
           })}
         </div>
 
-        <button onClick={startQuiz} className="vip-btn w-full py-3 sm:py-4 text-lg sm:text-xl bg-gradient-to-r from-brand-600 to-brand-500 text-white font-bold rounded-2xl hover:shadow-brand-500/40 shadow-xl mb-3 sm:mb-4 uppercase tracking-wider">
+        <button onClick={startQuiz} className="vip-btn w-full py-4 bg-gradient-to-r from-brand-600 to-brand-500 hover:from-brand-500 hover:to-brand-600 text-white font-black text-lg rounded-2xl shadow-xl shadow-brand-500/30 transition-all transform hover:-translate-y-1 uppercase tracking-wide">
           Bắt đầu ngay
         </button>
-        <button onClick={onBack} className="text-slate-400 font-semibold text-sm sm:text-base hover:text-slate-600 transition-colors">Quay lại</button>
       </div>
     );
   }
@@ -347,20 +488,26 @@ export default function IntegratedQuizView({ vocabList, setIsQuizOngoing, onBack
               <XCircle className="text-red-500" size={24} /> Cần ôn tập lại ({mistakes.length})
             </h3>
             <div className="space-y-4 max-h-72 overflow-y-auto pr-2 scrollbar-thin">
-              {mistakes.map((m, i) => (
-                <div key={i} className="bg-white dark:bg-slate-800 p-5 rounded-2xl border-2 border-red-100 dark:border-red-900/30 shadow-sm relative overflow-hidden">
-                  <div className="absolute left-0 top-0 bottom-0 w-2 bg-red-400"></div>
-                  <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-3 pl-2">
-                    <span className="font-black text-xl text-slate-900 dark:text-white">{m.word}</span>
-                    <span className="text-sm font-bold text-emerald-700 bg-emerald-100 dark:bg-emerald-900/50 dark:text-emerald-300 px-4 py-1.5 rounded-xl border border-emerald-200 dark:border-emerald-800">
-                      Đúng: {m.qType.includes('vi-en') || m.qType === 'listen-vi' ? m.word : m.meaning}
-                    </span>
+              {mistakes.map((m, i) => {
+                const displayCorrect = m.validMeanings && m.validMeanings.length > 1
+                  ? m.validMeanings.join(" / ")
+                  : (m.qType.includes('vi-en') || m.qType === 'listen-vi' ? m.word : m.meaning);
+
+                return (
+                  <div key={i} className="bg-white dark:bg-slate-800 p-5 rounded-2xl border-2 border-red-100 dark:border-red-900/30 shadow-sm relative overflow-hidden">
+                    <div className="absolute left-0 top-0 bottom-0 w-2 bg-red-400"></div>
+                    <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-3 pl-2">
+                      <span className="font-black text-xl text-slate-900 dark:text-white">{m.word}</span>
+                      <span className="text-sm font-bold text-emerald-700 bg-emerald-100 dark:bg-emerald-900/50 dark:text-emerald-300 px-4 py-1.5 rounded-xl border border-emerald-200 dark:border-emerald-800">
+                        Đúng: {displayCorrect}
+                      </span>
+                    </div>
+                    <div className="text-sm text-slate-600 dark:text-slate-400 pl-2 font-medium">
+                      Bạn chọn: <span className="line-through text-red-500 font-bold ml-1">{m.userAnswer}</span>
+                    </div>
                   </div>
-                  <div className="text-sm text-slate-600 dark:text-slate-400 pl-2 font-medium">
-                    Bạn chọn: <span className="line-through text-red-500 font-bold ml-1">{m.userAnswer}</span>
-                  </div>
-                </div>
-              ))}
+                );
+              })}
             </div>
           </div>
         )}
@@ -442,16 +589,36 @@ export default function IntegratedQuizView({ vocabList, setIsQuizOngoing, onBack
       {q.qType === 'multiple-choice' ? (
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
           {q.options.map((opt, i) => {
+            const allValidMeanings = q.validMeanings || getValidMeaningsForWord(q.word, q.meaning);
+            const isOptCorrect = allValidMeanings.some(vm => isMeaningMatch(vm, opt));
+
             let cls = "bg-white dark:bg-slate-900 border-2 border-slate-100 dark:border-slate-800 hover:border-brand-400 hover:shadow-lg hover:-translate-y-1 shadow-sm";
             if (selected) {
-              if (opt === q.meaning) cls = "bg-emerald-50 border-emerald-500 text-emerald-700 shadow-md transform -translate-y-1 scale-105 z-10 animate-bounce-soft";
-              else if (opt === selected) cls = "bg-red-50 border-red-500 text-red-700 animate-shake";
-              else cls = "opacity-40 scale-95";
+              if (isOptCorrect) {
+                cls = "bg-emerald-50 dark:bg-emerald-950/40 border-emerald-500 text-emerald-700 dark:text-emerald-300 shadow-md transform -translate-y-1 scale-105 z-10 animate-bounce-soft";
+              } else if (opt === selected) {
+                cls = "bg-red-50 dark:bg-red-950/40 border-red-500 text-red-700 dark:text-red-300 animate-shake";
+              } else {
+                cls = "opacity-40 scale-95";
+              }
             }
             return (
-              <button key={i} onClick={() => handleMCQAnswer(opt)} disabled={!!selected} className={`p-3 sm:p-4 rounded-xl text-base sm:text-lg font-bold transition-all duration-300 text-left flex items-center ${cls}`}>
-                <span className={`w-6 h-6 rounded bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400 text-xs font-black flex items-center justify-center mr-3 flex-shrink-0 ${selected && opt === q.meaning ? 'bg-emerald-200 text-emerald-800' : ''}`}>{i+1}</span> 
-                {opt}
+              <button 
+                key={i} 
+                onClick={() => handleMCQAnswer(opt)} 
+                disabled={!!selected} 
+                className={`p-3 sm:p-4 rounded-xl text-base sm:text-lg font-bold transition-all duration-300 text-left flex items-center ${cls}`}
+              >
+                <span className={`w-6 h-6 rounded bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400 text-xs font-black flex items-center justify-center mr-3 flex-shrink-0 ${selected && isOptCorrect ? 'bg-emerald-200 dark:bg-emerald-800 text-emerald-800 dark:text-emerald-200' : ''}`}>
+                  {i+1}
+                </span> 
+                <span className="flex-1">{opt}</span>
+                {selected && isOptCorrect && (
+                  <CheckCircle2 size={18} className="text-emerald-600 dark:text-emerald-400 ml-2 flex-shrink-0" />
+                )}
+                {selected && !isOptCorrect && opt === selected && (
+                  <XCircle size={18} className="text-red-500 ml-2 flex-shrink-0" />
+                )}
               </button>
             );
           })}
