@@ -246,7 +246,7 @@ export default function IntegratedQuizView({ vocabList, setIsQuizOngoing, onBack
     if (feedback && gameState === 'playing') {
       timer = setTimeout(() => {
         if (autoNextRef.current) autoNextRef.current();
-      }, feedback.isCorrect ? 800 : 1800);
+      }, feedback.isCorrect ? 700 : 1200);
     }
     return () => clearTimeout(timer);
   }, [feedback, gameState]);
@@ -643,25 +643,11 @@ export default function IntegratedQuizView({ vocabList, setIsQuizOngoing, onBack
         </div>
       )}
 
-      {feedback && !feedback.isCorrect && (
-        <div className="mt-6 bg-red-50 dark:bg-red-900/20 border-2 border-red-200 dark:border-red-800/50 rounded-2xl p-5 sm:p-6 animate-scale-in text-center shadow-lg">
-          <div className="flex flex-col items-center justify-center gap-1">
-            <XCircle size={48} className="text-red-500 mb-1" />
-            <h3 className="text-xl font-black text-red-700 dark:text-red-400">Chưa đúng rồi</h3>
-            {q.qType !== 'multiple-choice' && (
-              <div className="text-red-900 dark:text-red-200 font-medium text-base mt-2">
-                Đáp án đúng: <span className="font-black text-xl ml-1">{(q.qType === 'typing-vi-en' || q.qType === 'listen-vi') ? q.word : q.meaning}</span>
-              </div>
-            )}
-            <p className="text-sm font-medium text-red-600/80 dark:text-red-400/80 mt-1">{feedback.reason}</p>
-            
-            <button 
-              onClick={() => nextQuestion()} 
-              className="mt-5 py-3 px-10 rounded-xl font-bold text-lg bg-red-500 hover:bg-red-400 text-white shadow-lg shadow-red-500/30 transition-all hover:-translate-y-1"
-            >
-              Tiếp tục
-            </button>
-          </div>
+      {feedback && !feedback.isCorrect && q.qType !== 'multiple-choice' && (
+        <div className="mt-4 text-center animate-fade-in">
+          <p className="text-sm font-semibold text-red-500 dark:text-red-400">
+            Đáp án đúng: <span className="font-bold underline ml-1">{(q.qType === 'typing-vi-en' || q.qType === 'listen-vi') ? q.word : q.meaning}</span>
+          </p>
         </div>
       )}
     </div>
