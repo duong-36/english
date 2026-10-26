@@ -246,7 +246,7 @@ export default function IntegratedQuizView({ vocabList, setIsQuizOngoing, onBack
     if (feedback && gameState === 'playing') {
       timer = setTimeout(() => {
         if (autoNextRef.current) autoNextRef.current();
-      }, feedback.isCorrect ? 700 : 1200);
+      }, feedback.isCorrect ? 1000 : 1200);
     }
     return () => clearTimeout(timer);
   }, [feedback, gameState]);
