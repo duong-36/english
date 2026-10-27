@@ -787,11 +787,7 @@ export default function ReadingPracticeView({ topics = [], user, addXP }) {
                   Question {curQ.questionNumber} of {totalQCount}
                 </span>
               </div>
-              {curQ.targetWord && (
-                <span className="text-xs px-2.5 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400 font-medium">
-                  Từ vựng mục tiêu: <strong className="text-blue-600 dark:text-blue-400">{curQ.targetWord}</strong>
-                </span>
-              )}
+              
             </div>
 
             {/* Sentence with blank */}
