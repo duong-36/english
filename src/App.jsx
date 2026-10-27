@@ -20,6 +20,7 @@ import AdminLayout from "./views/admin/AdminLayout.jsx";
 import AudioTranscriptionView from "./views/AudioTranscriptionView.jsx";
 import DashboardView from "./views/DashboardView.jsx";
 import LeaderboardView from "./views/LeaderboardView.jsx";
+import ReadingPracticeView from "./views/ReadingPracticeView.jsx";
 
 export default function App() {
   const [user, setUser] = useState(() => JSON.parse(localStorage.getItem("engmaster-user") || "null"));
@@ -259,6 +260,7 @@ export default function App() {
     { id: "list",      icon: BookOpen,       label: "Kho từ" },
     { id: "flashcard", icon: Layers,         label: "Thẻ bài" },
     { id: "quiz",      icon: BrainCircuit,   label: "Kiểm tra" },
+    { id: "reading",   icon: FileText,       label: "Luyện đọc" },
   ];
   if (user?.role === 'admin') {
     navItems.push({ id: "transcribe",icon: Headphones,     label: "Luyện nghe" });
@@ -466,6 +468,11 @@ export default function App() {
               {activeTab === "flashcard" && (
                 <div className="animate-slide-up">
                   <FlashcardQuizWrapper topics={topics} mode="flashcard" addXP={addXP} />
+                </div>
+              )}
+              {activeTab === "reading" && (
+                <div className="animate-slide-up">
+                  <ReadingPracticeView topics={topics} user={user} addXP={addXP} />
                 </div>
               )}
               {activeTab === "quiz" && (

@@ -90,7 +90,7 @@ exports.deleteVocab = async (req, res) => {
     res.status(500).json({ success: false, message: error.message });
   }
 };
-async (req, res) => {
+exports.getAllMeaningsMap = async (req, res) => {
   try {
     const [rows] = await pool.query('SELECT LOWER(TRIM(word)) as word, TRIM(meaning) as meaning FROM vocabularies WHERE word IS NOT NULL AND meaning IS NOT NULL');
     const map = {};
