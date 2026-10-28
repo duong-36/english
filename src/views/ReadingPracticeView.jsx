@@ -12,61 +12,70 @@ export default function ReadingPracticeView({ topics = [], user, addXP }) {
   // Navigation: 'lobby' | 'practice' | 'result'
   const [viewState, setViewState] = useState("lobby");
 
-  // Excel sessions grouping
-  const sortedSessions = useMemo(() => {
-    const grouped = {};
-    topics.forEach(t => {
-      const groupName = t.session_name || "TỪ VỰNG VER 13_FIXED.xlsx";
-      if (!grouped[groupName]) grouped[groupName] = [];
-      grouped[groupName].push(t);
-    });
-
-    return Object.entries(grouped).map(([sessionName, sheetList]) => {
-      sheetList.sort((a, b) => a.topic_name.localeCompare(b.topic_name, undefined, { numeric: true }));
-      return {
-        sessionName,
-        sheets: sheetList,
-        totalVocab: sheetList.reduce((s, sh) => s + Number(sh.vocab_count || 0), 0)
-      };
-    }).sort((a, b) => a.sessionName.localeCompare(b.sessionName, undefined, { numeric: true }));
-  }, [topics]);
+  // State: Available sessions from backend that ACTUALLY have test data
+  const [availableSessions, setAvailableSessions] = useState([]);
+  const [isLoadingAvailable, setIsLoadingAvailable] = useState(true);
 
   // Selected state
-  const [selectedSessionName, setSelectedSessionName] = useState(() => sortedSessions[0]?.sessionName || "");
-  const [selectedTopic, setSelectedTopic] = useState(() => sortedSessions[0]?.sheets[0] || null);
+  const [selectedSessionName, setSelectedSessionName] = useState("");
+  const [selectedSheet, setSelectedSheet] = useState(null);
   const [selectedPart, setSelectedPart] = useState("part5"); // 'part5' (30) | 'part6' (16) | 'full' (46)
   const [isLoadingTest, setIsLoadingTest] = useState(false);
   const [errorMsg, setErrorMsg] = useState("");
 
-  // Keep selectedTopic in sync when selectedSessionName changes
+  // Fetch available tests on mount
   useEffect(() => {
-    if (!selectedSessionName && sortedSessions.length > 0) {
-      setSelectedSessionName(sortedSessions[0].sessionName);
-    }
-  }, [sortedSessions, selectedSessionName]);
+    let isMounted = true;
+    const fetchAvailable = async () => {
+      setIsLoadingAvailable(true);
+      try {
+        const res = await axios.get(`${API_BASE}/reading/available-tests`);
+        if (res.data.success && isMounted) {
+          const sessions = res.data.data || [];
+          setAvailableSessions(sessions);
+          if (sessions.length > 0) {
+            setSelectedSessionName(sessions[0].sessionName);
+            setSelectedSheet(sessions[0].sheets[0] || null);
+          }
+        }
+      } catch (err) {
+        console.error("Lỗi lấy danh sách đề đọc:", err);
+      } finally {
+        if (isMounted) setIsLoadingAvailable(false);
+      }
+    };
+    fetchAvailable();
+    return () => { isMounted = false; };
+  }, []);
 
+  // Current session object
+  const currentSession = useMemo(() => {
+    return availableSessions.find(s => s.sessionName === selectedSessionName) || availableSessions[0] || null;
+  }, [availableSessions, selectedSessionName]);
+
+  // Current session's valid sheets
   const currentSessionSheets = useMemo(() => {
-    const found = sortedSessions.find(s => s.sessionName === selectedSessionName);
-    return found ? found.sheets : [];
-  }, [sortedSessions, selectedSessionName]);
+    return currentSession ? currentSession.sheets : [];
+  }, [currentSession]);
 
+  // Keep selectedSheet in sync when currentSession changes
   useEffect(() => {
     if (currentSessionSheets.length > 0) {
-      const stillValid = currentSessionSheets.some(s => s.topic_id === selectedTopic?.topic_id);
+      const stillValid = currentSessionSheets.some(s => s.sheetName === selectedSheet?.sheetName);
       if (!stillValid) {
-        setSelectedTopic(currentSessionSheets[0]);
+        setSelectedSheet(currentSessionSheets[0]);
       }
     }
-  }, [currentSessionSheets, selectedTopic]);
+  }, [currentSessionSheets, selectedSheet]);
 
   // Practice & Question State
-  const [testPackage, setTestPackage] = useState(null); // full data received from backend
-  const [flattenedQuestions, setFlattenedQuestions] = useState([]); // all questions for easy indexing
-  const [currentPassages, setCurrentPassages] = useState([]); // for Part 6
-  const [userAnswers, setUserAnswers] = useState({}); // { [questionNumber]: "A" | "B" | "C" | "D" }
-  const [flaggedQuestions, setFlaggedQuestions] = useState({}); // { [questionNumber]: boolean }
-  const [activeQuestionIndex, setActiveQuestionIndex] = useState(0); // 0 to N-1
-  const [activePassageIndex, setActivePassageIndex] = useState(0); // for Part 6 passage pagination
+  const [testPackage, setTestPackage] = useState(null);
+  const [flattenedQuestions, setFlattenedQuestions] = useState([]);
+  const [currentPassages, setCurrentPassages] = useState([]);
+  const [userAnswers, setUserAnswers] = useState({});
+  const [flaggedQuestions, setFlaggedQuestions] = useState({});
+  const [activeQuestionIndex, setActiveQuestionIndex] = useState(0);
+  const [activePassageIndex, setActivePassageIndex] = useState(0);
   const [showPassageTranslation, setShowPassageTranslation] = useState(false);
 
   // Timer
@@ -75,16 +84,14 @@ export default function ReadingPracticeView({ topics = [], user, addXP }) {
 
   // Result
   const [submittedResult, setSubmittedResult] = useState(null);
-  const [reviewFilter, setReviewFilter] = useState("all"); // 'all' | 'wrong' | 'flagged'
+  const [reviewFilter, setReviewFilter] = useState("all");
 
-  // Format time (MM:SS)
   const formatTime = (secs) => {
     const m = Math.floor(secs / 60);
     const s = secs % 60;
     return `${m < 10 ? "0" : ""}${m}:${s < 10 ? "0" : ""}${s}`;
   };
 
-  // Timer interval
   useEffect(() => {
     let interval = null;
     if (isTimerRunning) {
@@ -97,16 +104,15 @@ export default function ReadingPracticeView({ topics = [], user, addXP }) {
 
   // Load Test from Backend Seed Bank (0s instant load)
   const handleStartPractice = async () => {
-    if (!selectedTopic) return;
+    if (!selectedSheet || !currentSession) return;
     setErrorMsg("");
     setIsLoadingTest(true);
 
     try {
       const res = await axios.get(`${API_BASE}/reading/test`, {
         params: {
-          sessionName: selectedSessionName,
-          topicName: selectedTopic.topic_name,
-          topicId: selectedTopic.topic_id,
+          sessionName: currentSession.sessionName,
+          topicName: selectedSheet.sheetName,
           part: selectedPart
         }
       });
@@ -115,7 +121,6 @@ export default function ReadingPracticeView({ topics = [], user, addXP }) {
         const data = res.data.data;
         setTestPackage(data);
 
-        // Flatten questions depending on part
         let allQ = [];
         let passages = [];
 
@@ -135,9 +140,9 @@ export default function ReadingPracticeView({ topics = [], user, addXP }) {
             });
           });
         } else if (selectedPart === "full") {
-          // Part 5 (30 questions: 101 - 130)
+          // Part 5: 30 questions (101 - 130)
           const p5Q = (data.part5?.questions || []).map(q => ({ ...q, sectionPart: "Part 5" }));
-          // Part 6 (16 questions: 131 - 146)
+          // Part 6: 16 questions (131 - 146)
           const p6Passages = data.part6?.passages || [];
           const p6Q = [];
           p6Passages.forEach((p, pIdx) => {
@@ -179,7 +184,6 @@ export default function ReadingPracticeView({ topics = [], user, addXP }) {
     }
   };
 
-  // Select Answer
   const handleSelectAnswer = (qNumber, optKey) => {
     if (viewState !== "practice") return;
     setUserAnswers(prev => ({
@@ -188,7 +192,6 @@ export default function ReadingPracticeView({ topics = [], user, addXP }) {
     }));
   };
 
-  // Toggle Flag
   const toggleFlag = (qNumber) => {
     setFlaggedQuestions(prev => ({
       ...prev,
@@ -250,12 +253,9 @@ export default function ReadingPracticeView({ topics = [], user, addXP }) {
 
     const totalQuestions = flattenedQuestions.length;
     const percentage = Math.round((correctCount / totalQuestions) * 100);
-
-    // TOEIC Reading Scaled Score Estimation for 46 questions (Part 5: 30 + Part 6: 16)
     const estimatedToeicScore = Math.round((correctCount / totalQuestions) * 495);
-
-    // Award XP: 10 XP per correct question + 30 bonus
     const xpGained = correctCount * 10 + 30;
+
     if (addXP) {
       addXP(xpGained);
     }
@@ -274,7 +274,7 @@ export default function ReadingPracticeView({ topics = [], user, addXP }) {
   };
 
   // ==========================================
-  // RENDER 1: LOBBY (CHỌN FILE EXCEL -> SHEET -> PART)
+  // RENDER 1: LOBBY
   // ==========================================
   if (viewState === "lobby") {
     return (
@@ -292,13 +292,13 @@ export default function ReadingPracticeView({ topics = [], user, addXP }) {
                 Luyện Đọc TOEIC (Part 5 & Part 6)
               </h1>
               <p className="text-blue-100 text-sm md:text-base leading-relaxed">
-                Đề thi đã được thiết lập sẵn tổng cộng 46 câu cho từng sheet: Part 5 (30 câu điền câu đơn) và Part 6 (4 đoạn văn - 16 câu điền đoạn văn). Nạp đề tức thì 0 giây, không dùng AI.
+                Hệ thống chỉ hiển thị các File Excel và Sheet đã có sẵn đề thi hoàn chỉnh (Part 5: 30 câu + Part 6: 16 câu). Nạp đề tức thì 0 giây, không chờ AI.
               </p>
             </div>
             <div className="flex items-center gap-3">
               <div className="bg-white/15 backdrop-blur-md rounded-2xl p-4 text-center border border-white/20 min-w-[110px]">
-                <div className="text-2xl font-black">{sortedSessions.length}</div>
-                <div className="text-xs text-blue-100 font-medium">File Excel</div>
+                <div className="text-2xl font-black">{availableSessions.length}</div>
+                <div className="text-xs text-blue-100 font-medium">File Có Đề</div>
               </div>
               <div className="bg-white/15 backdrop-blur-md rounded-2xl p-4 text-center border border-white/20 min-w-[110px]">
                 <div className="text-2xl font-black">46 Câu</div>
@@ -315,76 +315,86 @@ export default function ReadingPracticeView({ topics = [], user, addXP }) {
           </div>
         )}
 
-        {/* 3 Steps Selection Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {/* Step 1: Select Excel File */}
-          <div className="bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 rounded-3xl p-5 shadow-sm space-y-4">
-            <div className="flex items-center gap-2 font-bold text-slate-800 dark:text-slate-100">
-              <div className="w-7 h-7 rounded-full bg-blue-100 dark:bg-blue-900/40 text-blue-600 dark:text-blue-400 flex items-center justify-center text-xs font-black">
-                1
-              </div>
-              <span>Chọn File Excel</span>
-            </div>
-            <p className="text-xs text-slate-500 dark:text-slate-400">
-              Phân tách rõ ràng từng file Excel bạn đã tải lên hệ thống:
-            </p>
-            <div className="space-y-2.5 max-h-[340px] overflow-y-auto pr-1">
-              {sortedSessions.map(sess => {
-                const isSelected = selectedSessionName === sess.sessionName;
-                return (
-                  <button
-                    key={sess.sessionName}
-                    onClick={() => {
-                      setSelectedSessionName(sess.sessionName);
-                      setSelectedTopic(sess.sheets[0] || null);
-                    }}
-                    className={`w-full text-left p-3.5 rounded-2xl border transition-all flex items-center justify-between group ${
-                      isSelected
-                        ? "bg-blue-50/90 dark:bg-blue-950/40 border-blue-600 text-blue-800 dark:text-blue-200 shadow-sm ring-1 ring-blue-500"
-                        : "bg-slate-50/70 dark:bg-slate-800/40 border-slate-200/80 dark:border-slate-800 hover:border-slate-300 text-slate-700 dark:text-slate-300"
-                    }`}
-                  >
-                    <div className="flex items-center gap-3 truncate">
-                      <div className={`p-2 rounded-xl flex-shrink-0 ${isSelected ? "bg-blue-600 text-white" : "bg-emerald-100 dark:bg-emerald-900/40 text-emerald-700 dark:text-emerald-300"}`}>
-                        <FileSpreadsheet size={18} />
-                      </div>
-                      <div className="truncate">
-                        <div className="font-bold text-xs md:text-sm truncate">{sess.sessionName}</div>
-                        <div className="text-[11px] text-slate-400 mt-0.5">
-                          {sess.sheets.length} Sheets • {sess.totalVocab} từ
-                        </div>
-                      </div>
-                    </div>
-                    {isSelected && <Check size={18} className="text-blue-600 dark:text-blue-400 flex-shrink-0" />}
-                  </button>
-                );
-              })}
-            </div>
+        {/* Loading Available Sessions */}
+        {isLoadingAvailable ? (
+          <div className="p-12 text-center space-y-3 bg-white dark:bg-slate-900 rounded-3xl border border-slate-200/80 dark:border-slate-800">
+            <Loader2 size={32} className="animate-spin text-blue-600 mx-auto" />
+            <p className="text-sm font-medium text-slate-500">Đang kiểm tra danh sách đề thi có sẵn...</p>
           </div>
-
-          {/* Step 2: Select Sheet inside that File */}
-          <div className="bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 rounded-3xl p-5 shadow-sm space-y-4">
-            <div className="flex items-center gap-2 font-bold text-slate-800 dark:text-slate-100">
-              <div className="w-7 h-7 rounded-full bg-blue-100 dark:bg-blue-900/40 text-blue-600 dark:text-blue-400 flex items-center justify-center text-xs font-black">
-                2
-              </div>
-              <span>Chọn Bảng Sheet</span>
-            </div>
-            <p className="text-xs text-slate-500 dark:text-slate-400">
-              Các sheet thuộc <strong className="text-slate-700 dark:text-slate-200">{selectedSessionName || "File đã chọn"}</strong>:
+        ) : availableSessions.length === 0 ? (
+          <div className="p-12 text-center space-y-3 bg-white dark:bg-slate-900 rounded-3xl border border-slate-200/80 dark:border-slate-800">
+            <AlertCircle size={36} className="text-amber-500 mx-auto" />
+            <h3 className="text-base font-bold text-slate-800 dark:text-slate-100">Chưa có bộ đề đọc nào khả dụng</h3>
+            <p className="text-xs text-slate-500 max-w-md mx-auto">
+              Hệ thống hiện tại chưa có dữ liệu đề đọc cho các file này. Vui lòng liên hệ quản trị viên để khởi tạo bộ câu hỏi.
             </p>
-            <div className="space-y-2 max-h-[340px] overflow-y-auto pr-1">
-              {currentSessionSheets.length === 0 ? (
-                <div className="text-xs text-slate-400 italic py-6 text-center">
-                  Không có sheet nào trong file này.
+          </div>
+        ) : (
+          /* 3 Steps Selection Grid: ONLY SHOWS SESSIONS AND SHEETS WITH REAL DATA */
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {/* Step 1: Select Excel File (ONLY VALID SESSIONS) */}
+            <div className="bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 rounded-3xl p-5 shadow-sm space-y-4">
+              <div className="flex items-center gap-2 font-bold text-slate-800 dark:text-slate-100">
+                <div className="w-7 h-7 rounded-full bg-blue-100 dark:bg-blue-900/40 text-blue-600 dark:text-blue-400 flex items-center justify-center text-xs font-black">
+                  1
                 </div>
-              ) : (
-                currentSessionSheets.map(sh => {
-                  const isSelected = selectedTopic?.topic_id === sh.topic_id;
+                <span>Chọn File Excel (Có Đề)</span>
+              </div>
+              <p className="text-xs text-slate-500 dark:text-slate-400">
+                Chỉ hiển thị các file Excel đã sẵn sàng câu hỏi:
+              </p>
+              <div className="space-y-2.5 max-h-[340px] overflow-y-auto pr-1">
+                {availableSessions.map(sess => {
+                  const isSelected = selectedSessionName === sess.sessionName;
                   return (
                     <button
-                      key={sh.topic_id}
-                      onClick={() => setSelectedTopic(sh)}
+                      key={sess.sessionName}
+                      onClick={() => {
+                        setSelectedSessionName(sess.sessionName);
+                        setSelectedSheet(sess.sheets[0] || null);
+                      }}
+                      className={`w-full text-left p-3.5 rounded-2xl border transition-all flex items-center justify-between group ${
+                        isSelected
+                          ? "bg-blue-50/90 dark:bg-blue-950/40 border-blue-600 text-blue-800 dark:text-blue-200 shadow-sm ring-1 ring-blue-500"
+                          : "bg-slate-50/70 dark:bg-slate-800/40 border-slate-200/80 dark:border-slate-800 hover:border-slate-300 text-slate-700 dark:text-slate-300"
+                      }`}
+                    >
+                      <div className="flex items-center gap-3 truncate">
+                        <div className={`p-2 rounded-xl flex-shrink-0 ${isSelected ? "bg-blue-600 text-white" : "bg-emerald-100 dark:bg-emerald-900/40 text-emerald-700 dark:text-emerald-300"}`}>
+                          <FileSpreadsheet size={18} />
+                        </div>
+                        <div className="truncate">
+                          <div className="font-bold text-xs md:text-sm truncate">{sess.sessionName}</div>
+                          <div className="text-[11px] text-slate-400 mt-0.5">
+                            {sess.sheets.length} Sheets có đề • {sess.totalVocab} từ
+                          </div>
+                        </div>
+                      </div>
+                      {isSelected && <Check size={18} className="text-blue-600 dark:text-blue-400 flex-shrink-0" />}
+                    </button>
+                  );
+                })}
+              </div>
+            </div>
+
+            {/* Step 2: Select Sheet inside that File (ONLY VALID SHEETS) */}
+            <div className="bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 rounded-3xl p-5 shadow-sm space-y-4">
+              <div className="flex items-center gap-2 font-bold text-slate-800 dark:text-slate-100">
+                <div className="w-7 h-7 rounded-full bg-blue-100 dark:bg-blue-900/40 text-blue-600 dark:text-blue-400 flex items-center justify-center text-xs font-black">
+                  2
+                </div>
+                <span>Chọn Bảng Sheet (Có Đề)</span>
+              </div>
+              <p className="text-xs text-slate-500 dark:text-slate-400">
+                Các sheet có sẵn bộ câu hỏi trong <strong className="text-slate-700 dark:text-slate-200">{currentSession?.sessionName}</strong>:
+              </p>
+              <div className="space-y-2 max-h-[340px] overflow-y-auto pr-1">
+                {currentSessionSheets.map(sh => {
+                  const isSelected = selectedSheet?.sheetName === sh.sheetName;
+                  return (
+                    <button
+                      key={sh.sheetName}
+                      onClick={() => setSelectedSheet(sh)}
                       className={`w-full text-left p-3 rounded-2xl border transition-all flex items-center justify-between group ${
                         isSelected
                           ? "bg-indigo-50/90 dark:bg-indigo-950/40 border-indigo-600 text-indigo-800 dark:text-indigo-200 shadow-sm ring-1 ring-indigo-500"
@@ -392,104 +402,105 @@ export default function ReadingPracticeView({ topics = [], user, addXP }) {
                       }`}
                     >
                       <div className="truncate">
-                        <div className="font-bold text-sm truncate">{sh.topic_name}</div>
-                        <div className="text-[11px] text-slate-400 mt-0.5">{sh.vocab_count || 0} từ vựng</div>
+                        <div className="font-bold text-sm truncate">{sh.sheetName}</div>
+                        <div className="text-[11px] text-slate-400 mt-0.5">
+                          {sh.totalVocabs} từ vựng • <strong className="text-indigo-600 dark:text-indigo-400">{sh.totalQuestions} câu</strong>
+                        </div>
                       </div>
                       {isSelected && <Check size={18} className="text-indigo-600 dark:text-indigo-400 flex-shrink-0" />}
                     </button>
                   );
-                })
-              )}
+                })}
+              </div>
             </div>
-          </div>
 
-          {/* Step 3: Select Part and Start */}
-          <div className="bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 rounded-3xl p-5 shadow-sm space-y-4 flex flex-col justify-between">
-            <div className="space-y-3">
-              <div className="flex items-center gap-2 font-bold text-slate-800 dark:text-slate-100">
-                <div className="w-7 h-7 rounded-full bg-blue-100 dark:bg-blue-900/40 text-blue-600 dark:text-blue-400 flex items-center justify-center text-xs font-black">
-                  3
+            {/* Step 3: Select Part and Start */}
+            <div className="bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 rounded-3xl p-5 shadow-sm space-y-4 flex flex-col justify-between">
+              <div className="space-y-3">
+                <div className="flex items-center gap-2 font-bold text-slate-800 dark:text-slate-100">
+                  <div className="w-7 h-7 rounded-full bg-blue-100 dark:bg-blue-900/40 text-blue-600 dark:text-blue-400 flex items-center justify-center text-xs font-black">
+                    3
+                  </div>
+                  <span>Chọn Phần Thi & Bắt Đầu</span>
                 </div>
-                <span>Chọn Phần Thi & Bắt Đầu</span>
+
+                <div className="space-y-2">
+                  <button
+                    onClick={() => setSelectedPart("part5")}
+                    className={`w-full text-left p-3.5 rounded-2xl border transition-all flex items-center justify-between ${
+                      selectedPart === "part5"
+                        ? "bg-blue-50/90 dark:bg-blue-950/40 border-blue-600 text-blue-800 dark:text-blue-200 ring-1 ring-blue-500 font-bold"
+                        : "bg-slate-50/60 dark:bg-slate-800/40 border-slate-200/80 dark:border-slate-800 hover:border-slate-300 text-slate-700 dark:text-slate-300"
+                    }`}
+                  >
+                    <div>
+                      <div className="text-xs font-bold">Part 5: Incomplete Sentences</div>
+                      <div className="text-[11px] text-slate-400">30 câu đơn (Câu 101 - 130)</div>
+                    </div>
+                    <span className="text-[10px] font-black px-2 py-0.5 rounded-full bg-blue-100 dark:bg-blue-900/50 text-blue-700 dark:text-blue-300">
+                      30 CÂU
+                    </span>
+                  </button>
+
+                  <button
+                    onClick={() => setSelectedPart("part6")}
+                    className={`w-full text-left p-3.5 rounded-2xl border transition-all flex items-center justify-between ${
+                      selectedPart === "part6"
+                        ? "bg-indigo-50/90 dark:bg-indigo-950/40 border-indigo-600 text-indigo-800 dark:text-indigo-200 ring-1 ring-indigo-500 font-bold"
+                        : "bg-slate-50/60 dark:bg-slate-800/40 border-slate-200/80 dark:border-slate-800 hover:border-slate-300 text-slate-700 dark:text-slate-300"
+                    }`}
+                  >
+                    <div>
+                      <div className="text-xs font-bold">Part 6: Text Completion</div>
+                      <div className="text-[11px] text-slate-400">4 đoạn văn • 16 câu (Câu 131 - 146)</div>
+                    </div>
+                    <span className="text-[10px] font-black px-2 py-0.5 rounded-full bg-indigo-100 dark:bg-indigo-900/50 text-indigo-700 dark:text-indigo-300">
+                      16 CÂU
+                    </span>
+                  </button>
+
+                  <button
+                    onClick={() => setSelectedPart("full")}
+                    className={`w-full text-left p-3.5 rounded-2xl border transition-all flex items-center justify-between ${
+                      selectedPart === "full"
+                        ? "bg-amber-50/90 dark:bg-amber-950/40 border-amber-500 text-amber-800 dark:text-amber-200 ring-1 ring-amber-500 font-bold"
+                        : "bg-slate-50/60 dark:bg-slate-800/40 border-slate-200/80 dark:border-slate-800 hover:border-slate-300 text-slate-700 dark:text-slate-300"
+                    }`}
+                  >
+                    <div>
+                      <div className="text-xs font-bold">Kiểm tra Tổng hợp (Part 5 + 6)</div>
+                      <div className="text-[11px] text-slate-400">Trọn vẹn 46 câu (Part 5: 30 + Part 6: 16)</div>
+                    </div>
+                    <span className="text-[10px] font-black px-2 py-0.5 rounded-full bg-amber-100 dark:bg-amber-900/50 text-amber-800 dark:text-amber-300">
+                      46 CÂU
+                    </span>
+                  </button>
+                </div>
               </div>
 
-              {/* Part Tabs (Part 5, Part 6, and Full 46 Questions) */}
-              <div className="space-y-2">
+              {/* Start Button */}
+              <div className="pt-3 border-t border-slate-100 dark:border-slate-800">
                 <button
-                  onClick={() => setSelectedPart("part5")}
-                  className={`w-full text-left p-3.5 rounded-2xl border transition-all flex items-center justify-between ${
-                    selectedPart === "part5"
-                      ? "bg-blue-50/90 dark:bg-blue-950/40 border-blue-600 text-blue-800 dark:text-blue-200 ring-1 ring-blue-500 font-bold"
-                      : "bg-slate-50/60 dark:bg-slate-800/40 border-slate-200/80 dark:border-slate-800 hover:border-slate-300 text-slate-700 dark:text-slate-300"
-                  }`}
+                  onClick={handleStartPractice}
+                  disabled={isLoadingTest || !selectedSheet}
+                  className="w-full py-4 px-4 rounded-2xl bg-gradient-to-r from-blue-600 via-indigo-600 to-indigo-700 hover:from-blue-700 hover:to-indigo-800 text-white font-black text-sm shadow-xl shadow-blue-500/20 active:scale-[0.98] transition-all flex items-center justify-center gap-2 disabled:opacity-50"
                 >
-                  <div>
-                    <div className="text-xs font-bold">Part 5: Incomplete Sentences</div>
-                    <div className="text-[11px] text-slate-400">30 câu đơn (Câu 101 - 130)</div>
-                  </div>
-                  <span className="text-[10px] font-black px-2 py-0.5 rounded-full bg-blue-100 dark:bg-blue-900/50 text-blue-700 dark:text-blue-300">
-                    30 CÂU
-                  </span>
-                </button>
-
-                <button
-                  onClick={() => setSelectedPart("part6")}
-                  className={`w-full text-left p-3.5 rounded-2xl border transition-all flex items-center justify-between ${
-                    selectedPart === "part6"
-                      ? "bg-indigo-50/90 dark:bg-indigo-950/40 border-indigo-600 text-indigo-800 dark:text-indigo-200 ring-1 ring-indigo-500 font-bold"
-                      : "bg-slate-50/60 dark:bg-slate-800/40 border-slate-200/80 dark:border-slate-800 hover:border-slate-300 text-slate-700 dark:text-slate-300"
-                  }`}
-                >
-                  <div>
-                    <div className="text-xs font-bold">Part 6: Text Completion</div>
-                    <div className="text-[11px] text-slate-400">4 đoạn văn • 16 câu (Câu 131 - 146)</div>
-                  </div>
-                  <span className="text-[10px] font-black px-2 py-0.5 rounded-full bg-indigo-100 dark:bg-indigo-900/50 text-indigo-700 dark:text-indigo-300">
-                    16 CÂU
-                  </span>
-                </button>
-
-                <button
-                  onClick={() => setSelectedPart("full")}
-                  className={`w-full text-left p-3.5 rounded-2xl border transition-all flex items-center justify-between ${
-                    selectedPart === "full"
-                      ? "bg-amber-50/90 dark:bg-amber-950/40 border-amber-500 text-amber-800 dark:text-amber-200 ring-1 ring-amber-500 font-bold"
-                      : "bg-slate-50/60 dark:bg-slate-800/40 border-slate-200/80 dark:border-slate-800 hover:border-slate-300 text-slate-700 dark:text-slate-300"
-                  }`}
-                >
-                  <div>
-                    <div className="text-xs font-bold">Kiểm tra Tổng hợp (Part 5 + 6)</div>
-                    <div className="text-[11px] text-slate-400">Trọn vẹn 46 câu (Part 5: 30 + Part 6: 16)</div>
-                  </div>
-                  <span className="text-[10px] font-black px-2 py-0.5 rounded-full bg-amber-100 dark:bg-amber-900/50 text-amber-800 dark:text-amber-300">
-                    46 CÂU
-                  </span>
+                  {isLoadingTest ? (
+                    <>
+                      <Loader2 size={18} className="animate-spin" />
+                      <span>Đang nạp bộ đề...</span>
+                    </>
+                  ) : (
+                    <>
+                      <Play size={18} fill="currentColor" />
+                      <span>Bắt đầu làm bài ngay</span>
+                    </>
+                  )}
                 </button>
               </div>
-            </div>
-
-            {/* Start Button */}
-            <div className="pt-3 border-t border-slate-100 dark:border-slate-800">
-              <button
-                onClick={handleStartPractice}
-                disabled={isLoadingTest || !selectedTopic}
-                className="w-full py-4 px-4 rounded-2xl bg-gradient-to-r from-blue-600 via-indigo-600 to-indigo-700 hover:from-blue-700 hover:to-indigo-800 text-white font-black text-sm shadow-xl shadow-blue-500/20 active:scale-[0.98] transition-all flex items-center justify-center gap-2 disabled:opacity-50"
-              >
-                {isLoadingTest ? (
-                  <>
-                    <Loader2 size={18} className="animate-spin" />
-                    <span>Đang nạp bộ đề...</span>
-                  </>
-                ) : (
-                  <>
-                    <Play size={18} fill="currentColor" />
-                    <span>Bắt đầu làm bài ngay</span>
-                  </>
-                )}
-              </button>
             </div>
           </div>
-        </div>
+        )}
       </div>
     );
   }
@@ -530,9 +541,9 @@ export default function ReadingPracticeView({ topics = [], user, addXP }) {
                   {curQ.sectionPart || selectedPart}
                 </span>
                 <span className="font-black text-slate-800 dark:text-slate-100 text-sm md:text-base">
-                  {selectedTopic?.topic_name}
+                  {selectedSheet?.sheetName}
                 </span>
-                <span className="text-xs text-slate-400 hidden sm:inline">• {selectedSessionName}</span>
+                <span className="text-xs text-slate-400 hidden sm:inline">• {currentSession?.sessionName}</span>
               </div>
               <div className="text-xs text-slate-400 mt-0.5">
                 Đã hoàn thành: <strong className="text-blue-600 dark:text-blue-400">{answeredCount}/{totalQCount}</strong> câu ({progressPercent}%)
@@ -844,7 +855,7 @@ export default function ReadingPracticeView({ topics = [], user, addXP }) {
             </div>
             <h2 className="text-2xl md:text-3xl font-black">Kết Quả Bài Luyện Đọc</h2>
             <p className="text-blue-100 text-sm">
-              Sheet: <span className="font-bold underline">{selectedTopic?.topic_name}</span> ({selectedSessionName}) • Phần: <span className="font-bold uppercase">{selectedPart === "full" ? "Part 5 + Part 6 (46 câu)" : selectedPart}</span>
+              Sheet: <span className="font-bold underline">{selectedSheet?.sheetName}</span> ({currentSession?.sessionName}) • Phần: <span className="font-bold uppercase">{selectedPart === "full" ? "Part 5 + Part 6 (46 câu)" : selectedPart}</span>
             </p>
 
             {/* Metrics */}

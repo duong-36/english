@@ -48,12 +48,20 @@ exports.getReadingTest = async (req, res) => {
         .filter(d => d.isDirectory())
         .map(d => d.name);
 
-      // Match folderSlug or fallback to available
+      // 1. Exact match
       const exactMatch = availableDirs.find(d => d.toLowerCase() === folderSlug.toLowerCase());
-      if (exactMatch) {
-        candidateFolders.push(exactMatch);
+      if (exactMatch) candidateFolders.push(exactMatch);
+
+      // 2. Fuzzy / Prefix match (e.g. TU_VUNG_VER_13 matches TU_VUNG_VER_13_FIXED)
+      const prefixMatch = availableDirs.find(d =>
+        d.toLowerCase().startsWith(folderSlug.toLowerCase()) ||
+        folderSlug.toLowerCase().startsWith(d.toLowerCase())
+      );
+      if (prefixMatch && !candidateFolders.includes(prefixMatch)) {
+        candidateFolders.push(prefixMatch);
       }
-      // Add other folders as fallback
+
+      // 3. Fallback to any available directory
       availableDirs.forEach(d => {
         if (!candidateFolders.includes(d)) candidateFolders.push(d);
       });
@@ -69,7 +77,11 @@ exports.getReadingTest = async (req, res) => {
       // Find matching sheet file (e.g. TEST_1.json, TEST_2.json)
       const matchedFile = files.find(f => {
         const base = path.parse(f).name.toUpperCase();
-        return base === sheetSlug || base.replace(/_/g, "") === sheetSlug.replace(/_/g, "");
+        return (
+          base === sheetSlug ||
+          base.replace(/_/g, "") === sheetSlug.replace(/_/g, "") ||
+          base.replace(/TEST/i, "").trim() === sheetSlug.replace(/TEST/i, "").trim()
+        );
       });
 
       if (matchedFile) {
@@ -132,7 +144,7 @@ exports.getReadingTest = async (req, res) => {
   }
 };
 
-// Get summary of available seed tests
+// Get summary of ONLY available seed tests (Filters out empty files & sheets)
 exports.getAvailableTests = async (req, res) => {
   try {
     if (!fs.existsSync(SEEDS_DIR)) {
@@ -147,11 +159,48 @@ exports.getAvailableTests = async (req, res) => {
     for (const folder of folders) {
       const folderPath = path.join(SEEDS_DIR, folder);
       const files = fs.readdirSync(folderPath).filter(f => f.endsWith(".json"));
+      if (files.length === 0) continue;
+
+      let sessionName = folder;
+      const sheets = [];
+
+      for (const f of files) {
+        try {
+          const filePath = path.join(folderPath, f);
+          const raw = fs.readFileSync(filePath, "utf8");
+          const parsed = JSON.parse(raw);
+          if (parsed.metadata?.excelFileName) {
+            sessionName = parsed.metadata.excelFileName;
+          }
+          sheets.push({
+            sheetName: parsed.metadata?.sheetName || path.parse(f).name.replace(/_/g, " "),
+            sheetSlug: parsed.metadata?.sheetSlug || path.parse(f).name,
+            totalVocabs: parsed.metadata?.totalVocabs || 0,
+            totalQuestions: parsed.metadata?.totalQuestions || 46
+          });
+        } catch (err) {
+          sheets.push({
+            sheetName: path.parse(f).name.replace(/_/g, " "),
+            sheetSlug: path.parse(f).name,
+            totalQuestions: 46
+          });
+        }
+      }
+
+      // Sort sheets naturally: TEST 1, TEST 2, ..., TEST 10
+      sheets.sort((a, b) => a.sheetName.localeCompare(b.sheetName, undefined, { numeric: true }));
+
       result.push({
         folderName: folder,
-        sheets: files.map(f => path.parse(f).name.replace(/_/g, " "))
+        sessionName: sessionName,
+        totalSheets: sheets.length,
+        totalVocab: sheets.reduce((sum, s) => sum + (s.totalVocabs || 0), 0),
+        sheets: sheets
       });
     }
+
+    // Sort sessions
+    result.sort((a, b) => a.sessionName.localeCompare(b.sessionName, undefined, { numeric: true }));
 
     res.json({ success: true, data: result });
   } catch (error) {
