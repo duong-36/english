@@ -6,7 +6,7 @@
     "sheetSlug": "TEST_9",
     "totalVocabs": 270,
     "totalQuestions": 46,
-    "createdAt": "2026-10-28T01:45:23.439Z"
+    "createdAt": "2026-10-28T02:25:37.567Z"
   },
   "part5": {
     "title": "TOEIC Reading Part 5 - Incomplete Sentences (TEST 9)",
@@ -15,812 +15,812 @@
       {
         "id": 101,
         "questionNumber": 101,
-        "question": "Before finalizing the agreement, the legal department requested that all staff _______ carefully.",
+        "question": "The primary _______ of tomorrow's workshop is to introduce staff members to the upgraded accounting software.",
         "options": [
           {
             "key": "A",
-            "text": "Postpone"
+            "text": "purpose"
           },
           {
             "key": "B",
-            "text": "Complain"
+            "text": "balance"
           },
           {
             "key": "C",
-            "text": "Place an order"
+            "text": "invoice"
           },
           {
             "key": "D",
-            "text": "Purpose"
+            "text": "baggage"
           }
         ],
         "correctAnswer": "A",
-        "explanation": "Đáp án đúng là [A] \"Postpone\" (nghĩa: Hoãn lại). Sau 'requested that all staff + V-inf' cần động từ/cụm từ nguyên mẫu.",
-        "translation": "Câu hoàn chỉnh: \"Before finalizing the agreement, the legal department requested that all staff Postpone carefully.\". Nghĩa: Hoãn lại",
-        "targetWord": "Postpone"
+        "explanation": "Danh từ 'purpose' (mục đích) kết hợp với tính từ 'primary' tạo thành cụm 'primary purpose of...' (mục đích chính của hội thảo là...). Các lựa chọn khác: B. balance (số dư), C. invoice (hóa đơn), D. baggage (hành lý) không phù hợp.",
+        "translation": "Mục đích chính của buổi hội thảo ngày mai là giới thiệu cho các nhân viên về phần mềm kế toán đã được nâng cấp.",
+        "targetWord": "Purpose"
       },
       {
         "id": 102,
         "questionNumber": 102,
-        "question": "Mr. Thompson had trouble _______ the quarterly financial statement before the deadline.",
+        "question": "Customers wishing to purchase bulk office supplies can _______ directly through our corporate website.",
         "options": [
           {
             "key": "A",
-            "text": "Business hours"
+            "text": "renew a contract"
           },
           {
             "key": "B",
-            "text": "Confirm"
+            "text": "place an order"
           },
           {
             "key": "C",
-            "text": "Promotion"
+            "text": "file a complaint"
           },
           {
             "key": "D",
-            "text": "Deliver"
+            "text": "conduct a survey"
           }
         ],
-        "correctAnswer": "C",
-        "explanation": "Đáp án đúng là [C] \"Promotion\" (nghĩa: Sự thăng chức). Cấu trúc 'have trouble doing something' đòi hỏi dạng V-ing phù hợp ngữ cảnh.",
-        "translation": "Câu hoàn chỉnh: \"Mr. Thompson had trouble Promotion the quarterly financial statement before the deadline.\". Nghĩa: Sự thăng chức",
-        "targetWord": "Promotion"
+        "correctAnswer": "B",
+        "explanation": "Cụm động từ 'place an order' (đặt hàng) kết hợp với 'purchase bulk office supplies' (mua văn phòng phẩm số lượng lớn). Các lựa chọn khác: A. renew a contract (gia hạn hợp đồng), C. file a complaint (nộp đơn khiếu nại), D. conduct a survey (thực hiện khảo sát) không phù hợp ngữ cảnh mua sắm.",
+        "translation": "Khách hàng muốn mua văn phòng phẩm số lượng lớn có thể đặt hàng trực tiếp qua trang web doanh nghiệp của chúng tôi.",
+        "targetWord": "Place an order"
       },
       {
         "id": 103,
         "questionNumber": 103,
-        "question": "If you cannot reach the department manager directly, please _______ with the front desk.",
+        "question": "Several hotel guests called the front desk to _______ about the persistent noise coming from the ongoing construction outside.",
         "options": [
           {
             "key": "A",
-            "text": "Coin slot"
+            "text": "argue"
           },
           {
             "key": "B",
-            "text": "Process"
+            "text": "boast"
           },
           {
             "key": "C",
-            "text": "Temporary"
+            "text": "complain"
           },
           {
             "key": "D",
-            "text": "Promotion"
+            "text": "speculate"
           }
         ],
-        "correctAnswer": "A",
-        "explanation": "Đáp án đúng là [A] \"Coin slot\" (nghĩa: Khe đút tiền xu). Ngữ cảnh liên lạc văn phòng, chọn cụm từ thích hợp nhất.",
-        "translation": "Câu hoàn chỉnh: \"If you cannot reach the department manager directly, please Coin slot with the front desk.\". Nghĩa: Khe đút tiền xu",
-        "targetWord": "Coin slot"
+        "correctAnswer": "C",
+        "explanation": "Động từ 'complain' (khiếu nại, phàn nàn) đi với giới từ 'about' ('complain about the persistent noise' - phàn nàn về tiếng ồn liên tục từ công trình đang thi công). Các từ khác: A. argue (tranh cãi), B. boast (khoe khoang), D. speculate (suy đoán) không hợp ngữ cảnh khách sạn tiếp nhận phản ánh tiếng ồn.",
+        "translation": "Một số khách lưu trú tại khách sạn đã gọi điện cho quầy lễ tân để phàn nàn về tiếng ồn liên tục phát ra từ công trình xây dựng bên ngoài.",
+        "targetWord": "Complain"
       },
       {
         "id": 104,
         "questionNumber": 104,
-        "question": "Employees must show their _______ to the security guard before entering the facility.",
+        "question": "Please review the attached itinerary and contact our travel coordinator by noon tomorrow to _______ your flight reservation.",
         "options": [
           {
             "key": "A",
-            "text": "Authorized"
+            "text": "calculate"
           },
           {
             "key": "B",
-            "text": "Installation"
+            "text": "discard"
           },
           {
             "key": "C",
-            "text": "Farmers' market"
+            "text": "restrict"
           },
           {
             "key": "D",
-            "text": "Procedure"
+            "text": "confirm"
           }
         ],
-        "correctAnswer": "A",
-        "explanation": "Đáp án đúng là [A] \"Authorized\" (nghĩa: Được ủy quyền). Cần danh từ chỉ giấy tờ/thẻ phù hợp để xác thực danh tính.",
-        "translation": "Câu hoàn chỉnh: \"Employees must show their Authorized to the security guard before entering the facility.\". Nghĩa: Được ủy quyền",
-        "targetWord": "Authorized"
+        "correctAnswer": "D",
+        "explanation": "Động từ 'confirm' (xác nhận) kết hợp với tân ngữ 'flight reservation' tạo thành cụm 'confirm your flight reservation' (xác nhận việc đặt chỗ chuyến bay). Các lựa chọn khác: A. calculate (tính toán), B. discard (vứt bỏ), C. restrict (hạn chế) hoàn toàn sai nghĩa.",
+        "translation": "Vui lòng xem lại lịch trình đính kèm và liên hệ với điều phối viên du lịch của chúng tôi trước trưa mai để xác nhận việc đặt chỗ chuyến bay của bạn.",
+        "targetWord": "Confirm"
       },
       {
         "id": 105,
         "questionNumber": 105,
-        "question": "The director scheduled a meeting to _______ with the regional sales representatives.",
+        "question": "Technical support representatives are available by telephone only during regular _______ from Monday to Friday.",
         "options": [
           {
             "key": "A",
-            "text": "Security alert"
+            "text": "business hours"
           },
           {
             "key": "B",
-            "text": "Renovate"
+            "text": "safety goggles"
           },
           {
             "key": "C",
-            "text": "Redesigned"
+            "text": "travel expenses"
           },
           {
             "key": "D",
-            "text": "West wing"
+            "text": "fitness centers"
           }
         ],
-        "correctAnswer": "C",
-        "explanation": "Đáp án đúng là [C] \"Redesigned\" (nghĩa: Được thiết kế lại). Cấu trúc chỉ mục đích 'to + V-inf' diễn tả hành động trong công việc.",
-        "translation": "Câu hoàn chỉnh: \"The director scheduled a meeting to Redesigned with the regional sales representatives.\". Nghĩa: Được thiết kế lại",
-        "targetWord": "Redesigned"
+        "correctAnswer": "A",
+        "explanation": "Cụm từ 'regular business hours' (giờ làm việc/kinh doanh thông thường) là cụm từ chuẩn mực chỉ khoảng thời gian mở cửa hoặc làm việc từ thứ Hai đến thứ Sáu ('from Monday to Friday'). Các phương án khác không liên quan đến thời gian làm việc.",
+        "translation": "Đại diện hỗ trợ kỹ thuật chỉ túc trực qua điện thoại trong giờ làm việc thông thường từ thứ Hai đến thứ Sáu.",
+        "targetWord": "Business hours"
       },
       {
         "id": 106,
         "questionNumber": 106,
-        "question": "Due to a technical issue on the server, the technical team will _______ this evening.",
+        "question": "The courier service guaranteed that it would _______ the confidential legal contract before the end of the business day.",
         "options": [
           {
             "key": "A",
-            "text": "Guest pass"
+            "text": "fabricate"
           },
           {
             "key": "B",
-            "text": "Refrain from"
+            "text": "deliver"
           },
           {
             "key": "C",
-            "text": "Supervisor"
+            "text": "postpone"
           },
           {
             "key": "D",
-            "text": "In charge"
+            "text": "hesitate"
           }
         ],
         "correctAnswer": "B",
-        "explanation": "Đáp án đúng là [B] \"Refrain from\" (nghĩa: Kiềm chế / Nhịn). Sau trợ động từ 'will' là động từ nguyên thể không to.",
-        "translation": "Câu hoàn chỉnh: \"Due to a technical issue on the server, the technical team will Refrain from this evening.\". Nghĩa: Kiềm chế / Nhịn",
-        "targetWord": "Refrain from"
+        "explanation": "Động từ 'deliver' (giao, phát) phù hợp với chủ ngữ dịch vụ chuyển phát nhanh ('courier service') và tân ngữ tài liệu pháp lý ('confidential legal contract'). Các từ khác: A. fabricate (ngụy tạo), C. postpone (trì hoãn), D. hesitate (do dự) không phù hợp.",
+        "translation": "Dịch vụ chuyển phát nhanh cam kết sẽ giao hợp đồng pháp lý bảo mật trước khi kết thúc ngày làm việc.",
+        "targetWord": "Deliver"
       },
       {
         "id": 107,
         "questionNumber": 107,
-        "question": "Please provide your _______ when filling out the online registration form.",
+        "question": "The loan department requires at least three business days to thoroughly _______ each mortgage application.",
         "options": [
           {
             "key": "A",
-            "text": "Job applicant"
+            "text": "process"
           },
           {
             "key": "B",
-            "text": "Personnel manager"
+            "text": "navigate"
           },
           {
             "key": "C",
-            "text": "Ambition"
+            "text": "assemble"
           },
           {
             "key": "D",
-            "text": "Research assistant"
+            "text": "advertise"
           }
         ],
-        "correctAnswer": "C",
-        "explanation": "Đáp án đúng là [C] \"Ambition\" (nghĩa: Hoài bão, tham vọng). Cần một cụm danh từ thích hợp làm tân ngữ cho động từ 'provide'.",
-        "translation": "Câu hoàn chỉnh: \"Please provide your Ambition when filling out the online registration form.\". Nghĩa: Hoài bão, tham vọng",
-        "targetWord": "Ambition"
+        "correctAnswer": "A",
+        "explanation": "Động từ 'process' (xử lý, giải quyết) thường đi kèm với các hồ sơ, đơn từ hành chính ('mortgage application' - đơn vay thế chấp). Các lựa chọn khác: B. navigate (định vị), C. assemble (lắp ráp), D. advertise (quảng cáo) không phù hợp với việc xử lý hồ sơ vay vốn.",
+        "translation": "Bộ phận cho vay cần ít nhất ba ngày làm việc để xử lý kỹ lưỡng từng hồ sơ xin vay thế chấp.",
+        "targetWord": "Process"
       },
       {
         "id": 108,
         "questionNumber": 108,
-        "question": "The accounting department reminds all supervisors to _______ by the end of the month.",
+        "question": "The bridge will be closed for _______ repairs throughout the upcoming weekend, so motorists must follow detour signs.",
         "options": [
           {
             "key": "A",
-            "text": "Unavailable"
+            "text": "nutritional"
           },
           {
             "key": "B",
-            "text": "Medical leave"
+            "text": "confidential"
           },
           {
             "key": "C",
-            "text": "Executive"
+            "text": "temporary"
           },
           {
             "key": "D",
-            "text": "Conference"
+            "text": "redundant"
           }
         ],
         "correctAnswer": "C",
-        "explanation": "Đáp án đúng là [C] \"Executive\" (nghĩa: Giám đốc / Cấp điều hành). Cấu trúc 'remind someone to + V-inf'.",
-        "translation": "Câu hoàn chỉnh: \"The accounting department reminds all supervisors to Executive by the end of the month.\". Nghĩa: Giám đốc / Cấp điều hành",
-        "targetWord": "Executive"
+        "explanation": "Tính từ 'temporary' (tạm thời) bổ nghĩa cho 'repairs' (sự sửa chữa tạm thời), phù hợp với việc cây cầu đóng cửa trong dịp cuối tuần ('throughout the upcoming weekend'). Các tính từ khác: A. nutritional (dinh dưỡng), B. confidential (bảo mật), D. redundant (dư thừa) không phù hợp.",
+        "translation": "Cây cầu sẽ bị đóng để sửa chữa tạm thời trong suốt dịp cuối tuần sắp tới, vì vậy người lái xe phải đi theo các biển chỉ dẫn đường vòng.",
+        "targetWord": "Temporary"
       },
       {
         "id": 109,
         "questionNumber": 109,
-        "question": "Customers who require specialized assistance are encouraged to speak with a _______.",
+        "question": "After consistently exceeding his quarterly sales targets, Mr. Vance received a well-deserved _______ to senior account executive.",
         "options": [
           {
             "key": "A",
-            "text": "Issue a code"
+            "text": "refund"
           },
           {
             "key": "B",
-            "text": "Update"
+            "text": "tenant"
           },
           {
             "key": "C",
-            "text": "Client"
+            "text": "baggage"
           },
           {
             "key": "D",
-            "text": "Available"
+            "text": "promotion"
           }
         ],
         "correctAnswer": "D",
-        "explanation": "Đáp án đúng là [D] \"Available\" (nghĩa: Có sẵn, rảnh rỗi). Cần danh từ chỉ người/chức danh sau mạo từ 'a'.",
-        "translation": "Câu hoàn chỉnh: \"Customers who require specialized assistance are encouraged to speak with a Available.\". Nghĩa: Có sẵn, rảnh rỗi",
-        "targetWord": "Available"
+        "explanation": "Danh từ 'promotion' (sự thăng chức) kết hợp trong cụm 'receive a promotion to...' (nhận được sự thăng chức lên vị trí...) sau khi vượt chỉ tiêu doanh số. Các lựa chọn khác: A. refund (tiền hoàn lại), B. tenant (người thuê), C. baggage (hành lý) sai nghĩa hoàn toàn.",
+        "translation": "Sau khi liên tục vượt các chỉ tiêu bán hàng hàng quý, ông Vance đã nhận được một sự thăng chức xứng đáng lên vị trí chuyên viên quản lý khách hàng cấp cao.",
+        "targetWord": "Promotion"
       },
       {
         "id": 110,
         "questionNumber": 110,
-        "question": "The company announced plans to _______ in order to accommodate its expanding workforce.",
+        "question": "The technician completed the _______ of the new air-conditioning units ahead of schedule.",
         "options": [
           {
             "key": "A",
-            "text": "Database"
+            "text": "installation"
           },
           {
             "key": "B",
-            "text": "Advertising firm"
+            "text": "transaction"
           },
           {
             "key": "C",
-            "text": "Boutique"
+            "text": "permission"
           },
           {
             "key": "D",
-            "text": "Conduct"
+            "text": "subscription"
           }
         ],
-        "correctAnswer": "D",
-        "explanation": "Đáp án đúng là [D] \"Conduct\" (nghĩa: Tiến hành; hành vi). Cụm động từ nguyên mẫu sau 'plans to'.",
-        "translation": "Câu hoàn chỉnh: \"The company announced plans to Conduct in order to accommodate its expanding workforce.\". Nghĩa: Tiến hành; hành vi",
-        "targetWord": "Conduct"
+        "correctAnswer": "A",
+        "explanation": "Danh từ 'installation' (sự lắp đặt) kết hợp tự nhiên với kỹ thuật viên ('technician') và thiết bị điều hòa ('air-conditioning units'). Các từ khác: B. transaction (giao dịch), C. permission (sự cho phép), D. subscription (sự đăng ký thuê bao) không hợp ngữ cảnh.",
+        "translation": "Kỹ thuật viên đã hoàn thành việc lắp đặt các bộ máy điều hòa mới trước thời hạn dự kiến.",
+        "targetWord": "Installation"
       },
       {
         "id": 111,
         "questionNumber": 111,
-        "question": "All travel expenses must be documented and submitted with an official _______.",
+        "question": "All laboratory personnel must adhere strictly to the established safety _______ when handling hazardous chemicals.",
         "options": [
           {
             "key": "A",
-            "text": "Branch"
+            "text": "appliance"
           },
           {
             "key": "B",
-            "text": "Alter"
+            "text": "procedure"
           },
           {
             "key": "C",
-            "text": "Authority"
+            "text": "pedestrian"
           },
           {
             "key": "D",
-            "text": "Employ"
+            "text": "itinerary"
           }
         ],
-        "correctAnswer": "C",
-        "explanation": "Đáp án đúng là [C] \"Authority\" (nghĩa: Cơ quan có thẩm quyền). Cần danh từ chỉ tài liệu/chứng từ sau mạo từ 'an official'.",
-        "translation": "Câu hoàn chỉnh: \"All travel expenses must be documented and submitted with an official Authority.\". Nghĩa: Cơ quan có thẩm quyền",
-        "targetWord": "Authority"
+        "correctAnswer": "B",
+        "explanation": "Cụm từ 'safety procedure' (quy trình an toàn, thủ tục an toàn) đi với động từ 'adhere strictly to' (tuân thủ nghiêm ngặt) khi xử lý hóa chất độc hại ('hazardous chemicals'). Các từ khác: A. appliance (thiết bị gia dụng), C. pedestrian (người đi bộ), D. itinerary (lịch trình chuyến đi) không phù hợp.",
+        "translation": "Tất cả nhân viên phòng thí nghiệm phải tuân thủ nghiêm ngặt quy trình an toàn đã thiết lập khi xử lý các hóa chất độc hại.",
+        "targetWord": "Procedure"
       },
       {
         "id": 112,
         "questionNumber": 112,
-        "question": "The supervisor commended the project team for their _______ during the inspection.",
+        "question": "Many residents prefer to buy fresh, locally grown fruits and vegetables at the weekend _______.",
         "options": [
           {
             "key": "A",
-            "text": "Recruit"
+            "text": "fitness center"
           },
           {
             "key": "B",
-            "text": "Assignment"
+            "text": "corporate boardroom"
           },
           {
             "key": "C",
-            "text": "Freelancer"
+            "text": "farmers' market"
           },
           {
             "key": "D",
-            "text": "Commitment"
+            "text": "security checkpoint"
           }
         ],
-        "correctAnswer": "D",
-        "explanation": "Đáp án đúng là [D] \"Commitment\" (nghĩa: Cam kết). Cần danh từ sau tính từ sở hữu 'their'.",
-        "translation": "Câu hoàn chỉnh: \"The supervisor commended the project team for their Commitment during the inspection.\". Nghĩa: Cam kết",
-        "targetWord": "Commitment"
+        "correctAnswer": "C",
+        "explanation": "Cụm danh từ 'farmers' market' (chợ nông sản) là nơi cư dân mua trái cây và rau củ tươi sạch trồng tại địa phương ('fresh, locally grown fruits and vegetables'). Các địa điểm khác: A. fitness center (phòng tập gym), B. corporate boardroom (phòng họp ban giám đốc), D. security checkpoint (trạm kiểm soát an ninh) không bán rau củ.",
+        "translation": "Nhiều cư dân thích mua các loại trái cây và rau củ tươi được trồng tại địa phương ở chợ nông sản cuối tuần.",
+        "targetWord": "Farmers' market"
       },
       {
         "id": 113,
         "questionNumber": 113,
-        "question": "Prospective applicants are advised to _______ prior to submitting their portfolio.",
+        "question": "The executive boardroom and several smaller conference rooms are situated on the third floor of the building's _______.",
         "options": [
           {
             "key": "A",
-            "text": "Professional"
+            "text": "time card"
           },
           {
             "key": "B",
-            "text": "Pharmacy"
+            "text": "job opening"
           },
           {
             "key": "C",
-            "text": "Appointment"
+            "text": "price tag"
           },
           {
             "key": "D",
-            "text": "Expansion"
+            "text": "west wing"
           }
         ],
-        "correctAnswer": "B",
-        "explanation": "Đáp án đúng là [B] \"Pharmacy\" (nghĩa: Nhà thuốc). Cấu trúc bị động 'are advised to + V-inf'.",
-        "translation": "Câu hoàn chỉnh: \"Prospective applicants are advised to Pharmacy prior to submitting their portfolio.\". Nghĩa: Nhà thuốc",
-        "targetWord": "Pharmacy"
+        "correctAnswer": "D",
+        "explanation": "Cụm danh từ 'west wing' (cánh phía Tây của tòa nhà) là thuật ngữ kiến trúc tiêu chuẩn chỉ khu vực / dãy nhà của một công trình lớn ('third floor of the building's west wing'). Các từ khác: A. time card (thẻ chấm công), B. job opening (vị trí tuyển dụng), C. price tag (nhãn giá) không phải là khu vực tòa nhà.",
+        "translation": "Phòng họp ban giám đốc và một số phòng hội nghị nhỏ hơn nằm ở tầng ba thuộc cánh phía Tây của tòa nhà.",
+        "targetWord": "West wing"
       },
       {
         "id": 114,
         "questionNumber": 114,
-        "question": "To avoid unnecessary delays, international packages must _______ the destination clearly.",
+        "question": "The IT department issued a critical _______ warning all staff members about a recent phishing email scam.",
         "options": [
           {
             "key": "A",
-            "text": "Laundromat"
+            "text": "security alert"
           },
           {
             "key": "B",
-            "text": "Dry cleaner's"
+            "text": "shipping container"
           },
           {
             "key": "C",
-            "text": "Device"
+            "text": "budget surplus"
           },
           {
             "key": "D",
-            "text": "Advertising firm"
+            "text": "retail outlet"
           }
         ],
-        "correctAnswer": "D",
-        "explanation": "Đáp án đúng là [D] \"Advertising firm\" (nghĩa: Công ty quảng cáo). Sau động từ khuyết thiếu 'must' cần động từ nguyên mẫu.",
-        "translation": "Câu hoàn chỉnh: \"To avoid unnecessary delays, international packages must Advertising firm the destination clearly.\". Nghĩa: Công ty quảng cáo",
-        "targetWord": "Advertising firm"
+        "correctAnswer": "A",
+        "explanation": "Cụm danh từ 'security alert' (cảnh báo an ninh) kết hợp với 'IT department' và 'phishing email scam' (chiêu trò lừa đảo qua email). Các phương án khác không liên quan đến việc cảnh báo hiểm họa công nghệ thông tin.",
+        "translation": "Bộ phận công nghệ thông tin đã đưa ra một cảnh báo an ninh quan trọng nhắc nhở tất cả nhân viên về một chiêu trò lừa đảo qua email giả mạo gần đây.",
+        "targetWord": "Security alert"
       },
       {
         "id": 115,
         "questionNumber": 115,
-        "question": "The customer was highly satisfied with the prompt response from our _______ team.",
+        "question": "The property management company plans to _______ the historic hotel lobby to attract more modern travelers.",
         "options": [
           {
             "key": "A",
-            "text": "Coin slot"
+            "text": "hesitate"
           },
           {
             "key": "B",
-            "text": "Process"
+            "text": "renovate"
           },
           {
             "key": "C",
-            "text": "Shut off"
+            "text": "calculate"
           },
           {
             "key": "D",
-            "text": "Stuck"
+            "text": "terminate"
           }
         ],
         "correctAnswer": "B",
-        "explanation": "Đáp án đúng là [B] \"Process\" (nghĩa: Xử lý). Cần danh từ/tính từ bổ nghĩa cho 'team'.",
-        "translation": "Câu hoàn chỉnh: \"The customer was highly satisfied with the prompt response from our Process team.\". Nghĩa: Xử lý",
-        "targetWord": "Process"
+        "explanation": "Động từ 'renovate' (cải tạo, nâng cấp) hoàn toàn phù hợp với tân ngữ sảnh khách sạn lâu đời ('historic hotel lobby') nhằm thu hút khách du lịch. Các từ khác: A. hesitate (do dự), C. calculate (tính toán), D. terminate (chấm dứt) không phù hợp.",
+        "translation": "Công ty quản lý bất động sản dự định cải tạo sảnh khách sạn cổ kính nhằm thu hút thêm du khách hiện đại.",
+        "targetWord": "Renovate"
       },
       {
         "id": 116,
         "questionNumber": 116,
-        "question": "Management decided to _______ until market conditions stabilize next quarter.",
+        "question": "If you encounter an unexpected equipment breakdown, you must notify your immediate _______ right away.",
         "options": [
           {
             "key": "A",
-            "text": "Coin slot"
+            "text": "pedestrian"
           },
           {
             "key": "B",
-            "text": "Refund"
+            "text": "spectator"
           },
           {
             "key": "C",
-            "text": "Emerging market"
+            "text": "supervisor"
           },
           {
             "key": "D",
-            "text": "Blocked"
+            "text": "passenger"
           }
         ],
         "correctAnswer": "C",
-        "explanation": "Đáp án đúng là [C] \"Emerging market\" (nghĩa: Thị trường đang nổi). Cấu trúc 'decided to + V-inf'.",
-        "translation": "Câu hoàn chỉnh: \"Management decided to Emerging market until market conditions stabilize next quarter.\". Nghĩa: Thị trường đang nổi",
-        "targetWord": "Emerging market"
+        "explanation": "Cụm từ 'immediate supervisor' (người giám sát trực tiếp / cấp trên trực tiếp) là người lao động cần báo cáo ngay khi xảy ra sự cố máy móc ('equipment breakdown'). Các từ khác: A. pedestrian (người đi bộ), B. spectator (khán giả), D. passenger (hành khách) không có vai trò quản lý nơi làm việc.",
+        "translation": "Nếu bạn gặp sự cố hỏng hóc thiết bị bất ngờ, bạn phải thông báo ngay cho người giám sát trực tiếp của mình.",
+        "targetWord": "Supervisor"
       },
       {
         "id": 117,
         "questionNumber": 117,
-        "question": "Please make sure to _______ before leaving the conference room.",
+        "question": "Ms. Larson will be _______ of coordinating the regional marketing campaign for our new product line.",
         "options": [
           {
             "key": "A",
-            "text": "Leftover"
+            "text": "on demand"
           },
           {
             "key": "B",
-            "text": "Awards banquet"
+            "text": "in advance"
           },
           {
             "key": "C",
-            "text": "Proof"
+            "text": "at fault"
           },
           {
             "key": "D",
-            "text": "Staff orientation"
+            "text": "in charge"
           }
         ],
-        "correctAnswer": "C",
-        "explanation": "Đáp án đúng là [C] \"Proof\" (nghĩa: Bằng chứng, giấy tờ chứng minh). Cấu trúc 'make sure to + V-inf'.",
-        "translation": "Câu hoàn chỉnh: \"Please make sure to Proof before leaving the conference room.\". Nghĩa: Bằng chứng, giấy tờ chứng minh",
-        "targetWord": "Proof"
+        "correctAnswer": "D",
+        "explanation": "Cụm thành ngữ cố định 'be in charge of + V-ing/noun' (phụ trách việc gì) đi với 'coordinating the regional marketing campaign' (điều phối chiến dịch tiếp thị khu vực). Các cụm khác: A. on demand (theo yêu cầu), B. in advance (trước), C. at fault (có lỗi) không đi với cấu trúc 'be ... of V-ing' với nghĩa này.",
+        "translation": "Cô Larson sẽ phụ trách việc điều phối chiến dịch tiếp thị khu vực cho dòng sản phẩm mới của chúng tôi.",
+        "targetWord": "In charge"
       },
       {
         "id": 118,
         "questionNumber": 118,
-        "question": "A thorough review of the system revealed several areas that require _______ attention.",
+        "question": "All visitors entering the corporate research facility must exchange an official photo ID for a temporary _______.",
         "options": [
           {
             "key": "A",
-            "text": "Funding proposal"
+            "text": "guest pass"
           },
           {
             "key": "B",
-            "text": "Fundraiser"
+            "text": "price tag"
           },
           {
             "key": "C",
-            "text": "Agenda"
+            "text": "safety hazard"
           },
           {
             "key": "D",
-            "text": "Demonstration"
+            "text": "sales quota"
           }
         ],
-        "correctAnswer": "C",
-        "explanation": "Đáp án đúng là [C] \"Agenda\" (nghĩa: Chương trình nghị sự, lịch trình). Cần tính từ đứng trước danh từ 'attention'.",
-        "translation": "Câu hoàn chỉnh: \"A thorough review of the system revealed several areas that require Agenda attention.\". Nghĩa: Chương trình nghị sự, lịch trình",
-        "targetWord": "Agenda"
+        "correctAnswer": "A",
+        "explanation": "Cụm danh từ 'guest pass' (thẻ dành cho khách) là loại thẻ tạm thời được phát cho khách tham quan ('visitors entering the facility') sau khi xuất trình căn cước có ảnh. Các lựa chọn khác: B. price tag (nhãn giá), C. safety hazard (mối nguy hiểm an toàn), D. sales quota (chỉ tiêu bán hàng) hoàn toàn không phù hợp.",
+        "translation": "Tất cả khách tham quan vào cơ sở nghiên cứu của công ty phải đổi giấy tờ tùy thân có ảnh chính thức để lấy thẻ khách tạm thời.",
+        "targetWord": "Guest pass"
       },
       {
         "id": 119,
         "questionNumber": 119,
-        "question": "The human resources division has issued new guidelines regarding _______ in the workplace.",
+        "question": "Professor Gable hired an experienced _______ to help collect data for the upcoming environmental study.",
         "options": [
           {
             "key": "A",
-            "text": "Preliminary figures"
+            "text": "security guard"
           },
           {
             "key": "B",
-            "text": "Handout"
+            "text": "research assistant"
           },
           {
             "key": "C",
-            "text": "Prototype"
+            "text": "flight attendant"
           },
           {
             "key": "D",
-            "text": "Invest"
+            "text": "real estate agent"
           }
         ],
-        "correctAnswer": "D",
-        "explanation": "Đáp án đúng là [D] \"Invest\" (nghĩa: Đầu tư). Sau giới từ 'regarding' cần danh từ hoặc V-ing.",
-        "translation": "Câu hoàn chỉnh: \"The human resources division has issued new guidelines regarding Invest in the workplace.\". Nghĩa: Đầu tư",
-        "targetWord": "Invest"
+        "correctAnswer": "B",
+        "explanation": "Cụm danh từ 'research assistant' (trợ lý nghiên cứu) phù hợp nhất với ngữ cảnh giáo sư ('Professor Gable') thuê để giúp thu thập dữ liệu cho cuộc nghiên cứu môi trường ('collect data for the study'). Các ngành nghề khác không khớp chuyên môn nghiên cứu.",
+        "translation": "Giáo sư Gable đã thuê một trợ lý nghiên cứu giàu kinh nghiệm để giúp thu thập dữ liệu cho nghiên cứu môi trường sắp tới.",
+        "targetWord": "Research assistant"
       },
       {
         "id": 120,
         "questionNumber": 120,
-        "question": "Clients are requested to pay the _______ before the project initiation phase begins.",
+        "question": "Any employee seeking information regarding health insurance coverage should speak directly with the _______.",
         "options": [
           {
             "key": "A",
-            "text": "Structural design"
+            "text": "travel agent"
           },
           {
             "key": "B",
-            "text": "Applicant"
+            "text": "flight attendant"
           },
           {
             "key": "C",
-            "text": "Deadline"
+            "text": "personal trainer"
           },
           {
             "key": "D",
-            "text": "Expert"
+            "text": "personnel manager"
           }
         ],
-        "correctAnswer": "B",
-        "explanation": "Đáp án đúng là [B] \"Applicant\" (nghĩa: Người nộp đơn xin việc). Cần cụm danh từ chỉ phí/chi phí làm tân ngữ của 'pay'.",
-        "translation": "Câu hoàn chỉnh: \"Clients are requested to pay the Applicant before the project initiation phase begins.\". Nghĩa: Người nộp đơn xin việc",
-        "targetWord": "Applicant"
+        "correctAnswer": "D",
+        "explanation": "Cụm danh từ 'personnel manager' (trưởng phòng nhân sự / quản lý nhân sự) là người phụ trách các vấn đề phúc lợi, chế độ bảo hiểm y tế của nhân viên ('health insurance coverage'). Các lựa chọn khác không thuộc bộ phận quản lý nhân sự công ty.",
+        "translation": "Bất kỳ nhân viên nào muốn tìm hiểu thông tin về quyền lợi bảo hiểm y tế nên trao đổi trực tiếp với trưởng phòng nhân sự.",
+        "targetWord": "Personnel manager"
       },
       {
         "id": 121,
         "questionNumber": 121,
-        "question": "The logistics company has agreed to _______ all damaged merchandise immediately.",
+        "question": "Each prospective _______ must submit three professional letters of recommendation along with an updated résumé.",
         "options": [
           {
             "key": "A",
-            "text": "Consult"
+            "text": "job applicant"
           },
           {
             "key": "B",
-            "text": "Steel"
+            "text": "flight attendant"
           },
           {
             "key": "C",
-            "text": "Instructor"
+            "text": "tour guide"
           },
           {
             "key": "D",
-            "text": "Exhausted"
+            "text": "interior designer"
           }
         ],
-        "correctAnswer": "C",
-        "explanation": "Đáp án đúng là [C] \"Instructor\" (nghĩa: Người hướng dẫn). Cấu trúc 'agreed to + V-inf'.",
-        "translation": "Câu hoàn chỉnh: \"The logistics company has agreed to Instructor all damaged merchandise immediately.\". Nghĩa: Người hướng dẫn",
-        "targetWord": "Instructor"
+        "correctAnswer": "A",
+        "explanation": "Cụm danh từ 'job applicant' (người nộp đơn xin việc / ứng viên) kết hợp tự nhiên với việc nộp thư giới thiệu chuyên môn và sơ yếu lý lịch ('résumé'). Các nghề nghiệp cụ thể khác không phù hợp làm chủ thể tổng quát cho quy trình tuyển dụng này.",
+        "translation": "Mỗi người nộp đơn xin việc tiềm năng phải nộp ba bức thư giới thiệu chuyên môn cùng với sơ yếu lý lịch đã được cập nhật.",
+        "targetWord": "Job applicant"
       },
       {
         "id": 122,
         "questionNumber": 122,
-        "question": "Our senior consultant will provide _______ on optimizing your business workflow.",
+        "question": "Because Mr. Tanaka is currently _______ due to a business trip, his deputy will oversee the weekly department meeting.",
         "options": [
           {
             "key": "A",
-            "text": "Achievement"
+            "text": "accurate"
           },
           {
             "key": "B",
-            "text": "Challenge"
+            "text": "unavailable"
           },
           {
             "key": "C",
-            "text": "Promotion"
+            "text": "temporary"
           },
           {
             "key": "D",
-            "text": "Deliberately"
+            "text": "mandatory"
           }
         ],
-        "correctAnswer": "D",
-        "explanation": "Đáp án đúng là [D] \"Deliberately\" (nghĩa: Một cách cố ý, có tính toán). Cần danh từ sau 'provide' kết hợp với giới từ 'on'.",
-        "translation": "Câu hoàn chỉnh: \"Our senior consultant will provide Deliberately on optimizing your business workflow.\". Nghĩa: Một cách cố ý, có tính toán",
-        "targetWord": "Deliberately"
+        "correctAnswer": "B",
+        "explanation": "Tính từ 'unavailable' (không có mặt / bận) giải thích nguyên nhân ông Tanaka đi công tác ('due to a business trip') nên cấp phó của ông phải điều hành cuộc họp. Các từ khác: A. accurate (chính xác), C. temporary (tạm thời), D. mandatory (bắt buộc) không phù hợp về ngữ nghĩa.",
+        "translation": "Vì ông Tanaka hiện đang vắng mặt do có chuyến công tác, nên cấp phó của ông sẽ điều hành cuộc họp phòng ban hàng tuần.",
+        "targetWord": "Unavailable"
       },
       {
         "id": 123,
         "questionNumber": 123,
-        "question": "Visitors must check in at the _______ upon entering the headquarters building.",
+        "question": "After undergoing minor knee surgery, Dr. Evans took a two-week _______ to recover at home.",
         "options": [
           {
             "key": "A",
-            "text": "Suitable"
+            "text": "press release"
           },
           {
             "key": "B",
-            "text": "Vacant"
+            "text": "safety inspection"
           },
           {
             "key": "C",
-            "text": "Management"
+            "text": "medical leave"
           },
           {
             "key": "D",
-            "text": "Appoint"
+            "text": "marketing survey"
           }
         ],
-        "correctAnswer": "D",
-        "explanation": "Đáp án đúng là [D] \"Appoint\" (nghĩa: Bổ nhiệm, chỉ định). Cần danh từ chỉ địa điểm/vị trí sau giới từ 'at the'.",
-        "translation": "Câu hoàn chỉnh: \"Visitors must check in at the Appoint upon entering the headquarters building.\". Nghĩa: Bổ nhiệm, chỉ định",
-        "targetWord": "Appoint"
+        "correctAnswer": "C",
+        "explanation": "Cụm danh từ 'medical leave' (nghỉ phép vì lý do y tế / nghỉ ốm) đi với 'recover at home' (hồi phục tại nhà) sau ca phẫu thuật nhỏ ở đầu gối. Các cụm khác: A. press release (thông cáo báo chí), B. safety inspection (thanh tra an toàn), D. marketing survey (khảo sát tiếp thị) không hợp ngữ cảnh nghỉ ốm.",
+        "translation": "Sau khi trải qua ca phẫu thuật đầu gối nhỏ, Bác sĩ Evans đã nghỉ phép vì lý do y tế hai tuần để hồi phục sức khỏe tại nhà.",
+        "targetWord": "Medical leave"
       },
       {
         "id": 124,
         "questionNumber": 124,
-        "question": "The annual budget proposal will be presented to the board for _______ next Tuesday.",
+        "question": "Representatives from over twenty global logistics companies will attend the annual supply chain _______ in Singapore.",
         "options": [
           {
             "key": "A",
-            "text": "Residential"
+            "text": "receipt"
           },
           {
             "key": "B",
-            "text": "Tote bag"
+            "text": "brochure"
           },
           {
             "key": "C",
-            "text": "Terminal"
+            "text": "invoice"
           },
           {
             "key": "D",
-            "text": "Commercial area"
+            "text": "conference"
           }
         ],
-        "correctAnswer": "B",
-        "explanation": "Đáp án đúng là [B] \"Tote bag\" (nghĩa: Túi vải xách tay). Sau giới từ 'for' cần danh từ chỉ sự phê duyệt/xem xét.",
-        "translation": "Câu hoàn chỉnh: \"The annual budget proposal will be presented to the board for Tote bag next Tuesday.\". Nghĩa: Túi vải xách tay",
-        "targetWord": "Tote bag"
+        "correctAnswer": "D",
+        "explanation": "Danh từ 'conference' (hội nghị) kết hợp với 'annual supply chain conference' (hội nghị chuỗi cung ứng thường niên), đi cùng động từ 'attend' (tham dự). Các từ khác: A. receipt (biên nhận), B. brochure (cuốn sách quảng cáo nhỏ), C. invoice (hóa đơn) không phải là sự kiện để tham dự.",
+        "translation": "Đại diện của hơn hai mươi công ty hậu cần toàn cầu sẽ tham dự hội nghị chuỗi cung ứng thường niên tại Singapore.",
+        "targetWord": "Conference"
       },
       {
         "id": 125,
         "questionNumber": 125,
-        "question": "Participants in the training session are asked to _______ with their assigned groups.",
+        "question": "The legal team scheduled an emergency consultation with their most important corporate _______ to discuss the merger terms.",
         "options": [
           {
             "key": "A",
-            "text": "Participate"
+            "text": "client"
           },
           {
             "key": "B",
-            "text": "High demand"
+            "text": "gadget"
           },
           {
             "key": "C",
-            "text": "Concern"
+            "text": "detour"
           },
           {
             "key": "D",
-            "text": "Fund"
+            "text": "parcel"
           }
         ],
         "correctAnswer": "A",
-        "explanation": "Đáp án đúng là [A] \"Participate\" (nghĩa: Tham gia). Cấu trúc 'are asked to + V-inf'.",
-        "translation": "Câu hoàn chỉnh: \"Participants in the training session are asked to Participate with their assigned groups.\". Nghĩa: Tham gia",
-        "targetWord": "Participate"
+        "explanation": "Danh từ 'client' (khách hàng, thân chủ) là người / đơn vị làm việc với đội ngũ pháp lý ('legal team scheduled a consultation with corporate client'). Các từ khác: B. gadget (tiện ích/thiết bị nhỏ), C. detour (đường vòng), D. parcel (bưu kiện) không thể là đối tác tư vấn pháp lý.",
+        "translation": "Đội ngũ pháp lý đã lên lịch một cuộc tư vấn khẩn cấp với khách hàng doanh nghiệp quan trọng nhất của họ để thảo luận về các điều khoản sáp nhập.",
+        "targetWord": "Client"
       },
       {
         "id": 126,
         "questionNumber": 126,
-        "question": "The executive committee reached a unanimous agreement to _______ the partnership.",
+        "question": "The building security office will _______ to each new employee to grant them access to the underground garage.",
         "options": [
           {
             "key": "A",
-            "text": "Obtain"
+            "text": "conduct a poll"
           },
           {
             "key": "B",
-            "text": "Structural design"
+            "text": "issue a code"
           },
           {
             "key": "C",
-            "text": "Invest"
+            "text": "sign a lease"
           },
           {
             "key": "D",
-            "text": "Supplier"
+            "text": "place an order"
           }
         ],
         "correctAnswer": "B",
-        "explanation": "Đáp án đúng là [B] \"Structural design\" (nghĩa: Thiết kế cấu trúc). Cấu trúc 'agreement to + V-inf'.",
-        "translation": "Câu hoàn chỉnh: \"The executive committee reached a unanimous agreement to Structural design the partnership.\". Nghĩa: Thiết kế cấu trúc",
-        "targetWord": "Structural design"
+        "explanation": "Cụm động từ 'issue a code' (cấp một mã số) kết hợp với mục đích cho phép ra vào nhà để xe ngầm ('grant access to the underground garage'). Các lựa chọn khác: A. conduct a poll (tiến hành thăm dò), C. sign a lease (ký hợp đồng thuê), D. place an order (đặt hàng) không liên quan đến việc cấp quyền ra vào.",
+        "translation": "Văn phòng an ninh tòa nhà sẽ cấp một mã số cho mỗi nhân viên mới để cho phép họ ra vào nhà để xe dưới tầng hầm.",
+        "targetWord": "Issue a code"
       },
       {
         "id": 127,
         "questionNumber": 127,
-        "question": "Before boarding the corporate shuttle, passengers must present their _______.",
+        "question": "The human resources department sent an email reminding all employees to _______ their personal contact details in the portal.",
         "options": [
           {
             "key": "A",
-            "text": "Real estate agent"
+            "text": "hesitate"
           },
           {
             "key": "B",
-            "text": "Obtain"
+            "text": "terminate"
           },
           {
             "key": "C",
-            "text": "Budget"
+            "text": "update"
           },
           {
             "key": "D",
-            "text": "Line of credit"
+            "text": "speculate"
           }
         ],
         "correctAnswer": "C",
-        "explanation": "Đáp án đúng là [C] \"Budget\" (nghĩa: Ngân sách). Cần danh từ chỉ vé/thẻ thông hành sau 'their'.",
-        "translation": "Câu hoàn chỉnh: \"Before boarding the corporate shuttle, passengers must present their Budget.\". Nghĩa: Ngân sách",
-        "targetWord": "Budget"
+        "explanation": "Động từ 'update' (cập nhật) kết hợp với tân ngữ 'personal contact details' (thông tin liên hệ cá nhân). Các động từ khác: A. hesitate (do dự), B. terminate (chấm dứt), D. speculate (suy đoán) không hợp ngữ cảnh chỉnh sửa thông tin trên cổng điện tử.",
+        "translation": "Phòng nhân sự đã gửi một email nhắc nhở tất cả nhân viên cập nhật thông tin liên hệ cá nhân của họ trên cổng thông tin nội bộ.",
+        "targetWord": "Update"
       },
       {
         "id": 128,
         "questionNumber": 128,
-        "question": "The technician worked diligently to _______ the malfunctioning equipment by noon.",
+        "question": "Our IT specialist spent the entire afternoon restoring corrupted customer records in the central _______.",
         "options": [
           {
             "key": "A",
-            "text": "Video conference"
+            "text": "brochure"
           },
           {
             "key": "B",
-            "text": "Field survey"
+            "text": "database"
           },
           {
             "key": "C",
-            "text": "Venue"
+            "text": "itinerary"
           },
           {
             "key": "D",
-            "text": "Graphic"
+            "text": "hallway"
           }
         ],
         "correctAnswer": "B",
-        "explanation": "Đáp án đúng là [B] \"Field survey\" (nghĩa: Khảo sát thực địa). Cấu trúc 'worked diligently to + V-inf'.",
-        "translation": "Câu hoàn chỉnh: \"The technician worked diligently to Field survey the malfunctioning equipment by noon.\". Nghĩa: Khảo sát thực địa",
-        "targetWord": "Field survey"
+        "explanation": "Danh từ 'database' (cơ sở dữ liệu) kết hợp với 'restoring customer records' (khôi phục hồ sơ khách hàng) và 'IT specialist'. Các lựa chọn khác: A. brochure (tờ gấp), C. itinerary (lịch trình), D. hallway (hành lang) không phải là nơi lưu trữ dữ liệu số của khách hàng.",
+        "translation": "Chuyên gia công nghệ thông tin của chúng tôi đã dành cả buổi chiều để khôi phục các hồ sơ khách hàng bị lỗi trong cơ sở dữ liệu trung tâm.",
+        "targetWord": "Database"
       },
       {
         "id": 129,
         "questionNumber": 129,
-        "question": "All feedback received from recent surveys indicates a strong preference for _______.",
+        "question": "To increase brand awareness before the product rollout, the retail chain hired a renowned _______.",
         "options": [
           {
             "key": "A",
-            "text": "Evaluate"
+            "text": "catering service"
           },
           {
             "key": "B",
-            "text": "Incentive"
+            "text": "shipping dock"
           },
           {
             "key": "C",
-            "text": "Acquire"
+            "text": "advertising firm"
           },
           {
             "key": "D",
-            "text": "Car dealership"
+            "text": "dental clinic"
           }
         ],
         "correctAnswer": "C",
-        "explanation": "Đáp án đúng là [C] \"Acquire\" (nghĩa: Thu được, đạt được). Sau giới từ 'for' cần danh từ hoặc cụm danh từ.",
-        "translation": "Câu hoàn chỉnh: \"All feedback received from recent surveys indicates a strong preference for Acquire.\". Nghĩa: Thu được, đạt được",
-        "targetWord": "Acquire"
+        "explanation": "Cụm danh từ 'advertising firm' (công ty quảng cáo) kết hợp với mục tiêu tăng cường nhận diện thương hiệu ('increase brand awareness before product rollout'). Các đơn vị khác: A. catering service (dịch vụ ăn uống), B. shipping dock (bến bốc dỡ hàng), D. dental clinic (phòng khám nha khoa) không thực hiện dịch vụ truyền thông tiếp thị.",
+        "translation": "Để tăng mức độ nhận biết thương hiệu trước khi tung sản phẩm mới ra thị trường, chuỗi bán lẻ đã thuê một công ty quảng cáo danh tiếng.",
+        "targetWord": "Advertising firm"
       },
       {
         "id": 130,
         "questionNumber": 130,
-        "question": "The branch manager expressed gratitude for the team's _______ during peak hours.",
+        "question": "Ms. Chen opened an upscale clothing _______ downtown that features exclusive designer apparel and handcrafted jewelry.",
         "options": [
           {
             "key": "A",
-            "text": "Adapt"
+            "text": "warehouse"
           },
           {
             "key": "B",
-            "text": "Pharmacy"
+            "text": "highway"
           },
           {
             "key": "C",
-            "text": "Spa"
+            "text": "terminal"
           },
           {
             "key": "D",
-            "text": "Clinic"
+            "text": "boutique"
           }
         ],
-        "correctAnswer": "A",
-        "explanation": "Đáp án đúng là [A] \"Adapt\" (nghĩa: Thích ứng, điều chỉnh). Cần danh từ sau 'the team's'.",
-        "translation": "Câu hoàn chỉnh: \"The branch manager expressed gratitude for the team's Adapt during peak hours.\". Nghĩa: Thích ứng, điều chỉnh",
-        "targetWord": "Adapt"
+        "correctAnswer": "D",
+        "explanation": "Danh từ 'boutique' (cửa hàng thời trang nhỏ/độc đáo) đi cùng với 'upscale clothing' và trang phục thiết kế độc quyền ('exclusive designer apparel'). Các từ khác: A. warehouse (nhà kho), B. highway (đường cao tốc), C. terminal (nhà ga) không phù hợp.",
+        "translation": "Cô Chen đã khai trương một cửa hàng thời trang cao cấp ở trung tâm thành phố chuyên bán trang phục thiết kế độc quyền và đồ trang sức thủ công.",
+        "targetWord": "Boutique"
       }
     ]
   },
@@ -831,10 +831,11 @@
     "passages": [
       {
         "passageId": 1,
-        "passageType": "Email Announcement",
-        "title": "Notice of Systems Modernization and Staff Guidelines",
-        "passage": "To: All Department Staff\nFrom: Operations Directorate\nDate: October 27\nSubject: Scheduled System Upgrades\n\nPlease be advised that our IT infrastructure team will [131] essential server upgrades this coming weekend. During this transition window, all personnel are instructed to [132] their ongoing project records prior to Friday at 6:00 PM.\n\n[133]. We appreciate your patience and assistance as we strive to create a more [134] operational environment for the entire company.\n\nSincerely,\nDirector of IT",
-        "passageTranslation": "Gửi: Toàn thể nhân viên phòng ban\nTừ: Ban Giám đốc Vận hành\nNgày: 27 tháng 10\nTiêu đề: Lịch nâng cấp hệ thống\n\nXin lưu ý rằng đội ngũ hạ tầng CNTT sẽ [131] các nâng cấp máy chủ quan trọng vào cuối tuần này. Trong khoảng thời gian chuyển giao này, toàn bộ nhân sự được hướng dẫn [132] các hồ sơ dự án đang thực hiện trước 18:00 chiều thứ Sáu.\n\n[133]. Chúng tôi trân trọng sự kiên nhẫn và giúp đỡ của các bạn khi chúng tôi nỗ lực xây dựng môi trường vận hành [134] hơn cho toàn công ty.\n\nTrân trọng,\nGiám đốc CNTT",
+        "passageType": "Email Notice",
+        "title": "Scheduled IT Server Maintenance and Protocol",
+        "offset": 131,
+        "passage": "To: All Company Employees\nFrom: Enterprise Technology Directorate\nDate: October 28\nSubject: Scheduled Network Infrastructure Upgrades\n\nPlease be advised that our IT engineering team will [131] a major maintenance cycle on our central servers this coming Saturday, beginning at 10:00 PM. During this six-hour window, access to company databases will be temporarily restricted.\n\nTo prevent potential data loss, all staff members are strongly instructed to save and back up their project files [132] Friday at 5:00 PM. [133]. We sincerely appreciate your patience and cooperation as we work to build a more [134] digital workspace for the entire organization.\n\nBest regards,\nNetwork Operations Team",
+        "translation": "Gửi: Toàn thể nhân viên công ty\nTừ: Ban Giám đốc Công nghệ Doanh nghiệp\nNgày: 28 tháng 10\nTiêu đề: Lịch nâng cấp hạ tầng mạng\n\nXin lưu ý rằng đội ngũ kỹ thuật CNTT sẽ [131] một đợt bảo trì lớn trên các máy chủ trung tâm vào thứ Bảy tới, bắt đầu từ 22:00. Trong khoảng thời gian 6 tiếng này, việc truy cập vào cơ sở dữ liệu công ty sẽ tạm thời bị giới hạn.\n\nĐể tránh mất mát dữ liệu, tất cả nhân viên được hướng dẫn lưu và sao lưu các tệp dự án của mình [132] lúc 17:00 chiều thứ Sáu. [133]. Chúng tôi chân thành cảm ơn sự kiên nhẫn và hợp tác của các bạn khi chúng tôi nỗ lực xây dựng môi trường làm việc số [134] hơn cho toàn tổ chức.\n\nTrân trọng,\nĐội ngũ Vận hành Mạng",
         "questions": [
           {
             "id": 131,
@@ -843,24 +844,23 @@
             "options": [
               {
                 "key": "A",
-                "text": "overlook"
+                "text": "conduct"
               },
               {
                 "key": "B",
-                "text": "diminish"
+                "text": "conducting"
               },
               {
                 "key": "C",
-                "text": "abandon"
+                "text": "conducted"
               },
               {
                 "key": "D",
-                "text": "Approximate"
+                "text": "conductor"
               }
             ],
-            "correctAnswer": "D",
-            "explanation": "Vị trí [131] cần từ \"Approximate\" mang nghĩa: Xấp xỉ, ước chừng, hoàn toàn chuẩn xác với ngữ cảnh thông báo.",
-            "targetWord": "Approximate"
+            "correctAnswer": "A",
+            "explanation": "Sau trợ động từ khuyết thiếu 'will' bắt buộc dùng động từ nguyên thể không 'to' (conduct - tiến hành)."
           },
           {
             "id": 132,
@@ -869,24 +869,23 @@
             "options": [
               {
                 "key": "A",
-                "text": "eliminate"
+                "text": "before"
               },
               {
                 "key": "B",
-                "text": "postpone"
+                "text": "while"
               },
               {
                 "key": "C",
-                "text": "Accuracy"
+                "text": "among"
               },
               {
                 "key": "D",
-                "text": "neglect"
+                "text": "during"
               }
             ],
-            "correctAnswer": "C",
-            "explanation": "Vị trí [132] chọn \"Accuracy\" (nghĩa: Sự chính xác) phù hợp về ngữ pháp và kết hợp từ trong văn bản.",
-            "targetWord": "Accuracy"
+            "correctAnswer": "A",
+            "explanation": "Giới từ chỉ mốc thời gian hoàn thành trước một thời điểm: 'before Friday at 5:00 PM' (trước 17:00 chiều thứ Sáu)."
           },
           {
             "id": 133,
@@ -895,24 +894,23 @@
             "options": [
               {
                 "key": "A",
-                "text": "The kitchen pantry will be closed for sanitation."
+                "text": "Detailed step-by-step backup instructions can be found on the internal employee portal."
               },
               {
                 "key": "B",
-                "text": "Parking permits are strictly non-transferable between vehicles."
+                "text": "The annual holiday gala has been postponed until the next quarter."
               },
               {
                 "key": "C",
-                "text": "The annual company dinner will be postponed until winter."
+                "text": "Parking permits are strictly non-transferable between different vehicles."
               },
               {
                 "key": "D",
-                "text": "Detailed step-by-step instructions have been uploaded to the shared folder."
+                "text": "Flight itineraries must be submitted directly to accounting."
               }
             ],
-            "correctAnswer": "D",
-            "explanation": "Câu điền [133] cung cấp thông tin liên kết hợp lý nhất về hướng dẫn triển khai cho toàn thể nhân sự.",
-            "targetWord": "instructions"
+            "correctAnswer": "A",
+            "explanation": "Câu điền [133] liên kết chặt chẽ với câu trước về việc hướng dẫn nhân viên cách sao lưu tệp dự án qua cổng thông tin."
           },
           {
             "id": 134,
@@ -921,33 +919,33 @@
             "options": [
               {
                 "key": "A",
-                "text": "uncertainty"
+                "text": "efficient"
               },
               {
                 "key": "B",
-                "text": "complexity"
+                "text": "efficiency"
               },
               {
                 "key": "C",
-                "text": "hesitation"
+                "text": "efficiently"
               },
               {
                 "key": "D",
-                "text": "Automated"
+                "text": "inefficiency"
               }
             ],
-            "correctAnswer": "D",
-            "explanation": "Vị trí [134] yêu cầu danh từ/tính từ \"Automated\" (Tự động hóa) thể hiện cam kết chất lượng môi trường làm việc.",
-            "targetWord": "Automated"
+            "correctAnswer": "A",
+            "explanation": "Cần một tính từ đứng sau 'more' và trước cụm danh từ 'digital workspace'. 'Efficient' (hiệu quả) là tính từ chuẩn xác."
           }
         ]
       },
       {
         "passageId": 2,
         "passageType": "Business Letter",
-        "title": "Confirmation of Annual Service Agreement and Pricing",
-        "passage": "Dear Valued Partner,\n\nWe are writing to formalize our agreement regarding the upcoming fiscal year. Our executive committee has reviewed your proposal and decided to [135] the terms outlined in the memorandum. We believe that this partnership will [136] substantial mutual benefits for both organizations.\n\n[137]. Please do not hesitate to contact our representative if you require further [138] regarding billing arrangements.\n\nWarm regards,\nCorporate Relations Office",
-        "passageTranslation": "Kính gửi Quý đối tác,\n\nChúng tôi viết thư này để chính thức hóa thỏa thuận cho năm tài chính sắp tới. Ban điều hành của chúng tôi đã xem xét đề xuất và quyết định [135] các điều khoản nêu trong bản ghi nhớ. Chúng tôi tin rằng quan hệ đối tác này sẽ [136] những lợi ích to lớn cho cả hai bên.\n\n[137]. Xin đừng ngần ngại liên hệ đại diện của chúng tôi nếu bạn cần thêm [138] về các thỏa thuận thanh toán.\n\nTrân trọng,\nVăn phòng Quan hệ Doanh nghiệp",
+        "title": "Confirmation of Annual Service Agreement",
+        "offset": 135,
+        "passage": "Dear Mr. Gallagher,\n\nWe are pleased to inform you that Apex Logistics has approved the renewal of our annual corporate partnership. Over the past twelve months, your dedicated team has consistently [135] our expectations with prompt deliveries and professional service.\n\nEnclosed with this letter is the revised service agreement detailing our updated freight rates. Please review the contract terms and return a signed copy [136] our office within ten business days. [137]. Should you have any questions regarding the billing schedule, do not hesitate to contact our account representative [138].\n\nSincerely,\nDirector of Corporate Partnerships",
+        "translation": "Kính gửi ông Gallagher,\n\nChúng tôi vui mừng thông báo rằng Apex Logistics đã phê duyệt việc gia hạn hợp đồng đối tác thường niên. Trong 12 tháng qua, đội ngũ của bạn đã liên tục [135] mong đợi của chúng tôi bằng việc giao hàng đúng hẹn và dịch vụ chuyên nghiệp.\n\nĐính kèm thư này là bản thỏa thuận dịch vụ cập nhật chi tiết bảng giá vận chuyển mới. Vui lòng xem xét các điều khoản và gửi lại bản sao có chữ ký [136] văn phòng chúng tôi trong vòng 10 ngày làm việc. [137]. Nếu bạn có bất kỳ thắc mắc nào về lịch thanh toán, đừng ngần ngại liên hệ với đại diện khách hàng của chúng tôi [138].\n\nTrân trọng,\nGiám đốc Quan hệ Doanh nghiệp",
         "questions": [
           {
             "id": 135,
@@ -956,24 +954,23 @@
             "options": [
               {
                 "key": "A",
-                "text": "Redesigned"
+                "text": "exceeded"
               },
               {
                 "key": "B",
-                "text": "diminish"
+                "text": "exceeding"
               },
               {
                 "key": "C",
-                "text": "overlook"
+                "text": "excessive"
               },
               {
                 "key": "D",
-                "text": "abandon"
+                "text": "exceed"
               }
             ],
             "correctAnswer": "A",
-            "explanation": "Vị trí [135] cần từ \"Redesigned\" mang nghĩa: Được thiết kế lại, hoàn toàn chuẩn xác với ngữ cảnh thông báo.",
-            "targetWord": "Redesigned"
+            "explanation": "Thì hiện tại hoàn thành 'has consistently + V-ed'. Động từ 'exceeded' (vượt trên mong đợi) phù hợp cả ngữ pháp lẫn ngữ nghĩa."
           },
           {
             "id": 136,
@@ -982,24 +979,23 @@
             "options": [
               {
                 "key": "A",
-                "text": "eliminate"
+                "text": "to"
               },
               {
                 "key": "B",
-                "text": "Pharmacy"
+                "text": "at"
               },
               {
                 "key": "C",
-                "text": "postpone"
+                "text": "of"
               },
               {
                 "key": "D",
-                "text": "neglect"
+                "text": "by"
               }
             ],
-            "correctAnswer": "B",
-            "explanation": "Vị trí [136] chọn \"Pharmacy\" (nghĩa: Nhà thuốc) phù hợp về ngữ pháp và kết hợp từ trong văn bản.",
-            "targetWord": "Pharmacy"
+            "correctAnswer": "A",
+            "explanation": "Cấu trúc 'return something to somewhere' (gửi trả cái gì về đâu). Giới từ 'to' là chuẩn xác."
           },
           {
             "id": 137,
@@ -1008,24 +1004,23 @@
             "options": [
               {
                 "key": "A",
-                "text": "The kitchen pantry will be closed for sanitation."
+                "text": "Once received, we will finalize your account status and dispatch the shipment."
               },
               {
                 "key": "B",
-                "text": "Parking permits are strictly non-transferable between vehicles."
+                "text": "The weather forecast predicts heavy snowfall in the northern region."
               },
               {
                 "key": "C",
-                "text": "The annual company dinner will be postponed until winter."
+                "text": "Visitors must wear protective helmets while entering the construction site."
               },
               {
                 "key": "D",
-                "text": "Detailed step-by-step instructions have been uploaded to the shared folder."
+                "text": "Our cafeteria will serve traditional dishes during the international week."
               }
             ],
-            "correctAnswer": "D",
-            "explanation": "Câu điền [137] cung cấp thông tin liên kết hợp lý nhất về hướng dẫn triển khai cho toàn thể nhân sự.",
-            "targetWord": "instructions"
+            "correctAnswer": "A",
+            "explanation": "Câu điền [137] tiếp nối ý nộp bản sao hợp đồng: 'Ngay khi nhận được, chúng tôi sẽ hoàn tất trạng thái tài khoản và gửi hàng'."
           },
           {
             "id": 138,
@@ -1034,33 +1029,33 @@
             "options": [
               {
                 "key": "A",
-                "text": "complexity"
+                "text": "promptly"
               },
               {
                 "key": "B",
-                "text": "uncertainty"
+                "text": "prompt"
               },
               {
                 "key": "C",
-                "text": "Scenery"
+                "text": "promptness"
               },
               {
                 "key": "D",
-                "text": "hesitation"
+                "text": "prompter"
               }
             ],
-            "correctAnswer": "C",
-            "explanation": "Vị trí [138] yêu cầu danh từ/tính từ \"Scenery\" (Phong cảnh) thể hiện cam kết chất lượng môi trường làm việc.",
-            "targetWord": "Scenery"
+            "correctAnswer": "A",
+            "explanation": "Cần một trạng từ (adverb) đứng ở cuối câu để bổ nghĩa cho động từ 'contact' (liên hệ một cách nhanh chóng)."
           }
         ]
       },
       {
         "passageId": 3,
-        "passageType": "Internal Memorandum",
-        "title": "Revised Travel Reimbursement and Expense Protocol",
-        "passage": "MEMORANDUM\n\nTo: Traveling Executives and Field Associates\nFrom: Finance and Compliance Department\nSubject: Updated Travel Expense Claims\n\nIn order to streamline our expense auditing procedures, the accounting team has instituted a new digital filing process. Effective immediately, travelers must [139] all itemized receipts via the employee portal within five days of return. Any expense report submitted without appropriate [140] will experience delays in reimbursement.\n\n[141]. Your adherence to this updated protocol ensures [142] processing of all employee disbursements.\n\nThank you for your cooperation.",
-        "passageTranslation": "BẢN GHI NHỚ\n\nGửi: Các cán bộ đi công tác và nhân viên thị trường\nTừ: Phòng Tài chính và Tuân thủ\nTiêu đề: Yêu cầu thanh toán chi phí công tác cập nhật\n\nĐể đơn giản hóa quy trình kiểm toán chi phí, bộ phận kế toán đã thiết lập quy trình nộp hồ sơ số mới. Có hiệu lực ngay lập tức, người đi công tác phải [139] toàn bộ hóa đơn chi tiết qua cổng thông tin nhân viên trong vòng 5 ngày kể từ ngày về. Mọi báo cáo chi phí nộp thiếu [140] hợp lệ sẽ bị chậm trễ hoàn tiền.\n\n[141]. Việc tuân thủ quy trình này sẽ đảm bảo xử lý [142] cho mọi khoản giải ngân.\n\nCảm ơn sự hợp tác của các bạn.",
+        "passageType": "Executive Memorandum",
+        "title": "Revised Travel Reimbursement Procedure",
+        "offset": 139,
+        "passage": "MEMORANDUM\n\nTo: All Traveling Associates and Regional Staff\nFrom: Corporate Finance and Accounting Directorate\nDate: October 28\nSubject: Implementation of Digital Expense Filing\n\nIn our continuous efforts to simplify corporate accounting procedures, the financial division has introduced an updated online expense filing system. Effective November 1, all travel expense claims must be [139] digitally through the employee self-service portal.\n\nEmployees are reminded that all itemized receipts and lodging invoices must be scanned and uploaded [140] seven days of returning from business travel. [141]. Adherence to this timeline guarantees [142] reimbursement directly into your designated bank account.\n\nThank you for your cooperation.\nFinance Directorate",
+        "translation": "BẢN GHI NHỚ\n\nGửi: Toàn thể nhân viên đi công tác và nhân sự khu vực\nTừ: Ban Tài chính và Kế toán Doanh nghiệp\nNgày: 28 tháng 10\nTiêu đề: Triển khai nộp báo cáo chi phí trực tuyến\n\nTrong nỗ lực liên tục nhằm đơn giản hóa quy trình kế toán, bộ phận tài chính đã giới thiệu hệ thống nộp chi phí trực tuyến mới. Có hiệu lực từ ngày 1 tháng 11, mọi yêu cầu thanh toán chi phí công tác phải được [139] dưới dạng số qua cổng tự phục vụ của nhân viên.\n\nNhân viên được nhắc nhở rằng mọi hóa đơn chi tiết và biên lai khách sạn phải được scan và tải lên [140] vòng 7 ngày kể từ khi đi công tác về. [141]. Việc tuân thủ thời hạn này sẽ đảm bảo việc hoàn tiền [142] trực tiếp vào tài khoản ngân hàng của bạn.\n\nCảm ơn sự hợp tác của các bạn.\nBan Tài chính",
         "questions": [
           {
             "id": 139,
@@ -1069,24 +1064,23 @@
             "options": [
               {
                 "key": "A",
-                "text": "overlook"
+                "text": "submitted"
               },
               {
                 "key": "B",
-                "text": "abandon"
+                "text": "submitting"
               },
               {
                 "key": "C",
-                "text": "Promotion"
+                "text": "submit"
               },
               {
                 "key": "D",
-                "text": "diminish"
+                "text": "submission"
               }
             ],
-            "correctAnswer": "C",
-            "explanation": "Vị trí [139] cần từ \"Promotion\" mang nghĩa: Khuyến mãi / Thăng chức, hoàn toàn chuẩn xác với ngữ cảnh thông báo.",
-            "targetWord": "Promotion"
+            "correctAnswer": "A",
+            "explanation": "Cấu trúc bị động 'must be + V-ed/V3' (phải được nộp): 'submitted' là đáp án chính xác."
           },
           {
             "id": 140,
@@ -1095,24 +1089,23 @@
             "options": [
               {
                 "key": "A",
-                "text": "eliminate"
+                "text": "within"
               },
               {
                 "key": "B",
-                "text": "Announce"
+                "text": "between"
               },
               {
                 "key": "C",
-                "text": "postpone"
+                "text": "beside"
               },
               {
                 "key": "D",
-                "text": "neglect"
+                "text": "along"
               }
             ],
-            "correctAnswer": "B",
-            "explanation": "Vị trí [140] chọn \"Announce\" (nghĩa: Thông báo) phù hợp về ngữ pháp và kết hợp từ trong văn bản.",
-            "targetWord": "Announce"
+            "correctAnswer": "A",
+            "explanation": "Giới từ chỉ khoảng thời gian: 'within seven days' (trong vòng 7 ngày)."
           },
           {
             "id": 141,
@@ -1121,24 +1114,23 @@
             "options": [
               {
                 "key": "A",
-                "text": "Detailed step-by-step instructions have been uploaded to the shared folder."
+                "text": "Reports submitted without proper receipts will experience processing delays."
               },
               {
                 "key": "B",
-                "text": "The kitchen pantry will be closed for sanitation."
+                "text": "The parking lot will be repaved during the upcoming holiday weekend."
               },
               {
                 "key": "C",
-                "text": "The annual company dinner will be postponed until winter."
+                "text": "All employee gym memberships will renew automatically next month."
               },
               {
                 "key": "D",
-                "text": "Parking permits are strictly non-transferable between vehicles."
+                "text": "The catering team has introduced several vegan lunch options."
               }
             ],
             "correctAnswer": "A",
-            "explanation": "Câu điền [141] cung cấp thông tin liên kết hợp lý nhất về hướng dẫn triển khai cho toàn thể nhân sự.",
-            "targetWord": "instructions"
+            "explanation": "Câu [141] cảnh báo về việc nộp thiếu hóa đơn chứng từ sẽ bị chậm trễ giải ngân, hoàn toàn ăn khớp với quy định thanh toán."
           },
           {
             "id": 142,
@@ -1147,33 +1139,33 @@
             "options": [
               {
                 "key": "A",
-                "text": "uncertainty"
+                "text": "prompt"
               },
               {
                 "key": "B",
-                "text": "hesitation"
+                "text": "promptly"
               },
               {
                 "key": "C",
-                "text": "complexity"
+                "text": "promptness"
               },
               {
                 "key": "D",
-                "text": "Appreciation"
+                "text": "prompts"
               }
             ],
-            "correctAnswer": "D",
-            "explanation": "Vị trí [142] yêu cầu danh từ/tính từ \"Appreciation\" (Sự tri ân, đánh giá cao) thể hiện cam kết chất lượng môi trường làm việc.",
-            "targetWord": "Appreciation"
+            "correctAnswer": "A",
+            "explanation": "Cần tính từ 'prompt' đứng trước danh từ 'reimbursement' để bổ nghĩa (việc hoàn tiền nhanh chóng)."
           }
         ]
       },
       {
         "passageId": 4,
         "passageType": "Facility Advisory",
-        "title": "Upcoming Building Improvements and Parking Relocation",
-        "passage": "FACILITY ADVISORY\n\nAttention: Building Occupants\n\nBeginning next Monday, extensive exterior restoration work will commence on the western wing of the facility. Contractors will [143] new energy-efficient double-pane windows throughout the second floor. To ensure safety, pedestrian access along the main pathway will be temporarily [144] until Wednesday afternoon.\n\n[145]. The facility management team remains dedicated to ensuring the highest standards of [146] for all visitors and employees.\n\nSincerely,\nFacilities Management",
-        "passageTranslation": "THÔNG BÁO VẬN HÀNH TOÀ NHÀ\n\nLưu ý: Khách thuê và nhân sự trong toà nhà\n\nBắt đầu từ thứ Hai tới, công việc trùng tu ngoại thất sẽ được tiến hành ở cánh phía Tây toà nhà. Các nhà thầu sẽ [143] các cửa sổ hai lớp tiết kiệm năng lượng trên toàn bộ tầng 2. Để đảm bảo an toàn, lối đi bộ chính sẽ tạm thời bị [144] cho đến chiều thứ Tư.\n\n[145]. Ban quản lý toà nhà luôn tận tâm duy trì các tiêu chuẩn [146] cao nhất cho khách tham quan và nhân viên.\n\nTrân trọng,\nBan Quản lý Toà nhà",
+        "title": "Notice of Headquarters Renovation and Access",
+        "offset": 143,
+        "passage": "FACILITY ADVISORY\n\nAttention: All Building Tenants and Visitors\n\nPlease be informed that our facility management team will oversee extensive renovations on the western entrance of the building starting next Monday. Construction crews will [143] energy-efficient revolving glass doors to reduce temperature fluctuations in the lobby.\n\nWhile work is actively underway, the western entrance will be [144] closed to all pedestrians. Please use the eastern side doors to enter and exit the premises. [145]. We apologize for any temporary inconvenience and thank you for your [146] during these facility enhancements.\n\nFacilities Administration",
+        "translation": "THÔNG BÁO VẬN HÀNH TOÀ NHÀ\n\nLưu ý: Khách thuê và khách tham quan toà nhà\n\nXin lưu ý rằng ban quản lý toà nhà sẽ giám sát đợt cải tạo lớn ở lối vào phía Tây bắt đầu từ thứ Hai tới. Đội ngũ thi công sẽ [143] các cửa kính xoay tiết kiệm năng lượng để giảm dao động nhiệt độ trong sảnh.\n\nTrong thời gian thi công, lối vào phía Tây sẽ bị đóng cửa [144] đối với người đi bộ. Vui lòng sử dụng các cửa bên phía Đông để ra vào khuôn viên. [145]. Chúng tôi xin lỗi vì bất kỳ sự bất tiện tạm thời nào và cảm ơn sự [146] của các bạn trong quá trình nâng cấp toà nhà.\n\nBan Quản lý Toà nhà",
         "questions": [
           {
             "id": 143,
@@ -1182,24 +1174,23 @@
             "options": [
               {
                 "key": "A",
-                "text": "Budget"
+                "text": "install"
               },
               {
                 "key": "B",
-                "text": "overlook"
+                "text": "installation"
               },
               {
                 "key": "C",
-                "text": "abandon"
+                "text": "installed"
               },
               {
                 "key": "D",
-                "text": "diminish"
+                "text": "installing"
               }
             ],
             "correctAnswer": "A",
-            "explanation": "Vị trí [143] cần từ \"Budget\" mang nghĩa: Ngân sách, hoàn toàn chuẩn xác với ngữ cảnh thông báo.",
-            "targetWord": "Budget"
+            "explanation": "Sau trợ động từ 'will' là động từ nguyên mẫu không 'to': 'install' (lắp đặt)."
           },
           {
             "id": 144,
@@ -1208,24 +1199,23 @@
             "options": [
               {
                 "key": "A",
-                "text": "postpone"
+                "text": "temporarily"
               },
               {
                 "key": "B",
-                "text": "neglect"
+                "text": "temporary"
               },
               {
                 "key": "C",
-                "text": "eliminate"
+                "text": "temporariness"
               },
               {
                 "key": "D",
-                "text": "Decidedly"
+                "text": "temperament"
               }
             ],
-            "correctAnswer": "D",
-            "explanation": "Vị trí [144] chọn \"Decidedly\" (nghĩa: Rõ ràng, dứt khoát) phù hợp về ngữ pháp và kết hợp từ trong văn bản.",
-            "targetWord": "Decidedly"
+            "correctAnswer": "A",
+            "explanation": "Trạng từ 'temporarily' (tạm thời) đứng giữa 'will be' và tính từ/quá khứ phân từ 'closed'."
           },
           {
             "id": 145,
@@ -1234,24 +1224,23 @@
             "options": [
               {
                 "key": "A",
-                "text": "Parking permits are strictly non-transferable between vehicles."
+                "text": "Clear directional signage has been posted in the lobby to guide visitors."
               },
               {
                 "key": "B",
-                "text": "The kitchen pantry will be closed for sanitation."
+                "text": "The annual software conference tickets are currently fifty percent off."
               },
               {
                 "key": "C",
-                "text": "The annual company dinner will be postponed until winter."
+                "text": "Employees must present airline vouchers to collect foreign currency."
               },
               {
                 "key": "D",
-                "text": "Detailed step-by-step instructions have been uploaded to the shared folder."
+                "text": "The company library will receive new finance textbooks next week."
               }
             ],
-            "correctAnswer": "D",
-            "explanation": "Câu điền [145] cung cấp thông tin liên kết hợp lý nhất về hướng dẫn triển khai cho toàn thể nhân sự.",
-            "targetWord": "instructions"
+            "correctAnswer": "A",
+            "explanation": "Câu [145] hướng dẫn khách đi lối cửa phía Đông: biển chỉ dẫn rõ ràng đã được đặt tại sảnh."
           },
           {
             "id": 146,
@@ -1260,24 +1249,23 @@
             "options": [
               {
                 "key": "A",
-                "text": "uncertainty"
+                "text": "cooperation"
               },
               {
                 "key": "B",
-                "text": "hesitation"
+                "text": "cooperate"
               },
               {
                 "key": "C",
-                "text": "Convenient"
+                "text": "cooperatively"
               },
               {
                 "key": "D",
-                "text": "complexity"
+                "text": "cooperator"
               }
             ],
-            "correctAnswer": "C",
-            "explanation": "Vị trí [146] yêu cầu danh từ/tính từ \"Convenient\" (Tiện lợi) thể hiện cam kết chất lượng môi trường làm việc.",
-            "targetWord": "Convenient"
+            "correctAnswer": "A",
+            "explanation": "Cần danh từ sau tính từ sở hữu 'your': 'your cooperation' (sự hợp tác của các bạn) là cụm từ lịch sự trang trọng trong thông báo."
           }
         ]
       }
