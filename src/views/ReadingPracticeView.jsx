@@ -34,7 +34,7 @@ export default function ReadingPracticeView({ topics = [], user, addXP }) {
   // Selected state
   const [selectedSessionName, setSelectedSessionName] = useState(() => sortedSessions[0]?.sessionName || "");
   const [selectedTopic, setSelectedTopic] = useState(() => sortedSessions[0]?.sheets[0] || null);
-  const [selectedPart, setSelectedPart] = useState("part5"); // 'part5' (30) | 'part6' (16) | 'part7' (54) | 'full' (100)
+  const [selectedPart, setSelectedPart] = useState("part5"); // 'part5' (30) | 'part6' (16) | 'full' (46)
   const [isLoadingTest, setIsLoadingTest] = useState(false);
   const [errorMsg, setErrorMsg] = useState("");
 
@@ -62,11 +62,11 @@ export default function ReadingPracticeView({ topics = [], user, addXP }) {
   // Practice & Question State
   const [testPackage, setTestPackage] = useState(null); // full data received from backend
   const [flattenedQuestions, setFlattenedQuestions] = useState([]); // all questions for easy indexing
-  const [currentPassages, setCurrentPassages] = useState([]); // for Part 6, 7
+  const [currentPassages, setCurrentPassages] = useState([]); // for Part 6
   const [userAnswers, setUserAnswers] = useState({}); // { [questionNumber]: "A" | "B" | "C" | "D" }
   const [flaggedQuestions, setFlaggedQuestions] = useState({}); // { [questionNumber]: boolean }
   const [activeQuestionIndex, setActiveQuestionIndex] = useState(0); // 0 to N-1
-  const [activePassageIndex, setActivePassageIndex] = useState(0); // for Part 6 & 7 passage pagination
+  const [activePassageIndex, setActivePassageIndex] = useState(0); // for Part 6 passage pagination
   const [showPassageTranslation, setShowPassageTranslation] = useState(false);
 
   // Timer
@@ -120,13 +120,14 @@ export default function ReadingPracticeView({ topics = [], user, addXP }) {
         let passages = [];
 
         if (selectedPart === "part5") {
-          allQ = data.questions || [];
-        } else if (selectedPart === "part6" || selectedPart === "part7") {
+          allQ = (data.questions || []).map(q => ({ ...q, sectionPart: "Part 5" }));
+        } else if (selectedPart === "part6") {
           passages = data.passages || [];
           passages.forEach((p, pIdx) => {
             (p.questions || []).forEach(q => {
               allQ.push({
                 ...q,
+                sectionPart: "Part 6",
                 passageRefIndex: pIdx,
                 passageTitle: p.title,
                 passageType: p.passageType
@@ -150,23 +151,10 @@ export default function ReadingPracticeView({ topics = [], user, addXP }) {
               });
             });
           });
-          // Part 7 (54 questions: 147 - 200)
-          const p7Passages = data.part7?.passages || [];
-          const p7Q = [];
-          p7Passages.forEach((p, pIdx) => {
-            (p.questions || []).forEach(q => {
-              p7Q.push({
-                ...q,
-                sectionPart: "Part 7",
-                passageRefIndex: pIdx + p6Passages.length,
-                passageType: p.passageType,
-                passageTitle: p.title
-              });
-            });
-          });
 
-          allQ = [...p5Q, ...p6Q, ...p7Q];
-          passages = [...p6Passages, ...p7Passages];
+          // Total: Exactly 46 questions (Part 5: 30 + Part 6: 16)
+          allQ = [...p5Q, ...p6Q];
+          passages = p6Passages;
         }
 
         setFlattenedQuestions(allQ);
@@ -225,7 +213,7 @@ export default function ReadingPracticeView({ topics = [], user, addXP }) {
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, [viewState, activeQuestionIndex, flattenedQuestions]);
 
-  // When activeQuestionIndex changes in Part 6/7, sync passage index
+  // When activeQuestionIndex changes in Part 6, sync passage index
   useEffect(() => {
     const curQ = flattenedQuestions[activeQuestionIndex];
     if (curQ && curQ.passageRefIndex !== undefined) {
@@ -233,7 +221,7 @@ export default function ReadingPracticeView({ topics = [], user, addXP }) {
     }
   }, [activeQuestionIndex, flattenedQuestions]);
 
-  // Submit and Calculate TOEIC Score
+  // Submit and Calculate Score
   const handleSubmitPractice = () => {
     if (flattenedQuestions.length === 0) return;
     const unansweredCount = flattenedQuestions.filter(q => !userAnswers[q.questionNumber]).length;
@@ -263,21 +251,11 @@ export default function ReadingPracticeView({ topics = [], user, addXP }) {
     const totalQuestions = flattenedQuestions.length;
     const percentage = Math.round((correctCount / totalQuestions) * 100);
 
-    // TOEIC Reading Scaled Score Estimation (out of 495)
-    let estimatedToeicScore = Math.round((correctCount / totalQuestions) * 495);
-    if (selectedPart === "full") {
-      // Standard TOEIC conversion curve
-      if (correctCount >= 96) estimatedToeicScore = 495;
-      else if (correctCount >= 90) estimatedToeicScore = 470;
-      else if (correctCount >= 80) estimatedToeicScore = 420;
-      else if (correctCount >= 70) estimatedToeicScore = 370;
-      else if (correctCount >= 60) estimatedToeicScore = 320;
-      else if (correctCount >= 50) estimatedToeicScore = 270;
-      else estimatedToeicScore = Math.max(50, correctCount * 5);
-    }
+    // TOEIC Reading Scaled Score Estimation for 46 questions (Part 5: 30 + Part 6: 16)
+    const estimatedToeicScore = Math.round((correctCount / totalQuestions) * 495);
 
-    // Award XP: 10 XP per correct question + 50 bonus
-    const xpGained = correctCount * 10 + 50;
+    // Award XP: 10 XP per correct question + 30 bonus
+    const xpGained = correctCount * 10 + 30;
     if (addXP) {
       addXP(xpGained);
     }
@@ -308,13 +286,13 @@ export default function ReadingPracticeView({ topics = [], user, addXP }) {
             <div className="space-y-2 max-w-2xl">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/20 backdrop-blur-md text-xs font-semibold tracking-wide uppercase">
                 <BookOpen size={14} className="text-yellow-300" />
-                Bộ Đề Mặc Định Chuẩn TOEIC Reading (100 Câu)
+                Bộ Đề Mặc Định Chuẩn TOEIC Reading (46 Câu)
               </div>
               <h1 className="text-2xl md:text-3xl font-black tracking-tight">
-                Luyện Đọc TOEIC Theo Từng File Excel & Sheet
+                Luyện Đọc TOEIC (Part 5 & Part 6)
               </h1>
               <p className="text-blue-100 text-sm md:text-base leading-relaxed">
-                Đề thi đã được thiết lập sẵn 100 câu chuẩn TOEIC cho từng sheet: Part 5 (30 câu), Part 6 (4 đoạn - 16 câu) và Part 7 (54 câu đọc hiểu). Nạp đề tức thì 0 giây, không chờ AI.
+                Đề thi đã được thiết lập sẵn tổng cộng 46 câu cho từng sheet: Part 5 (30 câu điền câu đơn) và Part 6 (4 đoạn văn - 16 câu điền đoạn văn). Nạp đề tức thì 0 giây, không dùng AI.
               </p>
             </div>
             <div className="flex items-center gap-3">
@@ -323,8 +301,8 @@ export default function ReadingPracticeView({ topics = [], user, addXP }) {
                 <div className="text-xs text-blue-100 font-medium">File Excel</div>
               </div>
               <div className="bg-white/15 backdrop-blur-md rounded-2xl p-4 text-center border border-white/20 min-w-[110px]">
-                <div className="text-2xl font-black">100 Câu</div>
-                <div className="text-xs text-blue-100 font-medium">Chuẩn TOEIC</div>
+                <div className="text-2xl font-black">46 Câu</div>
+                <div className="text-xs text-blue-100 font-medium">Part 5 & 6</div>
               </div>
             </div>
           </div>
@@ -435,11 +413,11 @@ export default function ReadingPracticeView({ topics = [], user, addXP }) {
                 <span>Chọn Phần Thi & Bắt Đầu</span>
               </div>
 
-              {/* Part Tabs */}
+              {/* Part Tabs (Part 5, Part 6, and Full 46 Questions) */}
               <div className="space-y-2">
                 <button
                   onClick={() => setSelectedPart("part5")}
-                  className={`w-full text-left p-3 rounded-2xl border transition-all flex items-center justify-between ${
+                  className={`w-full text-left p-3.5 rounded-2xl border transition-all flex items-center justify-between ${
                     selectedPart === "part5"
                       ? "bg-blue-50/90 dark:bg-blue-950/40 border-blue-600 text-blue-800 dark:text-blue-200 ring-1 ring-blue-500 font-bold"
                       : "bg-slate-50/60 dark:bg-slate-800/40 border-slate-200/80 dark:border-slate-800 hover:border-slate-300 text-slate-700 dark:text-slate-300"
@@ -456,7 +434,7 @@ export default function ReadingPracticeView({ topics = [], user, addXP }) {
 
                 <button
                   onClick={() => setSelectedPart("part6")}
-                  className={`w-full text-left p-3 rounded-2xl border transition-all flex items-center justify-between ${
+                  className={`w-full text-left p-3.5 rounded-2xl border transition-all flex items-center justify-between ${
                     selectedPart === "part6"
                       ? "bg-indigo-50/90 dark:bg-indigo-950/40 border-indigo-600 text-indigo-800 dark:text-indigo-200 ring-1 ring-indigo-500 font-bold"
                       : "bg-slate-50/60 dark:bg-slate-800/40 border-slate-200/80 dark:border-slate-800 hover:border-slate-300 text-slate-700 dark:text-slate-300"
@@ -472,36 +450,19 @@ export default function ReadingPracticeView({ topics = [], user, addXP }) {
                 </button>
 
                 <button
-                  onClick={() => setSelectedPart("part7")}
-                  className={`w-full text-left p-3 rounded-2xl border transition-all flex items-center justify-between ${
-                    selectedPart === "part7"
-                      ? "bg-purple-50/90 dark:bg-purple-950/40 border-purple-600 text-purple-800 dark:text-purple-200 ring-1 ring-purple-500 font-bold"
-                      : "bg-slate-50/60 dark:bg-slate-800/40 border-slate-200/80 dark:border-slate-800 hover:border-slate-300 text-slate-700 dark:text-slate-300"
-                  }`}
-                >
-                  <div>
-                    <div className="text-xs font-bold">Part 7: Reading Comprehension</div>
-                    <div className="text-[11px] text-slate-400">14 bài đọc • 54 câu (Câu 147 - 200)</div>
-                  </div>
-                  <span className="text-[10px] font-black px-2 py-0.5 rounded-full bg-purple-100 dark:bg-purple-900/50 text-purple-700 dark:text-purple-300">
-                    54 CÂU
-                  </span>
-                </button>
-
-                <button
                   onClick={() => setSelectedPart("full")}
-                  className={`w-full text-left p-3 rounded-2xl border transition-all flex items-center justify-between ${
+                  className={`w-full text-left p-3.5 rounded-2xl border transition-all flex items-center justify-between ${
                     selectedPart === "full"
                       ? "bg-amber-50/90 dark:bg-amber-950/40 border-amber-500 text-amber-800 dark:text-amber-200 ring-1 ring-amber-500 font-bold"
                       : "bg-slate-50/60 dark:bg-slate-800/40 border-slate-200/80 dark:border-slate-800 hover:border-slate-300 text-slate-700 dark:text-slate-300"
                   }`}
                 >
                   <div>
-                    <div className="text-xs font-bold">Full Test: Đề thi thử hoàn chỉnh</div>
-                    <div className="text-[11px] text-slate-400">Trọn vẹn 100 câu (Part 5 + 6 + 7)</div>
+                    <div className="text-xs font-bold">Kiểm tra Tổng hợp (Part 5 + 6)</div>
+                    <div className="text-[11px] text-slate-400">Trọn vẹn 46 câu (Part 5: 30 + Part 6: 16)</div>
                   </div>
                   <span className="text-[10px] font-black px-2 py-0.5 rounded-full bg-amber-100 dark:bg-amber-900/50 text-amber-800 dark:text-amber-300">
-                    100 CÂU
+                    46 CÂU
                   </span>
                 </button>
               </div>
@@ -534,7 +495,7 @@ export default function ReadingPracticeView({ topics = [], user, addXP }) {
   }
 
   // ==========================================
-  // RENDER 2: PRACTICE VIEW (PART 5, 6, 7 & FULL TEST)
+  // RENDER 2: PRACTICE VIEW (PART 5, PART 6 & FULL TEST 46 CÂU)
   // ==========================================
   if (viewState === "practice" && flattenedQuestions.length > 0) {
     const curQ = flattenedQuestions[activeQuestionIndex];
@@ -543,7 +504,7 @@ export default function ReadingPracticeView({ topics = [], user, addXP }) {
     const progressPercent = Math.round((answeredCount / totalQCount) * 100);
 
     const isCurrentFlagged = !!flaggedQuestions[curQ.questionNumber];
-    const isPassageBased = selectedPart === "part6" || selectedPart === "part7" || (selectedPart === "full" && curQ.sectionPart !== "Part 5");
+    const isPassageBased = selectedPart === "part6" || (selectedPart === "full" && curQ.sectionPart === "Part 6");
     const activePassage = currentPassages[activePassageIndex] || null;
 
     return (
@@ -609,7 +570,7 @@ export default function ReadingPracticeView({ topics = [], user, addXP }) {
           </div>
         </div>
 
-        {/* Question Palette Matrix (Collapsible or scrollable) */}
+        {/* Question Palette Matrix (101 - 146) */}
         <div className="bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 rounded-3xl p-3.5 shadow-sm space-y-2">
           <div className="flex items-center justify-between text-xs text-slate-400 font-semibold px-1">
             <span>Danh sách câu hỏi ({totalQCount} câu):</span>
@@ -652,7 +613,7 @@ export default function ReadingPracticeView({ topics = [], user, addXP }) {
 
         {/* QUESTION DISPLAY AREA */}
         {isPassageBased ? (
-          /* ================= SPLIT SCREEN FOR PART 6 & PART 7 ================= */
+          /* ================= SPLIT SCREEN FOR PART 6 ================= */
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
             {/* Left: Reading Passage (6 cols) */}
             <div className="lg:col-span-6 bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 rounded-3xl p-6 shadow-sm space-y-4 lg:sticky lg:top-24">
@@ -660,7 +621,7 @@ export default function ReadingPracticeView({ topics = [], user, addXP }) {
                 <div className="flex items-center gap-2">
                   <FileText size={18} className="text-blue-600 dark:text-blue-400" />
                   <span className="font-bold text-sm text-slate-800 dark:text-slate-100">
-                    {activePassage?.passageType || "Đoạn văn bài đọc"}
+                    {activePassage?.passageType || "Đoạn văn Part 6"}
                   </span>
                 </div>
                 {activePassage?.passageTranslation && (
@@ -787,7 +748,6 @@ export default function ReadingPracticeView({ topics = [], user, addXP }) {
                   Question {curQ.questionNumber} of {totalQCount}
                 </span>
               </div>
-              
             </div>
 
             {/* Sentence with blank */}
@@ -884,7 +844,7 @@ export default function ReadingPracticeView({ topics = [], user, addXP }) {
             </div>
             <h2 className="text-2xl md:text-3xl font-black">Kết Quả Bài Luyện Đọc</h2>
             <p className="text-blue-100 text-sm">
-              Sheet: <span className="font-bold underline">{selectedTopic?.topic_name}</span> ({selectedSessionName}) • Phần: <span className="font-bold uppercase">{selectedPart}</span>
+              Sheet: <span className="font-bold underline">{selectedTopic?.topic_name}</span> ({selectedSessionName}) • Phần: <span className="font-bold uppercase">{selectedPart === "full" ? "Part 5 + Part 6 (46 câu)" : selectedPart}</span>
             </p>
 
             {/* Metrics */}
@@ -982,6 +942,7 @@ export default function ReadingPracticeView({ topics = [], user, addXP }) {
                       </div>
                       <span className="font-bold text-sm text-slate-800 dark:text-slate-100">
                         {q.blankId ? `Chỗ trống ${q.blankId}` : `Câu hỏi ${q.questionNumber}`}
+                        {q.sectionPart && <span className="ml-2 text-xs text-slate-400 font-normal">({q.sectionPart})</span>}
                       </span>
                     </div>
 
@@ -1045,11 +1006,6 @@ export default function ReadingPracticeView({ topics = [], user, addXP }) {
                     <p className="text-slate-700 dark:text-slate-300 leading-relaxed">
                       {q.explanation}
                     </p>
-                    {q.evidence && (
-                      <div className="text-xs text-indigo-600 dark:text-indigo-400 font-medium">
-                        <strong>Dẫn chứng từ bài:</strong> <em>"{q.evidence}"</em>
-                      </div>
-                    )}
                     {q.translation && (
                       <div className="text-xs text-slate-500 dark:text-slate-400 pt-1 border-t border-blue-100 dark:border-blue-900/40">
                         <strong>Dịch nghĩa:</strong> {q.translation}

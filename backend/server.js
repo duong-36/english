@@ -36,7 +36,7 @@ app.use("/api", topicRoutes); // Topics, Vocabularies, Upload Excel
 app.use("/api/reviews", quizRoutes);
 app.use("/api", aiRoutes); // chat & transcribe
 app.use("/api/admin", adminRoutes);
-app.use("/api/reading", readingRoutes); // TOEIC Reading Part 5, 6, 7
+app.use("/api/reading", readingRoutes); // TOEIC Reading Part 5, 6
 
 // Root Endpoint
 app.get("/", (req, res) => res.send("EngMaster API is running (Refactored Structure)"));
@@ -76,6 +76,11 @@ async function autoMigrate() {
   } catch (e) {
     console.error("Migration error for reading_exercises:", e.message);
   }
+
+  try {
+    await pool.query("DELETE FROM reading_exercises WHERE part = 'part7'");
+    console.log("Auto-migrated: Cleaned up legacy part7 reading exercises.");
+  } catch (e) {}
 }
 autoMigrate();
 

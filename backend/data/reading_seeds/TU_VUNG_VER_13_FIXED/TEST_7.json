@@ -5,7 +5,8 @@
     "sheetName": "TEST 7",
     "sheetSlug": "TEST_7",
     "totalVocabs": 250,
-    "createdAt": "2026-10-27T14:57:39.144Z"
+    "totalQuestions": 46,
+    "createdAt": "2026-10-28T01:45:23.434Z"
   },
   "part5": {
     "title": "TOEIC Reading Part 5 - Incomplete Sentences (TEST 7)",
@@ -18,25 +19,25 @@
         "options": [
           {
             "key": "A",
-            "text": "Out of business"
-          },
-          {
-            "key": "B",
-            "text": "Vacancy"
-          },
-          {
-            "key": "C",
             "text": "Promotion"
           },
           {
-            "key": "D",
+            "key": "B",
             "text": "Relocate"
+          },
+          {
+            "key": "C",
+            "text": "Deposit"
+          },
+          {
+            "key": "D",
+            "text": "Out of business"
           }
         ],
-        "correctAnswer": "B",
-        "explanation": "Đáp án đúng là [B] \"Vacancy\" (nghĩa: Vị trí trống, chỗ khuyết). Sau 'requested that all staff + V-inf' cần động từ/cụm từ nguyên mẫu.",
-        "translation": "Câu hoàn chỉnh: \"Before finalizing the agreement, the legal department requested that all staff Vacancy carefully.\". Nghĩa: Vị trí trống, chỗ khuyết",
-        "targetWord": "Vacancy"
+        "correctAnswer": "C",
+        "explanation": "Đáp án đúng là [C] \"Deposit\" (nghĩa: Tiền cọc; đặt cọc). Sau 'requested that all staff + V-inf' cần động từ/cụm từ nguyên mẫu.",
+        "translation": "Câu hoàn chỉnh: \"Before finalizing the agreement, the legal department requested that all staff Deposit carefully.\". Nghĩa: Tiền cọc; đặt cọc",
+        "targetWord": "Deposit"
       },
       {
         "id": 102,
@@ -45,11 +46,11 @@
         "options": [
           {
             "key": "A",
-            "text": "Information booth"
+            "text": "Helpline"
           },
           {
             "key": "B",
-            "text": "Packaging"
+            "text": "Management"
           },
           {
             "key": "C",
@@ -57,13 +58,13 @@
           },
           {
             "key": "D",
-            "text": "Management"
+            "text": "Information booth"
           }
         ],
-        "correctAnswer": "B",
-        "explanation": "Đáp án đúng là [B] \"Packaging\" (nghĩa: Bao bì). Cấu trúc 'have trouble doing something' đòi hỏi dạng V-ing phù hợp ngữ cảnh.",
-        "translation": "Câu hoàn chỉnh: \"Mr. Thompson had trouble Packaging the quarterly financial statement before the deadline.\". Nghĩa: Bao bì",
-        "targetWord": "Packaging"
+        "correctAnswer": "D",
+        "explanation": "Đáp án đúng là [D] \"Information booth\" (nghĩa: Quầy thông tin). Cấu trúc 'have trouble doing something' đòi hỏi dạng V-ing phù hợp ngữ cảnh.",
+        "translation": "Câu hoàn chỉnh: \"Mr. Thompson had trouble Information booth the quarterly financial statement before the deadline.\". Nghĩa: Quầy thông tin",
+        "targetWord": "Information booth"
       },
       {
         "id": 103,
@@ -76,21 +77,21 @@
           },
           {
             "key": "B",
-            "text": "Name badge"
+            "text": "Accuracy"
           },
           {
             "key": "C",
-            "text": "Booth"
+            "text": "Name badge"
           },
           {
             "key": "D",
             "text": "Provide"
           }
         ],
-        "correctAnswer": "C",
-        "explanation": "Đáp án đúng là [C] \"Booth\" (nghĩa: Gian hàng). Ngữ cảnh liên lạc văn phòng, chọn cụm từ thích hợp nhất.",
-        "translation": "Câu hoàn chỉnh: \"If you cannot reach the department manager directly, please Booth with the front desk.\". Nghĩa: Gian hàng",
-        "targetWord": "Booth"
+        "correctAnswer": "B",
+        "explanation": "Đáp án đúng là [B] \"Accuracy\" (nghĩa: Sự chính xác). Ngữ cảnh liên lạc văn phòng, chọn cụm từ thích hợp nhất.",
+        "translation": "Câu hoàn chỉnh: \"If you cannot reach the department manager directly, please Accuracy with the front desk.\". Nghĩa: Sự chính xác",
+        "targetWord": "Accuracy"
       },
       {
         "id": 104,
@@ -99,11 +100,11 @@
         "options": [
           {
             "key": "A",
-            "text": "Photo ID"
+            "text": "Translator"
           },
           {
             "key": "B",
-            "text": "Loyalty card"
+            "text": "Photo ID"
           },
           {
             "key": "C",
@@ -111,13 +112,13 @@
           },
           {
             "key": "D",
-            "text": "Wetland"
+            "text": "Loyalty card"
           }
         ],
         "correctAnswer": "D",
-        "explanation": "Đáp án đúng là [D] \"Wetland\" (nghĩa: Vùng đất ngập nước). Cần danh từ chỉ giấy tờ/thẻ phù hợp để xác thực danh tính.",
-        "translation": "Câu hoàn chỉnh: \"Employees must show their Wetland to the security guard before entering the facility.\". Nghĩa: Vùng đất ngập nước",
-        "targetWord": "Wetland"
+        "explanation": "Đáp án đúng là [D] \"Loyalty card\" (nghĩa: Thẻ thành viên thân thiết). Cần danh từ chỉ giấy tờ/thẻ phù hợp để xác thực danh tính.",
+        "translation": "Câu hoàn chỉnh: \"Employees must show their Loyalty card to the security guard before entering the facility.\". Nghĩa: Thẻ thành viên thân thiết",
+        "targetWord": "Loyalty card"
       },
       {
         "id": 105,
@@ -126,7 +127,7 @@
         "options": [
           {
             "key": "A",
-            "text": "Translator"
+            "text": "Apologize"
           },
           {
             "key": "B",
@@ -134,17 +135,17 @@
           },
           {
             "key": "C",
-            "text": "Reference"
+            "text": "Translator"
           },
           {
             "key": "D",
-            "text": "Associate"
+            "text": "Reference"
           }
         ],
-        "correctAnswer": "D",
-        "explanation": "Đáp án đúng là [D] \"Associate\" (nghĩa: Cộng sự; liên kết). Cấu trúc chỉ mục đích 'to + V-inf' diễn tả hành động trong công việc.",
-        "translation": "Câu hoàn chỉnh: \"The director scheduled a meeting to Associate with the regional sales representatives.\". Nghĩa: Cộng sự; liên kết",
-        "targetWord": "Associate"
+        "correctAnswer": "A",
+        "explanation": "Đáp án đúng là [A] \"Apologize\" (nghĩa: Xin lỗi). Cấu trúc chỉ mục đích 'to + V-inf' diễn tả hành động trong công việc.",
+        "translation": "Câu hoàn chỉnh: \"The director scheduled a meeting to Apologize with the regional sales representatives.\". Nghĩa: Xin lỗi",
+        "targetWord": "Apologize"
       },
       {
         "id": 106,
@@ -153,25 +154,25 @@
         "options": [
           {
             "key": "A",
-            "text": "Résumé"
-          },
-          {
-            "key": "B",
-            "text": "Praise"
-          },
-          {
-            "key": "C",
             "text": "Submit"
           },
           {
-            "key": "D",
+            "key": "B",
             "text": "Available"
+          },
+          {
+            "key": "C",
+            "text": "Résumé"
+          },
+          {
+            "key": "D",
+            "text": "Loading zone"
           }
         ],
-        "correctAnswer": "B",
-        "explanation": "Đáp án đúng là [B] \"Praise\" (nghĩa: Khen ngợi, biểu dương). Sau trợ động từ 'will' là động từ nguyên thể không to.",
-        "translation": "Câu hoàn chỉnh: \"Due to a technical issue on the server, the technical team will Praise this evening.\". Nghĩa: Khen ngợi, biểu dương",
-        "targetWord": "Praise"
+        "correctAnswer": "D",
+        "explanation": "Đáp án đúng là [D] \"Loading zone\" (nghĩa: Khu vực bốc dỡ hàng hóa). Sau trợ động từ 'will' là động từ nguyên thể không to.",
+        "translation": "Câu hoàn chỉnh: \"Due to a technical issue on the server, the technical team will Loading zone this evening.\". Nghĩa: Khu vực bốc dỡ hàng hóa",
+        "targetWord": "Loading zone"
       },
       {
         "id": 107,
@@ -180,25 +181,25 @@
         "options": [
           {
             "key": "A",
-            "text": "Convene"
+            "text": "Off-site venue"
           },
           {
             "key": "B",
-            "text": "Membership"
-          },
-          {
-            "key": "C",
             "text": "Negotiate"
           },
           {
-            "key": "D",
+            "key": "C",
             "text": "Equipment"
+          },
+          {
+            "key": "D",
+            "text": "Convene"
           }
         ],
-        "correctAnswer": "B",
-        "explanation": "Đáp án đúng là [B] \"Membership\" (nghĩa: Tư cách thành viên). Cần một cụm danh từ thích hợp làm tân ngữ cho động từ 'provide'.",
-        "translation": "Câu hoàn chỉnh: \"Please provide your Membership when filling out the online registration form.\". Nghĩa: Tư cách thành viên",
-        "targetWord": "Membership"
+        "correctAnswer": "A",
+        "explanation": "Đáp án đúng là [A] \"Off-site venue\" (nghĩa: Địa điểm bên ngoài công ty). Cần một cụm danh từ thích hợp làm tân ngữ cho động từ 'provide'.",
+        "translation": "Câu hoàn chỉnh: \"Please provide your Off-site venue when filling out the online registration form.\". Nghĩa: Địa điểm bên ngoài công ty",
+        "targetWord": "Off-site venue"
       },
       {
         "id": 108,
@@ -207,25 +208,25 @@
         "options": [
           {
             "key": "A",
-            "text": "Campaign"
+            "text": "On short notice"
           },
           {
             "key": "B",
-            "text": "Proofread"
-          },
-          {
-            "key": "C",
             "text": "Appointment"
           },
           {
-            "key": "D",
+            "key": "C",
             "text": "Reassign"
+          },
+          {
+            "key": "D",
+            "text": "Proofread"
           }
         ],
         "correctAnswer": "A",
-        "explanation": "Đáp án đúng là [A] \"Campaign\" (nghĩa: Chiến dịch). Cấu trúc 'remind someone to + V-inf'.",
-        "translation": "Câu hoàn chỉnh: \"The accounting department reminds all supervisors to Campaign by the end of the month.\". Nghĩa: Chiến dịch",
-        "targetWord": "Campaign"
+        "explanation": "Đáp án đúng là [A] \"On short notice\" (nghĩa: Thông báo gấp, thời gian gấp). Cấu trúc 'remind someone to + V-inf'.",
+        "translation": "Câu hoàn chỉnh: \"The accounting department reminds all supervisors to On short notice by the end of the month.\". Nghĩa: Thông báo gấp, thời gian gấp",
+        "targetWord": "On short notice"
       },
       {
         "id": 109,
@@ -234,25 +235,25 @@
         "options": [
           {
             "key": "A",
-            "text": "Motivation"
-          },
-          {
-            "key": "B",
-            "text": "Scheduling conflict"
-          },
-          {
-            "key": "C",
             "text": "Colleague"
           },
           {
-            "key": "D",
+            "key": "B",
             "text": "Decision"
+          },
+          {
+            "key": "C",
+            "text": "Scheduling conflict"
+          },
+          {
+            "key": "D",
+            "text": "Authority"
           }
         ],
-        "correctAnswer": "A",
-        "explanation": "Đáp án đúng là [A] \"Motivation\" (nghĩa: Động lực). Cần danh từ chỉ người/chức danh sau mạo từ 'a'.",
-        "translation": "Câu hoàn chỉnh: \"Customers who require specialized assistance are encouraged to speak with a Motivation.\". Nghĩa: Động lực",
-        "targetWord": "Motivation"
+        "correctAnswer": "D",
+        "explanation": "Đáp án đúng là [D] \"Authority\" (nghĩa: Cơ quan có thẩm quyền, uy tín). Cần danh từ chỉ người/chức danh sau mạo từ 'a'.",
+        "translation": "Câu hoàn chỉnh: \"Customers who require specialized assistance are encouraged to speak with a Authority.\". Nghĩa: Cơ quan có thẩm quyền, uy tín",
+        "targetWord": "Authority"
       },
       {
         "id": 110,
@@ -265,7 +266,7 @@
           },
           {
             "key": "B",
-            "text": "Discrepancy"
+            "text": "Booking"
           },
           {
             "key": "C",
@@ -273,13 +274,13 @@
           },
           {
             "key": "D",
-            "text": "Booking"
+            "text": "Defective"
           }
         ],
-        "correctAnswer": "B",
-        "explanation": "Đáp án đúng là [B] \"Discrepancy\" (nghĩa: Sự sai lệch). Cụm động từ nguyên mẫu sau 'plans to'.",
-        "translation": "Câu hoàn chỉnh: \"The company announced plans to Discrepancy in order to accommodate its expanding workforce.\". Nghĩa: Sự sai lệch",
-        "targetWord": "Discrepancy"
+        "correctAnswer": "D",
+        "explanation": "Đáp án đúng là [D] \"Defective\" (nghĩa: Bị lỗi, có khuyết tật). Cụm động từ nguyên mẫu sau 'plans to'.",
+        "translation": "Câu hoàn chỉnh: \"The company announced plans to Defective in order to accommodate its expanding workforce.\". Nghĩa: Bị lỗi, có khuyết tật",
+        "targetWord": "Defective"
       },
       {
         "id": 111,
@@ -292,21 +293,21 @@
           },
           {
             "key": "B",
-            "text": "Technique"
+            "text": "Breakdown"
           },
           {
             "key": "C",
-            "text": "Comply"
+            "text": "Off-site venue"
           },
           {
             "key": "D",
-            "text": "Off-site venue"
+            "text": "Technique"
           }
         ],
-        "correctAnswer": "C",
-        "explanation": "Đáp án đúng là [C] \"Comply\" (nghĩa: Tuân thủ). Cần danh từ chỉ tài liệu/chứng từ sau mạo từ 'an official'.",
-        "translation": "Câu hoàn chỉnh: \"All travel expenses must be documented and submitted with an official Comply.\". Nghĩa: Tuân thủ",
-        "targetWord": "Comply"
+        "correctAnswer": "B",
+        "explanation": "Đáp án đúng là [B] \"Breakdown\" (nghĩa: Phân tích chi tiết; sự hỏng hóc). Cần danh từ chỉ tài liệu/chứng từ sau mạo từ 'an official'.",
+        "translation": "Câu hoàn chỉnh: \"All travel expenses must be documented and submitted with an official Breakdown.\". Nghĩa: Phân tích chi tiết; sự hỏng hóc",
+        "targetWord": "Breakdown"
       },
       {
         "id": 112,
@@ -315,11 +316,11 @@
         "options": [
           {
             "key": "A",
-            "text": "Passenger"
+            "text": "Malfunctioning"
           },
           {
             "key": "B",
-            "text": "Malfunctioning"
+            "text": "Enforce"
           },
           {
             "key": "C",
@@ -330,10 +331,10 @@
             "text": "Connectivity"
           }
         ],
-        "correctAnswer": "A",
-        "explanation": "Đáp án đúng là [A] \"Passenger\" (nghĩa: Hành khách). Cần danh từ sau tính từ sở hữu 'their'.",
-        "translation": "Câu hoàn chỉnh: \"The supervisor commended the project team for their Passenger during the inspection.\". Nghĩa: Hành khách",
-        "targetWord": "Passenger"
+        "correctAnswer": "B",
+        "explanation": "Đáp án đúng là [B] \"Enforce\" (nghĩa: Thực thi, thi hành (luật lệ)). Cần danh từ sau tính từ sở hữu 'their'.",
+        "translation": "Câu hoàn chỉnh: \"The supervisor commended the project team for their Enforce during the inspection.\". Nghĩa: Thực thi, thi hành (luật lệ)",
+        "targetWord": "Enforce"
       },
       {
         "id": 113,
@@ -342,25 +343,25 @@
         "options": [
           {
             "key": "A",
-            "text": "Access code"
+            "text": "Shipping label"
           },
           {
             "key": "B",
-            "text": "Database"
-          },
-          {
-            "key": "C",
             "text": "Zipper"
           },
           {
+            "key": "C",
+            "text": "Submit"
+          },
+          {
             "key": "D",
-            "text": "Cabinet"
+            "text": "Access code"
           }
         ],
-        "correctAnswer": "D",
-        "explanation": "Đáp án đúng là [D] \"Cabinet\" (nghĩa: Tủ đựng đồ/hồ sơ; nội các). Cấu trúc bị động 'are advised to + V-inf'.",
-        "translation": "Câu hoàn chỉnh: \"Prospective applicants are advised to Cabinet prior to submitting their portfolio.\". Nghĩa: Tủ đựng đồ/hồ sơ; nội các",
-        "targetWord": "Cabinet"
+        "correctAnswer": "C",
+        "explanation": "Đáp án đúng là [C] \"Submit\" (nghĩa: Nộp, đệ trình). Cấu trúc bị động 'are advised to + V-inf'.",
+        "translation": "Câu hoàn chỉnh: \"Prospective applicants are advised to Submit prior to submitting their portfolio.\". Nghĩa: Nộp, đệ trình",
+        "targetWord": "Submit"
       },
       {
         "id": 114,
@@ -369,25 +370,25 @@
         "options": [
           {
             "key": "A",
-            "text": "Incentive"
+            "text": "Refund"
           },
           {
             "key": "B",
-            "text": "Exchange"
+            "text": "Motivation"
           },
           {
             "key": "C",
-            "text": "Shipping label"
+            "text": "Exchange"
           },
           {
             "key": "D",
-            "text": "Refund"
+            "text": "Shipping label"
           }
         ],
-        "correctAnswer": "A",
-        "explanation": "Đáp án đúng là [A] \"Incentive\" (nghĩa: Ưu đãi, sự khuyến khích). Sau động từ khuyết thiếu 'must' cần động từ nguyên mẫu.",
-        "translation": "Câu hoàn chỉnh: \"To avoid unnecessary delays, international packages must Incentive the destination clearly.\". Nghĩa: Ưu đãi, sự khuyến khích",
-        "targetWord": "Incentive"
+        "correctAnswer": "B",
+        "explanation": "Đáp án đúng là [B] \"Motivation\" (nghĩa: Động lực). Sau động từ khuyết thiếu 'must' cần động từ nguyên mẫu.",
+        "translation": "Câu hoàn chỉnh: \"To avoid unnecessary delays, international packages must Motivation the destination clearly.\". Nghĩa: Động lực",
+        "targetWord": "Motivation"
       },
       {
         "id": 115,
@@ -396,25 +397,25 @@
         "options": [
           {
             "key": "A",
-            "text": "Engagement"
+            "text": "Complaint"
           },
           {
             "key": "B",
-            "text": "Imply"
-          },
-          {
-            "key": "C",
             "text": "Renovation"
           },
           {
+            "key": "C",
+            "text": "Inspection"
+          },
+          {
             "key": "D",
-            "text": "Helpline"
+            "text": "Engagement"
           }
         ],
-        "correctAnswer": "D",
-        "explanation": "Đáp án đúng là [D] \"Helpline\" (nghĩa: Đường dây hỗ trợ). Cần danh từ/tính từ bổ nghĩa cho 'team'.",
-        "translation": "Câu hoàn chỉnh: \"The customer was highly satisfied with the prompt response from our Helpline team.\". Nghĩa: Đường dây hỗ trợ",
-        "targetWord": "Helpline"
+        "correctAnswer": "C",
+        "explanation": "Đáp án đúng là [C] \"Inspection\" (nghĩa: Sự thanh tra, kiểm tra). Cần danh từ/tính từ bổ nghĩa cho 'team'.",
+        "translation": "Câu hoàn chỉnh: \"The customer was highly satisfied with the prompt response from our Inspection team.\". Nghĩa: Sự thanh tra, kiểm tra",
+        "targetWord": "Inspection"
       },
       {
         "id": 116,
@@ -423,25 +424,25 @@
         "options": [
           {
             "key": "A",
-            "text": "Temporarily"
+            "text": "Promotion"
           },
           {
             "key": "B",
-            "text": "Violation"
+            "text": "Temporarily"
           },
           {
             "key": "C",
-            "text": "Imply"
+            "text": "Demonstration"
           },
           {
             "key": "D",
             "text": "Inspection"
           }
         ],
-        "correctAnswer": "B",
-        "explanation": "Đáp án đúng là [B] \"Violation\" (nghĩa: Sự vi phạm). Cấu trúc 'decided to + V-inf'.",
-        "translation": "Câu hoàn chỉnh: \"Management decided to Violation until market conditions stabilize next quarter.\". Nghĩa: Sự vi phạm",
-        "targetWord": "Violation"
+        "correctAnswer": "A",
+        "explanation": "Đáp án đúng là [A] \"Promotion\" (nghĩa: Chương trình khuyến mãi/Thăng tiến). Cấu trúc 'decided to + V-inf'.",
+        "translation": "Câu hoàn chỉnh: \"Management decided to Promotion until market conditions stabilize next quarter.\". Nghĩa: Chương trình khuyến mãi/Thăng tiến",
+        "targetWord": "Promotion"
       },
       {
         "id": 117,
@@ -450,11 +451,11 @@
         "options": [
           {
             "key": "A",
-            "text": "Demonstration"
+            "text": "Enterprise"
           },
           {
             "key": "B",
-            "text": "Enterprise"
+            "text": "Operator"
           },
           {
             "key": "C",
@@ -462,13 +463,13 @@
           },
           {
             "key": "D",
-            "text": "On short notice"
+            "text": "Imply"
           }
         ],
         "correctAnswer": "D",
-        "explanation": "Đáp án đúng là [D] \"On short notice\" (nghĩa: Thông báo gấp, thời gian gấp). Cấu trúc 'make sure to + V-inf'.",
-        "translation": "Câu hoàn chỉnh: \"Please make sure to On short notice before leaving the conference room.\". Nghĩa: Thông báo gấp, thời gian gấp",
-        "targetWord": "On short notice"
+        "explanation": "Đáp án đúng là [D] \"Imply\" (nghĩa: Ngụ ý). Cấu trúc 'make sure to + V-inf'.",
+        "translation": "Câu hoàn chỉnh: \"Please make sure to Imply before leaving the conference room.\". Nghĩa: Ngụ ý",
+        "targetWord": "Imply"
       },
       {
         "id": 118,
@@ -481,21 +482,21 @@
           },
           {
             "key": "B",
-            "text": "Operator"
+            "text": "Supplier"
           },
           {
             "key": "C",
-            "text": "Application"
+            "text": "Register"
           },
           {
             "key": "D",
-            "text": "Supplier"
+            "text": "Technique"
           }
         ],
-        "correctAnswer": "C",
-        "explanation": "Đáp án đúng là [C] \"Application\" (nghĩa: Đơn xin việc; ứng dụng). Cần tính từ đứng trước danh từ 'attention'.",
-        "translation": "Câu hoàn chỉnh: \"A thorough review of the system revealed several areas that require Application attention.\". Nghĩa: Đơn xin việc; ứng dụng",
-        "targetWord": "Application"
+        "correctAnswer": "D",
+        "explanation": "Đáp án đúng là [D] \"Technique\" (nghĩa: Kỹ thuật, phương pháp). Cần tính từ đứng trước danh từ 'attention'.",
+        "translation": "Câu hoàn chỉnh: \"A thorough review of the system revealed several areas that require Technique attention.\". Nghĩa: Kỹ thuật, phương pháp",
+        "targetWord": "Technique"
       },
       {
         "id": 119,
@@ -504,25 +505,25 @@
         "options": [
           {
             "key": "A",
-            "text": "Booth"
+            "text": "Trade fair"
           },
           {
             "key": "B",
-            "text": "Database"
+            "text": "Accompany"
           },
           {
             "key": "C",
-            "text": "Length of stay"
+            "text": "Register"
           },
           {
             "key": "D",
-            "text": "Trade fair"
+            "text": "Length of stay"
           }
         ],
         "correctAnswer": "B",
-        "explanation": "Đáp án đúng là [B] \"Database\" (nghĩa: Cơ sở dữ liệu). Sau giới từ 'regarding' cần danh từ hoặc V-ing.",
-        "translation": "Câu hoàn chỉnh: \"The human resources division has issued new guidelines regarding Database in the workplace.\". Nghĩa: Cơ sở dữ liệu",
-        "targetWord": "Database"
+        "explanation": "Đáp án đúng là [B] \"Accompany\" (nghĩa: Đi cùng, đính kèm). Sau giới từ 'regarding' cần danh từ hoặc V-ing.",
+        "translation": "Câu hoàn chỉnh: \"The human resources division has issued new guidelines regarding Accompany in the workplace.\". Nghĩa: Đi cùng, đính kèm",
+        "targetWord": "Accompany"
       },
       {
         "id": 120,
@@ -531,25 +532,25 @@
         "options": [
           {
             "key": "A",
-            "text": "Collaborate"
+            "text": "Apartment"
           },
           {
             "key": "B",
-            "text": "Booth"
+            "text": "Commercial"
           },
           {
             "key": "C",
-            "text": "Lease"
+            "text": "Booth"
           },
           {
             "key": "D",
-            "text": "Apartment"
+            "text": "Lease"
           }
         ],
-        "correctAnswer": "A",
-        "explanation": "Đáp án đúng là [A] \"Collaborate\" (nghĩa: Hợp tác). Cần cụm danh từ chỉ phí/chi phí làm tân ngữ của 'pay'.",
-        "translation": "Câu hoàn chỉnh: \"Clients are requested to pay the Collaborate before the project initiation phase begins.\". Nghĩa: Hợp tác",
-        "targetWord": "Collaborate"
+        "correctAnswer": "B",
+        "explanation": "Đáp án đúng là [B] \"Commercial\" (nghĩa: Thuộc thương mại/Quảng cáo). Cần cụm danh từ chỉ phí/chi phí làm tân ngữ của 'pay'.",
+        "translation": "Câu hoàn chỉnh: \"Clients are requested to pay the Commercial before the project initiation phase begins.\". Nghĩa: Thuộc thương mại/Quảng cáo",
+        "targetWord": "Commercial"
       },
       {
         "id": 121,
@@ -558,11 +559,11 @@
         "options": [
           {
             "key": "A",
-            "text": "Environmentally"
+            "text": "Motivation"
           },
           {
             "key": "B",
-            "text": "Reimbursement"
+            "text": "Flexible"
           },
           {
             "key": "C",
@@ -570,13 +571,13 @@
           },
           {
             "key": "D",
-            "text": "Flexible"
+            "text": "Environmentally"
           }
         ],
-        "correctAnswer": "B",
-        "explanation": "Đáp án đúng là [B] \"Reimbursement\" (nghĩa: Khoản hoàn tiền). Cấu trúc 'agreed to + V-inf'.",
-        "translation": "Câu hoàn chỉnh: \"The logistics company has agreed to Reimbursement all damaged merchandise immediately.\". Nghĩa: Khoản hoàn tiền",
-        "targetWord": "Reimbursement"
+        "correctAnswer": "D",
+        "explanation": "Đáp án đúng là [D] \"Environmentally\" (nghĩa: Thuộc về môi trường). Cấu trúc 'agreed to + V-inf'.",
+        "translation": "Câu hoàn chỉnh: \"The logistics company has agreed to Environmentally all damaged merchandise immediately.\". Nghĩa: Thuộc về môi trường",
+        "targetWord": "Environmentally"
       },
       {
         "id": 122,
@@ -589,21 +590,21 @@
           },
           {
             "key": "B",
-            "text": "Motivation"
+            "text": "Digital file"
           },
           {
             "key": "C",
-            "text": "Tear"
+            "text": "Out of business"
           },
           {
             "key": "D",
-            "text": "Digital file"
+            "text": "Fundraiser"
           }
         ],
         "correctAnswer": "C",
-        "explanation": "Đáp án đúng là [C] \"Tear\" (nghĩa: Vết rách). Cần danh từ sau 'provide' kết hợp với giới từ 'on'.",
-        "translation": "Câu hoàn chỉnh: \"Our senior consultant will provide Tear on optimizing your business workflow.\". Nghĩa: Vết rách",
-        "targetWord": "Tear"
+        "explanation": "Đáp án đúng là [C] \"Out of business\" (nghĩa: Ngừng kinh doanh, phá sản). Cần danh từ sau 'provide' kết hợp với giới từ 'on'.",
+        "translation": "Câu hoàn chỉnh: \"Our senior consultant will provide Out of business on optimizing your business workflow.\". Nghĩa: Ngừng kinh doanh, phá sản",
+        "targetWord": "Out of business"
       },
       {
         "id": 123,
@@ -616,21 +617,21 @@
           },
           {
             "key": "B",
-            "text": "Passenger"
+            "text": "Destination"
           },
           {
             "key": "C",
-            "text": "Non-biodegradable"
+            "text": "Passenger"
           },
           {
             "key": "D",
-            "text": "Destination"
+            "text": "Entitled to"
           }
         ],
-        "correctAnswer": "C",
-        "explanation": "Đáp án đúng là [C] \"Non-biodegradable\" (nghĩa: Không thể phân hủy sinh học). Cần danh từ chỉ địa điểm/vị trí sau giới từ 'at the'.",
-        "translation": "Câu hoàn chỉnh: \"Visitors must check in at the Non-biodegradable upon entering the headquarters building.\". Nghĩa: Không thể phân hủy sinh học",
-        "targetWord": "Non-biodegradable"
+        "correctAnswer": "D",
+        "explanation": "Đáp án đúng là [D] \"Entitled to\" (nghĩa: Được hưởng quyền lợi). Cần danh từ chỉ địa điểm/vị trí sau giới từ 'at the'.",
+        "translation": "Câu hoàn chỉnh: \"Visitors must check in at the Entitled to upon entering the headquarters building.\". Nghĩa: Được hưởng quyền lợi",
+        "targetWord": "Entitled to"
       },
       {
         "id": 124,
@@ -639,7 +640,7 @@
         "options": [
           {
             "key": "A",
-            "text": "Imply"
+            "text": "Loan applicant"
           },
           {
             "key": "B",
@@ -647,17 +648,17 @@
           },
           {
             "key": "C",
-            "text": "Loan applicant"
+            "text": "Boost"
           },
           {
             "key": "D",
-            "text": "Restored"
+            "text": "Announcement"
           }
         ],
-        "correctAnswer": "A",
-        "explanation": "Đáp án đúng là [A] \"Imply\" (nghĩa: Ngụ ý). Sau giới từ 'for' cần danh từ chỉ sự phê duyệt/xem xét.",
-        "translation": "Câu hoàn chỉnh: \"The annual budget proposal will be presented to the board for Imply next Tuesday.\". Nghĩa: Ngụ ý",
-        "targetWord": "Imply"
+        "correctAnswer": "C",
+        "explanation": "Đáp án đúng là [C] \"Boost\" (nghĩa: Thúc đẩy, tăng cường). Sau giới từ 'for' cần danh từ chỉ sự phê duyệt/xem xét.",
+        "translation": "Câu hoàn chỉnh: \"The annual budget proposal will be presented to the board for Boost next Tuesday.\". Nghĩa: Thúc đẩy, tăng cường",
+        "targetWord": "Boost"
       },
       {
         "id": 125,
@@ -666,7 +667,7 @@
         "options": [
           {
             "key": "A",
-            "text": "Boutique"
+            "text": "Restored"
           },
           {
             "key": "B",
@@ -674,17 +675,17 @@
           },
           {
             "key": "C",
-            "text": "Environmentally"
+            "text": "Boutique"
           },
           {
             "key": "D",
-            "text": "Competitor"
+            "text": "Petition"
           }
         ],
-        "correctAnswer": "C",
-        "explanation": "Đáp án đúng là [C] \"Environmentally\" (nghĩa: Thuộc về môi trường). Cấu trúc 'are asked to + V-inf'.",
-        "translation": "Câu hoàn chỉnh: \"Participants in the training session are asked to Environmentally with their assigned groups.\". Nghĩa: Thuộc về môi trường",
-        "targetWord": "Environmentally"
+        "correctAnswer": "D",
+        "explanation": "Đáp án đúng là [D] \"Petition\" (nghĩa: Kiến nghị, đơn kiến nghị). Cấu trúc 'are asked to + V-inf'.",
+        "translation": "Câu hoàn chỉnh: \"Participants in the training session are asked to Petition with their assigned groups.\". Nghĩa: Kiến nghị, đơn kiến nghị",
+        "targetWord": "Petition"
       },
       {
         "id": 126,
@@ -693,25 +694,25 @@
         "options": [
           {
             "key": "A",
-            "text": "Recycled"
+            "text": "Collaborate"
           },
           {
             "key": "B",
-            "text": "Handmade"
+            "text": "Recycled"
           },
           {
             "key": "C",
-            "text": "Layover"
+            "text": "Competitor"
           },
           {
             "key": "D",
-            "text": "Competitor"
+            "text": "Handmade"
           }
         ],
-        "correctAnswer": "C",
-        "explanation": "Đáp án đúng là [C] \"Layover\" (nghĩa: Thời gian quá cảnh). Cấu trúc 'agreement to + V-inf'.",
-        "translation": "Câu hoàn chỉnh: \"The executive committee reached a unanimous agreement to Layover the partnership.\". Nghĩa: Thời gian quá cảnh",
-        "targetWord": "Layover"
+        "correctAnswer": "A",
+        "explanation": "Đáp án đúng là [A] \"Collaborate\" (nghĩa: Hợp tác). Cấu trúc 'agreement to + V-inf'.",
+        "translation": "Câu hoàn chỉnh: \"The executive committee reached a unanimous agreement to Collaborate the partnership.\". Nghĩa: Hợp tác",
+        "targetWord": "Collaborate"
       },
       {
         "id": 127,
@@ -720,25 +721,25 @@
         "options": [
           {
             "key": "A",
-            "text": "Choir"
-          },
-          {
-            "key": "B",
-            "text": "Budget"
-          },
-          {
-            "key": "C",
             "text": "Display"
           },
           {
-            "key": "D",
+            "key": "B",
+            "text": "Substantial"
+          },
+          {
+            "key": "C",
             "text": "Orchestra"
+          },
+          {
+            "key": "D",
+            "text": "Choir"
           }
         ],
         "correctAnswer": "B",
-        "explanation": "Đáp án đúng là [B] \"Budget\" (nghĩa: Ngân sách). Cần danh từ chỉ vé/thẻ thông hành sau 'their'.",
-        "translation": "Câu hoàn chỉnh: \"Before boarding the corporate shuttle, passengers must present their Budget.\". Nghĩa: Ngân sách",
-        "targetWord": "Budget"
+        "explanation": "Đáp án đúng là [B] \"Substantial\" (nghĩa: Lớn, đáng kể). Cần danh từ chỉ vé/thẻ thông hành sau 'their'.",
+        "translation": "Câu hoàn chỉnh: \"Before boarding the corporate shuttle, passengers must present their Substantial.\". Nghĩa: Lớn, đáng kể",
+        "targetWord": "Substantial"
       },
       {
         "id": 128,
@@ -747,25 +748,25 @@
         "options": [
           {
             "key": "A",
-            "text": "Disagreement"
-          },
-          {
-            "key": "B",
             "text": "Reluctant"
           },
           {
+            "key": "B",
+            "text": "Facility"
+          },
+          {
             "key": "C",
-            "text": "Concerned"
+            "text": "Disagreement"
           },
           {
             "key": "D",
-            "text": "Available"
+            "text": "Address"
           }
         ],
         "correctAnswer": "D",
-        "explanation": "Đáp án đúng là [D] \"Available\" (nghĩa: Có sẵn, rảnh rỗi). Cấu trúc 'worked diligently to + V-inf'.",
-        "translation": "Câu hoàn chỉnh: \"The technician worked diligently to Available the malfunctioning equipment by noon.\". Nghĩa: Có sẵn, rảnh rỗi",
-        "targetWord": "Available"
+        "explanation": "Đáp án đúng là [D] \"Address\" (nghĩa: Giải quyết (vấn đề); địa chỉ). Cấu trúc 'worked diligently to + V-inf'.",
+        "translation": "Câu hoàn chỉnh: \"The technician worked diligently to Address the malfunctioning equipment by noon.\". Nghĩa: Giải quyết (vấn đề); địa chỉ",
+        "targetWord": "Address"
       },
       {
         "id": 129,
@@ -774,7 +775,7 @@
         "options": [
           {
             "key": "A",
-            "text": "Appointment"
+            "text": "Beneficial"
           },
           {
             "key": "B",
@@ -782,17 +783,17 @@
           },
           {
             "key": "C",
-            "text": "Voucher"
+            "text": "Pollution"
           },
           {
             "key": "D",
-            "text": "Pollution"
+            "text": "Concerned"
           }
         ],
         "correctAnswer": "A",
-        "explanation": "Đáp án đúng là [A] \"Appointment\" (nghĩa: Cuộc hẹn). Sau giới từ 'for' cần danh từ hoặc cụm danh từ.",
-        "translation": "Câu hoàn chỉnh: \"All feedback received from recent surveys indicates a strong preference for Appointment.\". Nghĩa: Cuộc hẹn",
-        "targetWord": "Appointment"
+        "explanation": "Đáp án đúng là [A] \"Beneficial\" (nghĩa: Có lợi). Sau giới từ 'for' cần danh từ hoặc cụm danh từ.",
+        "translation": "Câu hoàn chỉnh: \"All feedback received from recent surveys indicates a strong preference for Beneficial.\". Nghĩa: Có lợi",
+        "targetWord": "Beneficial"
       },
       {
         "id": 130,
@@ -801,25 +802,25 @@
         "options": [
           {
             "key": "A",
-            "text": "Membership"
+            "text": "Available"
           },
           {
             "key": "B",
-            "text": "Complements"
+            "text": "Collection"
           },
           {
             "key": "C",
-            "text": "Voucher"
+            "text": "Membership"
           },
           {
             "key": "D",
-            "text": "Collection"
+            "text": "Packaging"
           }
         ],
-        "correctAnswer": "B",
-        "explanation": "Đáp án đúng là [B] \"Complements\" (nghĩa: Bổ sung, làm tôn lên). Cần danh từ sau 'the team's'.",
-        "translation": "Câu hoàn chỉnh: \"The branch manager expressed gratitude for the team's Complements during peak hours.\". Nghĩa: Bổ sung, làm tôn lên",
-        "targetWord": "Complements"
+        "correctAnswer": "A",
+        "explanation": "Đáp án đúng là [A] \"Available\" (nghĩa: Có sẵn, rảnh rỗi). Cần danh từ sau 'the team's'.",
+        "translation": "Câu hoàn chỉnh: \"The branch manager expressed gratitude for the team's Available during peak hours.\". Nghĩa: Có sẵn, rảnh rỗi",
+        "targetWord": "Available"
       }
     ]
   },
@@ -842,24 +843,24 @@
             "options": [
               {
                 "key": "A",
-                "text": "diminish"
-              },
-              {
-                "key": "B",
-                "text": "Automated"
-              },
-              {
-                "key": "C",
                 "text": "overlook"
               },
               {
-                "key": "D",
+                "key": "B",
                 "text": "abandon"
+              },
+              {
+                "key": "C",
+                "text": "Efficient"
+              },
+              {
+                "key": "D",
+                "text": "diminish"
               }
             ],
-            "correctAnswer": "B",
-            "explanation": "Vị trí [131] cần từ \"Automated\" mang nghĩa: Tự động hóa, hoàn toàn chuẩn xác với ngữ cảnh thông báo.",
-            "targetWord": "Automated"
+            "correctAnswer": "C",
+            "explanation": "Vị trí [131] cần từ \"Efficient\" mang nghĩa: Hiệu quả, có năng suất, hoàn toàn chuẩn xác với ngữ cảnh thông báo.",
+            "targetWord": "Efficient"
           },
           {
             "id": 132,
@@ -868,11 +869,11 @@
             "options": [
               {
                 "key": "A",
-                "text": "Maintenance"
+                "text": "Past due"
               },
               {
                 "key": "B",
-                "text": "neglect"
+                "text": "eliminate"
               },
               {
                 "key": "C",
@@ -880,12 +881,12 @@
               },
               {
                 "key": "D",
-                "text": "eliminate"
+                "text": "neglect"
               }
             ],
             "correctAnswer": "A",
-            "explanation": "Vị trí [132] chọn \"Maintenance\" (nghĩa: Sự bảo trì) phù hợp về ngữ pháp và kết hợp từ trong văn bản.",
-            "targetWord": "Maintenance"
+            "explanation": "Vị trí [132] chọn \"Past due\" (nghĩa: Quá hạn thanh toán) phù hợp về ngữ pháp và kết hợp từ trong văn bản.",
+            "targetWord": "Past due"
           },
           {
             "id": 133,
@@ -898,18 +899,18 @@
               },
               {
                 "key": "B",
-                "text": "The kitchen pantry will be closed for sanitation."
+                "text": "The annual company dinner will be postponed until winter."
               },
               {
                 "key": "C",
-                "text": "Detailed step-by-step instructions have been uploaded to the shared folder."
+                "text": "The kitchen pantry will be closed for sanitation."
               },
               {
                 "key": "D",
-                "text": "The annual company dinner will be postponed until winter."
+                "text": "Detailed step-by-step instructions have been uploaded to the shared folder."
               }
             ],
-            "correctAnswer": "C",
+            "correctAnswer": "D",
             "explanation": "Câu điền [133] cung cấp thông tin liên kết hợp lý nhất về hướng dẫn triển khai cho toàn thể nhân sự.",
             "targetWord": "instructions"
           },
@@ -920,24 +921,24 @@
             "options": [
               {
                 "key": "A",
-                "text": "Approval"
+                "text": "complexity"
               },
               {
                 "key": "B",
-                "text": "hesitation"
-              },
-              {
-                "key": "C",
                 "text": "uncertainty"
               },
               {
+                "key": "C",
+                "text": "hesitation"
+              },
+              {
                 "key": "D",
-                "text": "complexity"
+                "text": "Fluctuation"
               }
             ],
-            "correctAnswer": "A",
-            "explanation": "Vị trí [134] yêu cầu danh từ/tính từ \"Approval\" (Sự phê duyệt) thể hiện cam kết chất lượng môi trường làm việc.",
-            "targetWord": "Approval"
+            "correctAnswer": "D",
+            "explanation": "Vị trí [134] yêu cầu danh từ/tính từ \"Fluctuation\" (Sự biến động) thể hiện cam kết chất lượng môi trường làm việc.",
+            "targetWord": "Fluctuation"
           }
         ]
       },
@@ -955,7 +956,7 @@
             "options": [
               {
                 "key": "A",
-                "text": "Leading"
+                "text": "diminish"
               },
               {
                 "key": "B",
@@ -963,16 +964,16 @@
               },
               {
                 "key": "C",
-                "text": "diminish"
+                "text": "abandon"
               },
               {
                 "key": "D",
-                "text": "abandon"
+                "text": "Deadline"
               }
             ],
-            "correctAnswer": "A",
-            "explanation": "Vị trí [135] cần từ \"Leading\" mang nghĩa: Dẫn đầu, hàng đầu, hoàn toàn chuẩn xác với ngữ cảnh thông báo.",
-            "targetWord": "Leading"
+            "correctAnswer": "D",
+            "explanation": "Vị trí [135] cần từ \"Deadline\" mang nghĩa: Hạn chót, hoàn toàn chuẩn xác với ngữ cảnh thông báo.",
+            "targetWord": "Deadline"
           },
           {
             "id": 136,
@@ -981,11 +982,11 @@
             "options": [
               {
                 "key": "A",
-                "text": "postpone"
+                "text": "Corporation"
               },
               {
                 "key": "B",
-                "text": "Defective"
+                "text": "neglect"
               },
               {
                 "key": "C",
@@ -993,12 +994,12 @@
               },
               {
                 "key": "D",
-                "text": "neglect"
+                "text": "postpone"
               }
             ],
-            "correctAnswer": "B",
-            "explanation": "Vị trí [136] chọn \"Defective\" (nghĩa: Bị lỗi, có khuyết tật) phù hợp về ngữ pháp và kết hợp từ trong văn bản.",
-            "targetWord": "Defective"
+            "correctAnswer": "A",
+            "explanation": "Vị trí [136] chọn \"Corporation\" (nghĩa: Tập đoàn) phù hợp về ngữ pháp và kết hợp từ trong văn bản.",
+            "targetWord": "Corporation"
           },
           {
             "id": 137,
@@ -1007,7 +1008,7 @@
             "options": [
               {
                 "key": "A",
-                "text": "Detailed step-by-step instructions have been uploaded to the shared folder."
+                "text": "Parking permits are strictly non-transferable between vehicles."
               },
               {
                 "key": "B",
@@ -1015,14 +1016,14 @@
               },
               {
                 "key": "C",
-                "text": "The kitchen pantry will be closed for sanitation."
+                "text": "Detailed step-by-step instructions have been uploaded to the shared folder."
               },
               {
                 "key": "D",
-                "text": "Parking permits are strictly non-transferable between vehicles."
+                "text": "The kitchen pantry will be closed for sanitation."
               }
             ],
-            "correctAnswer": "A",
+            "correctAnswer": "C",
             "explanation": "Câu điền [137] cung cấp thông tin liên kết hợp lý nhất về hướng dẫn triển khai cho toàn thể nhân sự.",
             "targetWord": "instructions"
           },
@@ -1033,24 +1034,24 @@
             "options": [
               {
                 "key": "A",
-                "text": "complexity"
-              },
-              {
-                "key": "B",
                 "text": "uncertainty"
               },
               {
-                "key": "C",
+                "key": "B",
                 "text": "hesitation"
               },
               {
+                "key": "C",
+                "text": "Flexible"
+              },
+              {
                 "key": "D",
-                "text": "Infringe on"
+                "text": "complexity"
               }
             ],
-            "correctAnswer": "D",
-            "explanation": "Vị trí [138] yêu cầu danh từ/tính từ \"Infringe on\" (Vi phạm (bản quyền, quyền lợi)) thể hiện cam kết chất lượng môi trường làm việc.",
-            "targetWord": "Infringe on"
+            "correctAnswer": "C",
+            "explanation": "Vị trí [138] yêu cầu danh từ/tính từ \"Flexible\" (Linh hoạt) thể hiện cam kết chất lượng môi trường làm việc.",
+            "targetWord": "Flexible"
           }
         ]
       },
@@ -1068,24 +1069,24 @@
             "options": [
               {
                 "key": "A",
-                "text": "abandon"
+                "text": "Application"
               },
               {
                 "key": "B",
-                "text": "overlook"
-              },
-              {
-                "key": "C",
                 "text": "diminish"
               },
               {
+                "key": "C",
+                "text": "abandon"
+              },
+              {
                 "key": "D",
-                "text": "Relocate"
+                "text": "overlook"
               }
             ],
-            "correctAnswer": "D",
-            "explanation": "Vị trí [139] cần từ \"Relocate\" mang nghĩa: Di dời, chuyển địa điểm, hoàn toàn chuẩn xác với ngữ cảnh thông báo.",
-            "targetWord": "Relocate"
+            "correctAnswer": "A",
+            "explanation": "Vị trí [139] cần từ \"Application\" mang nghĩa: Đơn xin việc; ứng dụng, hoàn toàn chuẩn xác với ngữ cảnh thông báo.",
+            "targetWord": "Application"
           },
           {
             "id": 140,
@@ -1094,7 +1095,7 @@
             "options": [
               {
                 "key": "A",
-                "text": "Estimated"
+                "text": "neglect"
               },
               {
                 "key": "B",
@@ -1102,16 +1103,16 @@
               },
               {
                 "key": "C",
-                "text": "neglect"
+                "text": "Approximate"
               },
               {
                 "key": "D",
                 "text": "eliminate"
               }
             ],
-            "correctAnswer": "A",
-            "explanation": "Vị trí [140] chọn \"Estimated\" (nghĩa: Ước tính) phù hợp về ngữ pháp và kết hợp từ trong văn bản.",
-            "targetWord": "Estimated"
+            "correctAnswer": "C",
+            "explanation": "Vị trí [140] chọn \"Approximate\" (nghĩa: Xấp xỉ, ước chừng) phù hợp về ngữ pháp và kết hợp từ trong văn bản.",
+            "targetWord": "Approximate"
           },
           {
             "id": 141,
@@ -1120,11 +1121,11 @@
             "options": [
               {
                 "key": "A",
-                "text": "The kitchen pantry will be closed for sanitation."
+                "text": "Parking permits are strictly non-transferable between vehicles."
               },
               {
                 "key": "B",
-                "text": "Detailed step-by-step instructions have been uploaded to the shared folder."
+                "text": "The kitchen pantry will be closed for sanitation."
               },
               {
                 "key": "C",
@@ -1132,10 +1133,10 @@
               },
               {
                 "key": "D",
-                "text": "Parking permits are strictly non-transferable between vehicles."
+                "text": "Detailed step-by-step instructions have been uploaded to the shared folder."
               }
             ],
-            "correctAnswer": "B",
+            "correctAnswer": "D",
             "explanation": "Câu điền [141] cung cấp thông tin liên kết hợp lý nhất về hướng dẫn triển khai cho toàn thể nhân sự.",
             "targetWord": "instructions"
           },
@@ -1146,11 +1147,11 @@
             "options": [
               {
                 "key": "A",
-                "text": "Trade fair"
+                "text": "uncertainty"
               },
               {
                 "key": "B",
-                "text": "uncertainty"
+                "text": "hesitation"
               },
               {
                 "key": "C",
@@ -1158,12 +1159,12 @@
               },
               {
                 "key": "D",
-                "text": "hesitation"
+                "text": "Liaison"
               }
             ],
-            "correctAnswer": "A",
-            "explanation": "Vị trí [142] yêu cầu danh từ/tính từ \"Trade fair\" (Hội chợ thương mại) thể hiện cam kết chất lượng môi trường làm việc.",
-            "targetWord": "Trade fair"
+            "correctAnswer": "D",
+            "explanation": "Vị trí [142] yêu cầu danh từ/tính từ \"Liaison\" (Người/ban liên lạc, kết nối) thể hiện cam kết chất lượng môi trường làm việc.",
+            "targetWord": "Liaison"
           }
         ]
       },
@@ -1181,24 +1182,24 @@
             "options": [
               {
                 "key": "A",
-                "text": "Zipper"
-              },
-              {
-                "key": "B",
                 "text": "abandon"
               },
               {
+                "key": "B",
+                "text": "Destination"
+              },
+              {
                 "key": "C",
-                "text": "overlook"
+                "text": "diminish"
               },
               {
                 "key": "D",
-                "text": "diminish"
+                "text": "overlook"
               }
             ],
-            "correctAnswer": "A",
-            "explanation": "Vị trí [143] cần từ \"Zipper\" mang nghĩa: Khóa kéo (áo, quần), hoàn toàn chuẩn xác với ngữ cảnh thông báo.",
-            "targetWord": "Zipper"
+            "correctAnswer": "B",
+            "explanation": "Vị trí [143] cần từ \"Destination\" mang nghĩa: Điểm đến, hoàn toàn chuẩn xác với ngữ cảnh thông báo.",
+            "targetWord": "Destination"
           },
           {
             "id": 144,
@@ -1207,24 +1208,24 @@
             "options": [
               {
                 "key": "A",
-                "text": "postpone"
-              },
-              {
-                "key": "B",
                 "text": "eliminate"
               },
               {
+                "key": "B",
+                "text": "Digital file"
+              },
+              {
                 "key": "C",
-                "text": "Off-site venue"
+                "text": "neglect"
               },
               {
                 "key": "D",
-                "text": "neglect"
+                "text": "postpone"
               }
             ],
-            "correctAnswer": "C",
-            "explanation": "Vị trí [144] chọn \"Off-site venue\" (nghĩa: Địa điểm bên ngoài công ty) phù hợp về ngữ pháp và kết hợp từ trong văn bản.",
-            "targetWord": "Off-site venue"
+            "correctAnswer": "B",
+            "explanation": "Vị trí [144] chọn \"Digital file\" (nghĩa: Tệp kỹ thuật số) phù hợp về ngữ pháp và kết hợp từ trong văn bản.",
+            "targetWord": "Digital file"
           },
           {
             "id": 145,
@@ -1233,11 +1234,11 @@
             "options": [
               {
                 "key": "A",
-                "text": "Parking permits are strictly non-transferable between vehicles."
+                "text": "The kitchen pantry will be closed for sanitation."
               },
               {
                 "key": "B",
-                "text": "The kitchen pantry will be closed for sanitation."
+                "text": "Parking permits are strictly non-transferable between vehicles."
               },
               {
                 "key": "C",
@@ -1259,7 +1260,7 @@
             "options": [
               {
                 "key": "A",
-                "text": "uncertainty"
+                "text": "Nomination"
               },
               {
                 "key": "B",
@@ -1271,1603 +1272,12 @@
               },
               {
                 "key": "D",
-                "text": "Entitled to"
-              }
-            ],
-            "correctAnswer": "D",
-            "explanation": "Vị trí [146] yêu cầu danh từ/tính từ \"Entitled to\" (Được hưởng quyền lợi) thể hiện cam kết chất lượng môi trường làm việc.",
-            "targetWord": "Entitled to"
-          }
-        ]
-      }
-    ]
-  },
-  "part7": {
-    "title": "TOEIC Reading Part 7 - Reading Comprehension (TEST 7)",
-    "totalPassages": 14,
-    "totalQuestions": 54,
-    "passages": [
-      {
-        "passageId": 1,
-        "passageType": "Advertisement",
-        "title": "Commercial Space for Lease",
-        "passage": "DOCUMENT: COMMERCIAL SPACE FOR LEASE\nDocument Reference: REF-202601\nCategory: Advertisement\n\nTo Whom It May Concern,\n\nWe are pleased to announce our latest updates regarding commercial space for lease. As part of our commitment to excellence, our team has arranged to Apologize all key activities with precision. Clients wishing to Accuracy about additional details are advised to submit an online inquiry through our primary portal.\n\nPlease ensure that all documentation is verified prior to the designated deadline. Representatives will be on hand to assist throughout the transition period.\n\nFor urgent matters, please contact the administrative coordinator at contact@enterprise-solutions.com.",
-        "passageTranslation": "TÀI LIỆU: COMMERCIAL SPACE FOR LEASE\nMã tham chiếu: REF-202601\nThể loại: Advertisement\n\nKính gửi các bên liên quan,\n\nChúng tôi vui mừng thông báo những cập nhật mới nhất liên quan đến commercial space for lease. Nhằm thực hiện cam kết về chất lượng, đội ngũ của chúng tôi đã sắp xếp để [Apologize - Xin lỗi] tất cả các hoạt động chính một cách chuẩn xác. Khách hàng muốn [Accuracy - Sự chính xác] thêm chi tiết nên gửi biểu mẫu trực tuyến qua cổng thông tin chính của chúng tôi.\n\nVui lòng đảm bảo mọi tài liệu được kiểm tra trước thời hạn quy định. Các đại diện sẽ luôn có mặt để hỗ trợ trong suốt giai đoạn này.\n\nĐối với các vấn đề khẩn cấp, vui lòng liên hệ điều phối viên hành chính tại contact@enterprise-solutions.com.",
-        "questions": [
-          {
-            "id": 147,
-            "questionNumber": 147,
-            "question": "What is the main purpose of this advertisement?",
-            "options": [
-              {
-                "key": "A",
-                "text": "To announce updates regarding commercial space for lease"
-              },
-              {
-                "key": "B",
-                "text": "To dispute a recent billing invoice"
-              },
-              {
-                "key": "C",
-                "text": "To cancel an existing service contract"
-              },
-              {
-                "key": "D",
-                "text": "To advertise an upcoming clearance sale"
+                "text": "uncertainty"
               }
             ],
             "correctAnswer": "A",
-            "explanation": "Đoạn mở đầu nêu rõ mục đích thông báo về commercial space for lease.",
-            "evidence": "We are pleased to announce our latest updates regarding commercial space for lease.",
-            "translation": "Mục đích chính của văn bản này là gì?"
-          },
-          {
-            "id": 148,
-            "questionNumber": 148,
-            "question": "According to the document, what are clients advised to do if they need more information?",
-            "options": [
-              {
-                "key": "A",
-                "text": "Submit an online inquiry via the primary portal"
-              },
-              {
-                "key": "B",
-                "text": "Visit the corporate headquarters in person"
-              },
-              {
-                "key": "C",
-                "text": "Request an immediate refund from finance"
-              },
-              {
-                "key": "D",
-                "text": "Send a physical letter via registered mail"
-              }
-            ],
-            "correctAnswer": "A",
-            "explanation": "Văn bản ghi rõ: Khách hàng muốn tìm hiểu thêm thông tin cần gửi biểu mẫu trực tuyến ('submit an online inquiry through our primary portal').",
-            "evidence": "Clients wishing to inquire about additional details are advised to submit an online inquiry through our primary portal.",
-            "translation": "Theo tài liệu, khách hàng được khuyên nên làm gì nếu muốn biết thêm thông tin?"
-          }
-        ]
-      },
-      {
-        "passageId": 2,
-        "passageType": "Text Message Chain",
-        "title": "Delivery Logistics Coordination",
-        "passage": "DOCUMENT: DELIVERY LOGISTICS COORDINATION\nDocument Reference: REF-202602\nCategory: Text Message Chain\n\nTo Whom It May Concern,\n\nWe are pleased to announce our latest updates regarding delivery logistics coordination. As part of our commitment to excellence, our team has arranged to Appointment all key activities with precision. Clients wishing to Prominent about additional details are advised to submit an online inquiry through our primary portal.\n\nPlease ensure that all documentation is verified prior to the designated deadline. Representatives will be on hand to assist throughout the transition period.\n\nFor urgent matters, please contact the administrative coordinator at contact@enterprise-solutions.com.",
-        "passageTranslation": "TÀI LIỆU: DELIVERY LOGISTICS COORDINATION\nMã tham chiếu: REF-202602\nThể loại: Text Message Chain\n\nKính gửi các bên liên quan,\n\nChúng tôi vui mừng thông báo những cập nhật mới nhất liên quan đến delivery logistics coordination. Nhằm thực hiện cam kết về chất lượng, đội ngũ của chúng tôi đã sắp xếp để [Appointment - Cuộc hẹn, sự bổ nhiệm] tất cả các hoạt động chính một cách chuẩn xác. Khách hàng muốn [Prominent - Nổi tiếng, lỗi lạc, xuất sắc] thêm chi tiết nên gửi biểu mẫu trực tuyến qua cổng thông tin chính của chúng tôi.\n\nVui lòng đảm bảo mọi tài liệu được kiểm tra trước thời hạn quy định. Các đại diện sẽ luôn có mặt để hỗ trợ trong suốt giai đoạn này.\n\nĐối với các vấn đề khẩn cấp, vui lòng liên hệ điều phối viên hành chính tại contact@enterprise-solutions.com.",
-        "questions": [
-          {
-            "id": 149,
-            "questionNumber": 149,
-            "question": "What is the main purpose of this text?",
-            "options": [
-              {
-                "key": "A",
-                "text": "To announce updates regarding delivery logistics coordination"
-              },
-              {
-                "key": "B",
-                "text": "To dispute a recent billing invoice"
-              },
-              {
-                "key": "C",
-                "text": "To cancel an existing service contract"
-              },
-              {
-                "key": "D",
-                "text": "To advertise an upcoming clearance sale"
-              }
-            ],
-            "correctAnswer": "A",
-            "explanation": "Đoạn mở đầu nêu rõ mục đích thông báo về delivery logistics coordination.",
-            "evidence": "We are pleased to announce our latest updates regarding delivery logistics coordination.",
-            "translation": "Mục đích chính của văn bản này là gì?"
-          },
-          {
-            "id": 150,
-            "questionNumber": 150,
-            "question": "According to the document, what are clients advised to do if they need more information?",
-            "options": [
-              {
-                "key": "A",
-                "text": "Submit an online inquiry via the primary portal"
-              },
-              {
-                "key": "B",
-                "text": "Visit the corporate headquarters in person"
-              },
-              {
-                "key": "C",
-                "text": "Request an immediate refund from finance"
-              },
-              {
-                "key": "D",
-                "text": "Send a physical letter via registered mail"
-              }
-            ],
-            "correctAnswer": "A",
-            "explanation": "Văn bản ghi rõ: Khách hàng muốn tìm hiểu thêm thông tin cần gửi biểu mẫu trực tuyến ('submit an online inquiry through our primary portal').",
-            "evidence": "Clients wishing to inquire about additional details are advised to submit an online inquiry through our primary portal.",
-            "translation": "Theo tài liệu, khách hàng được khuyên nên làm gì nếu muốn biết thêm thông tin?"
-          }
-        ]
-      },
-      {
-        "passageId": 3,
-        "passageType": "Business Email",
-        "title": "Request for Quotation on Bulk Supplies",
-        "passage": "DOCUMENT: REQUEST FOR QUOTATION ON BULK SUPPLIES\nDocument Reference: REF-202603\nCategory: Business Email\n\nTo Whom It May Concern,\n\nWe are pleased to announce our latest updates regarding request for quotation on bulk supplies. As part of our commitment to excellence, our team has arranged to Register all key activities with precision. Clients wishing to Voucher about additional details are advised to submit an online inquiry through our primary portal.\n\nPlease ensure that all documentation is verified prior to the designated deadline. Representatives will be on hand to assist throughout the transition period.\n\nFor urgent matters, please contact the administrative coordinator at contact@enterprise-solutions.com.",
-        "passageTranslation": "TÀI LIỆU: REQUEST FOR QUOTATION ON BULK SUPPLIES\nMã tham chiếu: REF-202603\nThể loại: Business Email\n\nKính gửi các bên liên quan,\n\nChúng tôi vui mừng thông báo những cập nhật mới nhất liên quan đến request for quotation on bulk supplies. Nhằm thực hiện cam kết về chất lượng, đội ngũ của chúng tôi đã sắp xếp để [Register - Đăng ký] tất cả các hoạt động chính một cách chuẩn xác. Khách hàng muốn [Voucher - Phiếu mua hàng] thêm chi tiết nên gửi biểu mẫu trực tuyến qua cổng thông tin chính của chúng tôi.\n\nVui lòng đảm bảo mọi tài liệu được kiểm tra trước thời hạn quy định. Các đại diện sẽ luôn có mặt để hỗ trợ trong suốt giai đoạn này.\n\nĐối với các vấn đề khẩn cấp, vui lòng liên hệ điều phối viên hành chính tại contact@enterprise-solutions.com.",
-        "questions": [
-          {
-            "id": 151,
-            "questionNumber": 151,
-            "question": "What is the main purpose of this business?",
-            "options": [
-              {
-                "key": "A",
-                "text": "To announce updates regarding request for quotation on bulk supplies"
-              },
-              {
-                "key": "B",
-                "text": "To dispute a recent billing invoice"
-              },
-              {
-                "key": "C",
-                "text": "To cancel an existing service contract"
-              },
-              {
-                "key": "D",
-                "text": "To advertise an upcoming clearance sale"
-              }
-            ],
-            "correctAnswer": "A",
-            "explanation": "Đoạn mở đầu nêu rõ mục đích thông báo về request for quotation on bulk supplies.",
-            "evidence": "We are pleased to announce our latest updates regarding request for quotation on bulk supplies.",
-            "translation": "Mục đích chính của văn bản này là gì?"
-          },
-          {
-            "id": 152,
-            "questionNumber": 152,
-            "question": "According to the document, what are clients advised to do if they need more information?",
-            "options": [
-              {
-                "key": "A",
-                "text": "Submit an online inquiry via the primary portal"
-              },
-              {
-                "key": "B",
-                "text": "Visit the corporate headquarters in person"
-              },
-              {
-                "key": "C",
-                "text": "Request an immediate refund from finance"
-              },
-              {
-                "key": "D",
-                "text": "Send a physical letter via registered mail"
-              }
-            ],
-            "correctAnswer": "A",
-            "explanation": "Văn bản ghi rõ: Khách hàng muốn tìm hiểu thêm thông tin cần gửi biểu mẫu trực tuyến ('submit an online inquiry through our primary portal').",
-            "evidence": "Clients wishing to inquire about additional details are advised to submit an online inquiry through our primary portal.",
-            "translation": "Theo tài liệu, khách hàng được khuyên nên làm gì nếu muốn biết thêm thông tin?"
-          },
-          {
-            "id": 153,
-            "questionNumber": 153,
-            "question": "The word \"Register\" in paragraph 1 is closest in meaning to:",
-            "options": [
-              {
-                "key": "A",
-                "text": "organize / coordinate"
-              },
-              {
-                "key": "B",
-                "text": "discontinue"
-              },
-              {
-                "key": "C",
-                "text": "prohibit"
-              },
-              {
-                "key": "D",
-                "text": "misplace"
-              }
-            ],
-            "correctAnswer": "A",
-            "explanation": "Từ \"Register\" (Đăng ký) trong ngữ cảnh lên lịch/sắp xếp hoạt động đồng nghĩa với 'organize / coordinate'.",
-            "evidence": "our team has arranged to Register all key activities with precision",
-            "translation": "Từ \"Register\" trong đoạn 1 gần nghĩa nhất với từ nào?"
-          }
-        ]
-      },
-      {
-        "passageId": 4,
-        "passageType": "Online Review & Response",
-        "title": "Customer Experience at Grand Horizon Hotel",
-        "passage": "DOCUMENT: CUSTOMER EXPERIENCE AT GRAND HORIZON HOTEL\nDocument Reference: REF-202604\nCategory: Online Review & Response\n\nTo Whom It May Concern,\n\nWe are pleased to announce our latest updates regarding customer experience at grand horizon hotel. As part of our commitment to excellence, our team has arranged to Representative all key activities with precision. Clients wishing to Commercial about additional details are advised to submit an online inquiry through our primary portal.\n\nPlease ensure that all documentation is verified prior to the designated deadline. Representatives will be on hand to assist throughout the transition period.\n\nFor urgent matters, please contact the administrative coordinator at contact@enterprise-solutions.com.",
-        "passageTranslation": "TÀI LIỆU: CUSTOMER EXPERIENCE AT GRAND HORIZON HOTEL\nMã tham chiếu: REF-202604\nThể loại: Online Review & Response\n\nKính gửi các bên liên quan,\n\nChúng tôi vui mừng thông báo những cập nhật mới nhất liên quan đến customer experience at grand horizon hotel. Nhằm thực hiện cam kết về chất lượng, đội ngũ của chúng tôi đã sắp xếp để [Representative - Người đại diện] tất cả các hoạt động chính một cách chuẩn xác. Khách hàng muốn [Commercial - Thuộc thương mại/Quảng cáo] thêm chi tiết nên gửi biểu mẫu trực tuyến qua cổng thông tin chính của chúng tôi.\n\nVui lòng đảm bảo mọi tài liệu được kiểm tra trước thời hạn quy định. Các đại diện sẽ luôn có mặt để hỗ trợ trong suốt giai đoạn này.\n\nĐối với các vấn đề khẩn cấp, vui lòng liên hệ điều phối viên hành chính tại contact@enterprise-solutions.com.",
-        "questions": [
-          {
-            "id": 154,
-            "questionNumber": 154,
-            "question": "What is the main purpose of this online?",
-            "options": [
-              {
-                "key": "A",
-                "text": "To announce updates regarding customer experience at grand horizon hotel"
-              },
-              {
-                "key": "B",
-                "text": "To dispute a recent billing invoice"
-              },
-              {
-                "key": "C",
-                "text": "To cancel an existing service contract"
-              },
-              {
-                "key": "D",
-                "text": "To advertise an upcoming clearance sale"
-              }
-            ],
-            "correctAnswer": "A",
-            "explanation": "Đoạn mở đầu nêu rõ mục đích thông báo về customer experience at grand horizon hotel.",
-            "evidence": "We are pleased to announce our latest updates regarding customer experience at grand horizon hotel.",
-            "translation": "Mục đích chính của văn bản này là gì?"
-          },
-          {
-            "id": 155,
-            "questionNumber": 155,
-            "question": "According to the document, what are clients advised to do if they need more information?",
-            "options": [
-              {
-                "key": "A",
-                "text": "Submit an online inquiry via the primary portal"
-              },
-              {
-                "key": "B",
-                "text": "Visit the corporate headquarters in person"
-              },
-              {
-                "key": "C",
-                "text": "Request an immediate refund from finance"
-              },
-              {
-                "key": "D",
-                "text": "Send a physical letter via registered mail"
-              }
-            ],
-            "correctAnswer": "A",
-            "explanation": "Văn bản ghi rõ: Khách hàng muốn tìm hiểu thêm thông tin cần gửi biểu mẫu trực tuyến ('submit an online inquiry through our primary portal').",
-            "evidence": "Clients wishing to inquire about additional details are advised to submit an online inquiry through our primary portal.",
-            "translation": "Theo tài liệu, khách hàng được khuyên nên làm gì nếu muốn biết thêm thông tin?"
-          },
-          {
-            "id": 156,
-            "questionNumber": 156,
-            "question": "The word \"Representative\" in paragraph 1 is closest in meaning to:",
-            "options": [
-              {
-                "key": "A",
-                "text": "organize / coordinate"
-              },
-              {
-                "key": "B",
-                "text": "discontinue"
-              },
-              {
-                "key": "C",
-                "text": "prohibit"
-              },
-              {
-                "key": "D",
-                "text": "misplace"
-              }
-            ],
-            "correctAnswer": "A",
-            "explanation": "Từ \"Representative\" (Người đại diện) trong ngữ cảnh lên lịch/sắp xếp hoạt động đồng nghĩa với 'organize / coordinate'.",
-            "evidence": "our team has arranged to Representative all key activities with precision",
-            "translation": "Từ \"Representative\" trong đoạn 1 gần nghĩa nhất với từ nào?"
-          }
-        ]
-      },
-      {
-        "passageId": 5,
-        "passageType": "Job Posting & Schedule",
-        "title": "Senior Logistics Coordinator Vacancy",
-        "passage": "DOCUMENT: SENIOR LOGISTICS COORDINATOR VACANCY\nDocument Reference: REF-202605\nCategory: Job Posting & Schedule\n\nTo Whom It May Concern,\n\nWe are pleased to announce our latest updates regarding senior logistics coordinator vacancy. As part of our commitment to excellence, our team has arranged to Come up short all key activities with precision. Clients wishing to Affordable about additional details are advised to submit an online inquiry through our primary portal.\n\nPlease ensure that all documentation is verified prior to the designated deadline. Representatives will be on hand to assist throughout the transition period.\n\nFor urgent matters, please contact the administrative coordinator at contact@enterprise-solutions.com.",
-        "passageTranslation": "TÀI LIỆU: SENIOR LOGISTICS COORDINATOR VACANCY\nMã tham chiếu: REF-202605\nThể loại: Job Posting & Schedule\n\nKính gửi các bên liên quan,\n\nChúng tôi vui mừng thông báo những cập nhật mới nhất liên quan đến senior logistics coordinator vacancy. Nhằm thực hiện cam kết về chất lượng, đội ngũ của chúng tôi đã sắp xếp để [Come up short - Không đạt kỳ vọng, thiếu sót] tất cả các hoạt động chính một cách chuẩn xác. Khách hàng muốn [Affordable - Giá cả phải chăng] thêm chi tiết nên gửi biểu mẫu trực tuyến qua cổng thông tin chính của chúng tôi.\n\nVui lòng đảm bảo mọi tài liệu được kiểm tra trước thời hạn quy định. Các đại diện sẽ luôn có mặt để hỗ trợ trong suốt giai đoạn này.\n\nĐối với các vấn đề khẩn cấp, vui lòng liên hệ điều phối viên hành chính tại contact@enterprise-solutions.com.",
-        "questions": [
-          {
-            "id": 157,
-            "questionNumber": 157,
-            "question": "What is the main purpose of this job?",
-            "options": [
-              {
-                "key": "A",
-                "text": "To announce updates regarding senior logistics coordinator vacancy"
-              },
-              {
-                "key": "B",
-                "text": "To dispute a recent billing invoice"
-              },
-              {
-                "key": "C",
-                "text": "To cancel an existing service contract"
-              },
-              {
-                "key": "D",
-                "text": "To advertise an upcoming clearance sale"
-              }
-            ],
-            "correctAnswer": "A",
-            "explanation": "Đoạn mở đầu nêu rõ mục đích thông báo về senior logistics coordinator vacancy.",
-            "evidence": "We are pleased to announce our latest updates regarding senior logistics coordinator vacancy.",
-            "translation": "Mục đích chính của văn bản này là gì?"
-          },
-          {
-            "id": 158,
-            "questionNumber": 158,
-            "question": "According to the document, what are clients advised to do if they need more information?",
-            "options": [
-              {
-                "key": "A",
-                "text": "Submit an online inquiry via the primary portal"
-              },
-              {
-                "key": "B",
-                "text": "Visit the corporate headquarters in person"
-              },
-              {
-                "key": "C",
-                "text": "Request an immediate refund from finance"
-              },
-              {
-                "key": "D",
-                "text": "Send a physical letter via registered mail"
-              }
-            ],
-            "correctAnswer": "A",
-            "explanation": "Văn bản ghi rõ: Khách hàng muốn tìm hiểu thêm thông tin cần gửi biểu mẫu trực tuyến ('submit an online inquiry through our primary portal').",
-            "evidence": "Clients wishing to inquire about additional details are advised to submit an online inquiry through our primary portal.",
-            "translation": "Theo tài liệu, khách hàng được khuyên nên làm gì nếu muốn biết thêm thông tin?"
-          },
-          {
-            "id": 159,
-            "questionNumber": 159,
-            "question": "The word \"Come up short\" in paragraph 1 is closest in meaning to:",
-            "options": [
-              {
-                "key": "A",
-                "text": "organize / coordinate"
-              },
-              {
-                "key": "B",
-                "text": "discontinue"
-              },
-              {
-                "key": "C",
-                "text": "prohibit"
-              },
-              {
-                "key": "D",
-                "text": "misplace"
-              }
-            ],
-            "correctAnswer": "A",
-            "explanation": "Từ \"Come up short\" (Không đạt kỳ vọng, thiếu sót) trong ngữ cảnh lên lịch/sắp xếp hoạt động đồng nghĩa với 'organize / coordinate'.",
-            "evidence": "our team has arranged to Come up short all key activities with precision",
-            "translation": "Từ \"Come up short\" trong đoạn 1 gần nghĩa nhất với từ nào?"
-          }
-        ]
-      },
-      {
-        "passageId": 6,
-        "passageType": "Executive Memo",
-        "title": "Implementation of Cloud Database System",
-        "passage": "DOCUMENT: IMPLEMENTATION OF CLOUD DATABASE SYSTEM\nDocument Reference: REF-202606\nCategory: Executive Memo\n\nTo Whom It May Concern,\n\nWe are pleased to announce our latest updates regarding implementation of cloud database system. As part of our commitment to excellence, our team has arranged to Appoint all key activities with precision. Clients wishing to Head up about additional details are advised to submit an online inquiry through our primary portal.\n\nPlease ensure that all documentation is verified prior to the designated deadline. Representatives will be on hand to assist throughout the transition period.\n\nFor urgent matters, please contact the administrative coordinator at contact@enterprise-solutions.com.",
-        "passageTranslation": "TÀI LIỆU: IMPLEMENTATION OF CLOUD DATABASE SYSTEM\nMã tham chiếu: REF-202606\nThể loại: Executive Memo\n\nKính gửi các bên liên quan,\n\nChúng tôi vui mừng thông báo những cập nhật mới nhất liên quan đến implementation of cloud database system. Nhằm thực hiện cam kết về chất lượng, đội ngũ của chúng tôi đã sắp xếp để [Appoint - Bổ nhiệm, chỉ định] tất cả các hoạt động chính một cách chuẩn xác. Khách hàng muốn [Head up - Phụ trách, chỉ huy] thêm chi tiết nên gửi biểu mẫu trực tuyến qua cổng thông tin chính của chúng tôi.\n\nVui lòng đảm bảo mọi tài liệu được kiểm tra trước thời hạn quy định. Các đại diện sẽ luôn có mặt để hỗ trợ trong suốt giai đoạn này.\n\nĐối với các vấn đề khẩn cấp, vui lòng liên hệ điều phối viên hành chính tại contact@enterprise-solutions.com.",
-        "questions": [
-          {
-            "id": 160,
-            "questionNumber": 160,
-            "question": "What is the main purpose of this executive?",
-            "options": [
-              {
-                "key": "A",
-                "text": "To announce updates regarding implementation of cloud database system"
-              },
-              {
-                "key": "B",
-                "text": "To dispute a recent billing invoice"
-              },
-              {
-                "key": "C",
-                "text": "To cancel an existing service contract"
-              },
-              {
-                "key": "D",
-                "text": "To advertise an upcoming clearance sale"
-              }
-            ],
-            "correctAnswer": "A",
-            "explanation": "Đoạn mở đầu nêu rõ mục đích thông báo về implementation of cloud database system.",
-            "evidence": "We are pleased to announce our latest updates regarding implementation of cloud database system.",
-            "translation": "Mục đích chính của văn bản này là gì?"
-          },
-          {
-            "id": 161,
-            "questionNumber": 161,
-            "question": "According to the document, what are clients advised to do if they need more information?",
-            "options": [
-              {
-                "key": "A",
-                "text": "Submit an online inquiry via the primary portal"
-              },
-              {
-                "key": "B",
-                "text": "Visit the corporate headquarters in person"
-              },
-              {
-                "key": "C",
-                "text": "Request an immediate refund from finance"
-              },
-              {
-                "key": "D",
-                "text": "Send a physical letter via registered mail"
-              }
-            ],
-            "correctAnswer": "A",
-            "explanation": "Văn bản ghi rõ: Khách hàng muốn tìm hiểu thêm thông tin cần gửi biểu mẫu trực tuyến ('submit an online inquiry through our primary portal').",
-            "evidence": "Clients wishing to inquire about additional details are advised to submit an online inquiry through our primary portal.",
-            "translation": "Theo tài liệu, khách hàng được khuyên nên làm gì nếu muốn biết thêm thông tin?"
-          },
-          {
-            "id": 162,
-            "questionNumber": 162,
-            "question": "The word \"Appoint\" in paragraph 1 is closest in meaning to:",
-            "options": [
-              {
-                "key": "A",
-                "text": "organize / coordinate"
-              },
-              {
-                "key": "B",
-                "text": "discontinue"
-              },
-              {
-                "key": "C",
-                "text": "prohibit"
-              },
-              {
-                "key": "D",
-                "text": "misplace"
-              }
-            ],
-            "correctAnswer": "A",
-            "explanation": "Từ \"Appoint\" (Bổ nhiệm, chỉ định) trong ngữ cảnh lên lịch/sắp xếp hoạt động đồng nghĩa với 'organize / coordinate'.",
-            "evidence": "our team has arranged to Appoint all key activities with precision",
-            "translation": "Từ \"Appoint\" trong đoạn 1 gần nghĩa nhất với từ nào?"
-          },
-          {
-            "id": 163,
-            "questionNumber": 163,
-            "question": "What is indicated about the representatives?",
-            "options": [
-              {
-                "key": "A",
-                "text": "They will be available to provide assistance during the transition"
-              },
-              {
-                "key": "B",
-                "text": "They will be working exclusively from international branch offices"
-              },
-              {
-                "key": "C",
-                "text": "They have already completed all annual evaluations"
-              },
-              {
-                "key": "D",
-                "text": "They are scheduled to retire by next month"
-              }
-            ],
-            "correctAnswer": "A",
-            "explanation": "Bài đọc xác nhận: 'Representatives will be on hand to assist throughout the transition period'.",
-            "evidence": "Representatives will be on hand to assist throughout the transition period.",
-            "translation": "Điều gì được chỉ ra về các đại diện?"
-          }
-        ]
-      },
-      {
-        "passageId": 7,
-        "passageType": "Customer Support Communication",
-        "title": "Resolution of Software Subscription Inquiry",
-        "passage": "DOCUMENT: RESOLUTION OF SOFTWARE SUBSCRIPTION INQUIRY\nDocument Reference: REF-202607\nCategory: Customer Support Communication\n\nTo Whom It May Concern,\n\nWe are pleased to announce our latest updates regarding resolution of software subscription inquiry. As part of our commitment to excellence, our team has arranged to Enterprise all key activities with precision. Clients wishing to Comprehensive about additional details are advised to submit an online inquiry through our primary portal.\n\nPlease ensure that all documentation is verified prior to the designated deadline. Representatives will be on hand to assist throughout the transition period.\n\nFor urgent matters, please contact the administrative coordinator at contact@enterprise-solutions.com.",
-        "passageTranslation": "TÀI LIỆU: RESOLUTION OF SOFTWARE SUBSCRIPTION INQUIRY\nMã tham chiếu: REF-202607\nThể loại: Customer Support Communication\n\nKính gửi các bên liên quan,\n\nChúng tôi vui mừng thông báo những cập nhật mới nhất liên quan đến resolution of software subscription inquiry. Nhằm thực hiện cam kết về chất lượng, đội ngũ của chúng tôi đã sắp xếp để [Enterprise - Doanh nghiệp] tất cả các hoạt động chính một cách chuẩn xác. Khách hàng muốn [Comprehensive - Toàn diện] thêm chi tiết nên gửi biểu mẫu trực tuyến qua cổng thông tin chính của chúng tôi.\n\nVui lòng đảm bảo mọi tài liệu được kiểm tra trước thời hạn quy định. Các đại diện sẽ luôn có mặt để hỗ trợ trong suốt giai đoạn này.\n\nĐối với các vấn đề khẩn cấp, vui lòng liên hệ điều phối viên hành chính tại contact@enterprise-solutions.com.",
-        "questions": [
-          {
-            "id": 164,
-            "questionNumber": 164,
-            "question": "What is the main purpose of this customer?",
-            "options": [
-              {
-                "key": "A",
-                "text": "To announce updates regarding resolution of software subscription inquiry"
-              },
-              {
-                "key": "B",
-                "text": "To dispute a recent billing invoice"
-              },
-              {
-                "key": "C",
-                "text": "To cancel an existing service contract"
-              },
-              {
-                "key": "D",
-                "text": "To advertise an upcoming clearance sale"
-              }
-            ],
-            "correctAnswer": "A",
-            "explanation": "Đoạn mở đầu nêu rõ mục đích thông báo về resolution of software subscription inquiry.",
-            "evidence": "We are pleased to announce our latest updates regarding resolution of software subscription inquiry.",
-            "translation": "Mục đích chính của văn bản này là gì?"
-          },
-          {
-            "id": 165,
-            "questionNumber": 165,
-            "question": "According to the document, what are clients advised to do if they need more information?",
-            "options": [
-              {
-                "key": "A",
-                "text": "Submit an online inquiry via the primary portal"
-              },
-              {
-                "key": "B",
-                "text": "Visit the corporate headquarters in person"
-              },
-              {
-                "key": "C",
-                "text": "Request an immediate refund from finance"
-              },
-              {
-                "key": "D",
-                "text": "Send a physical letter via registered mail"
-              }
-            ],
-            "correctAnswer": "A",
-            "explanation": "Văn bản ghi rõ: Khách hàng muốn tìm hiểu thêm thông tin cần gửi biểu mẫu trực tuyến ('submit an online inquiry through our primary portal').",
-            "evidence": "Clients wishing to inquire about additional details are advised to submit an online inquiry through our primary portal.",
-            "translation": "Theo tài liệu, khách hàng được khuyên nên làm gì nếu muốn biết thêm thông tin?"
-          },
-          {
-            "id": 166,
-            "questionNumber": 166,
-            "question": "The word \"Enterprise\" in paragraph 1 is closest in meaning to:",
-            "options": [
-              {
-                "key": "A",
-                "text": "organize / coordinate"
-              },
-              {
-                "key": "B",
-                "text": "discontinue"
-              },
-              {
-                "key": "C",
-                "text": "prohibit"
-              },
-              {
-                "key": "D",
-                "text": "misplace"
-              }
-            ],
-            "correctAnswer": "A",
-            "explanation": "Từ \"Enterprise\" (Doanh nghiệp) trong ngữ cảnh lên lịch/sắp xếp hoạt động đồng nghĩa với 'organize / coordinate'.",
-            "evidence": "our team has arranged to Enterprise all key activities with precision",
-            "translation": "Từ \"Enterprise\" trong đoạn 1 gần nghĩa nhất với từ nào?"
-          },
-          {
-            "id": 167,
-            "questionNumber": 167,
-            "question": "What is indicated about the representatives?",
-            "options": [
-              {
-                "key": "A",
-                "text": "They will be available to provide assistance during the transition"
-              },
-              {
-                "key": "B",
-                "text": "They will be working exclusively from international branch offices"
-              },
-              {
-                "key": "C",
-                "text": "They have already completed all annual evaluations"
-              },
-              {
-                "key": "D",
-                "text": "They are scheduled to retire by next month"
-              }
-            ],
-            "correctAnswer": "A",
-            "explanation": "Bài đọc xác nhận: 'Representatives will be on hand to assist throughout the transition period'.",
-            "evidence": "Representatives will be on hand to assist throughout the transition period.",
-            "translation": "Điều gì được chỉ ra về các đại diện?"
-          }
-        ]
-      },
-      {
-        "passageId": 8,
-        "passageType": "Product Warranty & Policy",
-        "title": "Enterprise Hardware Warranty Terms",
-        "passage": "DOCUMENT: ENTERPRISE HARDWARE WARRANTY TERMS\nDocument Reference: REF-202608\nCategory: Product Warranty & Policy\n\nTo Whom It May Concern,\n\nWe are pleased to announce our latest updates regarding enterprise hardware warranty terms. As part of our commitment to excellence, our team has arranged to Appreciation all key activities with precision. Clients wishing to Budget about additional details are advised to submit an online inquiry through our primary portal.\n\nPlease ensure that all documentation is verified prior to the designated deadline. Representatives will be on hand to assist throughout the transition period.\n\nFor urgent matters, please contact the administrative coordinator at contact@enterprise-solutions.com.",
-        "passageTranslation": "TÀI LIỆU: ENTERPRISE HARDWARE WARRANTY TERMS\nMã tham chiếu: REF-202608\nThể loại: Product Warranty & Policy\n\nKính gửi các bên liên quan,\n\nChúng tôi vui mừng thông báo những cập nhật mới nhất liên quan đến enterprise hardware warranty terms. Nhằm thực hiện cam kết về chất lượng, đội ngũ của chúng tôi đã sắp xếp để [Appreciation - Sự tri ân, đánh giá cao] tất cả các hoạt động chính một cách chuẩn xác. Khách hàng muốn [Budget - Ngân sách] thêm chi tiết nên gửi biểu mẫu trực tuyến qua cổng thông tin chính của chúng tôi.\n\nVui lòng đảm bảo mọi tài liệu được kiểm tra trước thời hạn quy định. Các đại diện sẽ luôn có mặt để hỗ trợ trong suốt giai đoạn này.\n\nĐối với các vấn đề khẩn cấp, vui lòng liên hệ điều phối viên hành chính tại contact@enterprise-solutions.com.",
-        "questions": [
-          {
-            "id": 168,
-            "questionNumber": 168,
-            "question": "What is the main purpose of this product?",
-            "options": [
-              {
-                "key": "A",
-                "text": "To announce updates regarding enterprise hardware warranty terms"
-              },
-              {
-                "key": "B",
-                "text": "To dispute a recent billing invoice"
-              },
-              {
-                "key": "C",
-                "text": "To cancel an existing service contract"
-              },
-              {
-                "key": "D",
-                "text": "To advertise an upcoming clearance sale"
-              }
-            ],
-            "correctAnswer": "A",
-            "explanation": "Đoạn mở đầu nêu rõ mục đích thông báo về enterprise hardware warranty terms.",
-            "evidence": "We are pleased to announce our latest updates regarding enterprise hardware warranty terms.",
-            "translation": "Mục đích chính của văn bản này là gì?"
-          },
-          {
-            "id": 169,
-            "questionNumber": 169,
-            "question": "According to the document, what are clients advised to do if they need more information?",
-            "options": [
-              {
-                "key": "A",
-                "text": "Submit an online inquiry via the primary portal"
-              },
-              {
-                "key": "B",
-                "text": "Visit the corporate headquarters in person"
-              },
-              {
-                "key": "C",
-                "text": "Request an immediate refund from finance"
-              },
-              {
-                "key": "D",
-                "text": "Send a physical letter via registered mail"
-              }
-            ],
-            "correctAnswer": "A",
-            "explanation": "Văn bản ghi rõ: Khách hàng muốn tìm hiểu thêm thông tin cần gửi biểu mẫu trực tuyến ('submit an online inquiry through our primary portal').",
-            "evidence": "Clients wishing to inquire about additional details are advised to submit an online inquiry through our primary portal.",
-            "translation": "Theo tài liệu, khách hàng được khuyên nên làm gì nếu muốn biết thêm thông tin?"
-          },
-          {
-            "id": 170,
-            "questionNumber": 170,
-            "question": "The word \"Appreciation\" in paragraph 1 is closest in meaning to:",
-            "options": [
-              {
-                "key": "A",
-                "text": "organize / coordinate"
-              },
-              {
-                "key": "B",
-                "text": "discontinue"
-              },
-              {
-                "key": "C",
-                "text": "prohibit"
-              },
-              {
-                "key": "D",
-                "text": "misplace"
-              }
-            ],
-            "correctAnswer": "A",
-            "explanation": "Từ \"Appreciation\" (Sự tri ân, đánh giá cao) trong ngữ cảnh lên lịch/sắp xếp hoạt động đồng nghĩa với 'organize / coordinate'.",
-            "evidence": "our team has arranged to Appreciation all key activities with precision",
-            "translation": "Từ \"Appreciation\" trong đoạn 1 gần nghĩa nhất với từ nào?"
-          },
-          {
-            "id": 171,
-            "questionNumber": 171,
-            "question": "What is indicated about the representatives?",
-            "options": [
-              {
-                "key": "A",
-                "text": "They will be available to provide assistance during the transition"
-              },
-              {
-                "key": "B",
-                "text": "They will be working exclusively from international branch offices"
-              },
-              {
-                "key": "C",
-                "text": "They have already completed all annual evaluations"
-              },
-              {
-                "key": "D",
-                "text": "They are scheduled to retire by next month"
-              }
-            ],
-            "correctAnswer": "A",
-            "explanation": "Bài đọc xác nhận: 'Representatives will be on hand to assist throughout the transition period'.",
-            "evidence": "Representatives will be on hand to assist throughout the transition period.",
-            "translation": "Điều gì được chỉ ra về các đại diện?"
-          }
-        ]
-      },
-      {
-        "passageId": 9,
-        "passageType": "Conference Program & Guidelines",
-        "title": "Annual Innovation Summit Agenda",
-        "passage": "DOCUMENT: ANNUAL INNOVATION SUMMIT AGENDA\nDocument Reference: REF-202609\nCategory: Conference Program & Guidelines\n\nTo Whom It May Concern,\n\nWe are pleased to announce our latest updates regarding annual innovation summit agenda. As part of our commitment to excellence, our team has arranged to Applicant all key activities with precision. Clients wishing to Encounter about additional details are advised to submit an online inquiry through our primary portal.\n\nPlease ensure that all documentation is verified prior to the designated deadline. Representatives will be on hand to assist throughout the transition period.\n\nFor urgent matters, please contact the administrative coordinator at contact@enterprise-solutions.com.",
-        "passageTranslation": "TÀI LIỆU: ANNUAL INNOVATION SUMMIT AGENDA\nMã tham chiếu: REF-202609\nThể loại: Conference Program & Guidelines\n\nKính gửi các bên liên quan,\n\nChúng tôi vui mừng thông báo những cập nhật mới nhất liên quan đến annual innovation summit agenda. Nhằm thực hiện cam kết về chất lượng, đội ngũ của chúng tôi đã sắp xếp để [Applicant - Ứng viên xin việc] tất cả các hoạt động chính một cách chuẩn xác. Khách hàng muốn [Encounter - Bắt gặp, chạm trán] thêm chi tiết nên gửi biểu mẫu trực tuyến qua cổng thông tin chính của chúng tôi.\n\nVui lòng đảm bảo mọi tài liệu được kiểm tra trước thời hạn quy định. Các đại diện sẽ luôn có mặt để hỗ trợ trong suốt giai đoạn này.\n\nĐối với các vấn đề khẩn cấp, vui lòng liên hệ điều phối viên hành chính tại contact@enterprise-solutions.com.",
-        "questions": [
-          {
-            "id": 172,
-            "questionNumber": 172,
-            "question": "What is the main purpose of this conference?",
-            "options": [
-              {
-                "key": "A",
-                "text": "To announce updates regarding annual innovation summit agenda"
-              },
-              {
-                "key": "B",
-                "text": "To dispute a recent billing invoice"
-              },
-              {
-                "key": "C",
-                "text": "To cancel an existing service contract"
-              },
-              {
-                "key": "D",
-                "text": "To advertise an upcoming clearance sale"
-              }
-            ],
-            "correctAnswer": "A",
-            "explanation": "Đoạn mở đầu nêu rõ mục đích thông báo về annual innovation summit agenda.",
-            "evidence": "We are pleased to announce our latest updates regarding annual innovation summit agenda.",
-            "translation": "Mục đích chính của văn bản này là gì?"
-          },
-          {
-            "id": 173,
-            "questionNumber": 173,
-            "question": "According to the document, what are clients advised to do if they need more information?",
-            "options": [
-              {
-                "key": "A",
-                "text": "Submit an online inquiry via the primary portal"
-              },
-              {
-                "key": "B",
-                "text": "Visit the corporate headquarters in person"
-              },
-              {
-                "key": "C",
-                "text": "Request an immediate refund from finance"
-              },
-              {
-                "key": "D",
-                "text": "Send a physical letter via registered mail"
-              }
-            ],
-            "correctAnswer": "A",
-            "explanation": "Văn bản ghi rõ: Khách hàng muốn tìm hiểu thêm thông tin cần gửi biểu mẫu trực tuyến ('submit an online inquiry through our primary portal').",
-            "evidence": "Clients wishing to inquire about additional details are advised to submit an online inquiry through our primary portal.",
-            "translation": "Theo tài liệu, khách hàng được khuyên nên làm gì nếu muốn biết thêm thông tin?"
-          },
-          {
-            "id": 174,
-            "questionNumber": 174,
-            "question": "The word \"Applicant\" in paragraph 1 is closest in meaning to:",
-            "options": [
-              {
-                "key": "A",
-                "text": "organize / coordinate"
-              },
-              {
-                "key": "B",
-                "text": "discontinue"
-              },
-              {
-                "key": "C",
-                "text": "prohibit"
-              },
-              {
-                "key": "D",
-                "text": "misplace"
-              }
-            ],
-            "correctAnswer": "A",
-            "explanation": "Từ \"Applicant\" (Ứng viên xin việc) trong ngữ cảnh lên lịch/sắp xếp hoạt động đồng nghĩa với 'organize / coordinate'.",
-            "evidence": "our team has arranged to Applicant all key activities with precision",
-            "translation": "Từ \"Applicant\" trong đoạn 1 gần nghĩa nhất với từ nào?"
-          },
-          {
-            "id": 175,
-            "questionNumber": 175,
-            "question": "What is indicated about the representatives?",
-            "options": [
-              {
-                "key": "A",
-                "text": "They will be available to provide assistance during the transition"
-              },
-              {
-                "key": "B",
-                "text": "They will be working exclusively from international branch offices"
-              },
-              {
-                "key": "C",
-                "text": "They have already completed all annual evaluations"
-              },
-              {
-                "key": "D",
-                "text": "They are scheduled to retire by next month"
-              }
-            ],
-            "correctAnswer": "A",
-            "explanation": "Bài đọc xác nhận: 'Representatives will be on hand to assist throughout the transition period'.",
-            "evidence": "Representatives will be on hand to assist throughout the transition period.",
-            "translation": "Điều gì được chỉ ra về các đại diện?"
-          }
-        ]
-      },
-      {
-        "passageId": 10,
-        "passageType": "Double Passage (Brochure & Email)",
-        "title": "Equipment Catalog & Purchase Order",
-        "passage": "DOCUMENT: EQUIPMENT CATALOG & PURCHASE ORDER\nDocument Reference: REF-202610\nCategory: Double Passage (Brochure & Email)\n\nTo Whom It May Concern,\n\nWe are pleased to announce our latest updates regarding equipment catalog & purchase order. As part of our commitment to excellence, our team has arranged to In print all key activities with precision. Clients wishing to Calculation about additional details are advised to submit an online inquiry through our primary portal.\n\nPlease ensure that all documentation is verified prior to the designated deadline. Representatives will be on hand to assist throughout the transition period.\n\nFor urgent matters, please contact the administrative coordinator at contact@enterprise-solutions.com.",
-        "passageTranslation": "TÀI LIỆU: EQUIPMENT CATALOG & PURCHASE ORDER\nMã tham chiếu: REF-202610\nThể loại: Double Passage (Brochure & Email)\n\nKính gửi các bên liên quan,\n\nChúng tôi vui mừng thông báo những cập nhật mới nhất liên quan đến equipment catalog & purchase order. Nhằm thực hiện cam kết về chất lượng, đội ngũ của chúng tôi đã sắp xếp để [In print - Đang được in/xuất bản] tất cả các hoạt động chính một cách chuẩn xác. Khách hàng muốn [Calculation - Sự tính toán] thêm chi tiết nên gửi biểu mẫu trực tuyến qua cổng thông tin chính của chúng tôi.\n\nVui lòng đảm bảo mọi tài liệu được kiểm tra trước thời hạn quy định. Các đại diện sẽ luôn có mặt để hỗ trợ trong suốt giai đoạn này.\n\nĐối với các vấn đề khẩn cấp, vui lòng liên hệ điều phối viên hành chính tại contact@enterprise-solutions.com.",
-        "questions": [
-          {
-            "id": 176,
-            "questionNumber": 176,
-            "question": "What is the main purpose of this double?",
-            "options": [
-              {
-                "key": "A",
-                "text": "To announce updates regarding equipment catalog & purchase order"
-              },
-              {
-                "key": "B",
-                "text": "To dispute a recent billing invoice"
-              },
-              {
-                "key": "C",
-                "text": "To cancel an existing service contract"
-              },
-              {
-                "key": "D",
-                "text": "To advertise an upcoming clearance sale"
-              }
-            ],
-            "correctAnswer": "A",
-            "explanation": "Đoạn mở đầu nêu rõ mục đích thông báo về equipment catalog & purchase order.",
-            "evidence": "We are pleased to announce our latest updates regarding equipment catalog & purchase order.",
-            "translation": "Mục đích chính của văn bản này là gì?"
-          },
-          {
-            "id": 177,
-            "questionNumber": 177,
-            "question": "According to the document, what are clients advised to do if they need more information?",
-            "options": [
-              {
-                "key": "A",
-                "text": "Submit an online inquiry via the primary portal"
-              },
-              {
-                "key": "B",
-                "text": "Visit the corporate headquarters in person"
-              },
-              {
-                "key": "C",
-                "text": "Request an immediate refund from finance"
-              },
-              {
-                "key": "D",
-                "text": "Send a physical letter via registered mail"
-              }
-            ],
-            "correctAnswer": "A",
-            "explanation": "Văn bản ghi rõ: Khách hàng muốn tìm hiểu thêm thông tin cần gửi biểu mẫu trực tuyến ('submit an online inquiry through our primary portal').",
-            "evidence": "Clients wishing to inquire about additional details are advised to submit an online inquiry through our primary portal.",
-            "translation": "Theo tài liệu, khách hàng được khuyên nên làm gì nếu muốn biết thêm thông tin?"
-          },
-          {
-            "id": 178,
-            "questionNumber": 178,
-            "question": "The word \"In print\" in paragraph 1 is closest in meaning to:",
-            "options": [
-              {
-                "key": "A",
-                "text": "organize / coordinate"
-              },
-              {
-                "key": "B",
-                "text": "discontinue"
-              },
-              {
-                "key": "C",
-                "text": "prohibit"
-              },
-              {
-                "key": "D",
-                "text": "misplace"
-              }
-            ],
-            "correctAnswer": "A",
-            "explanation": "Từ \"In print\" (Đang được in/xuất bản) trong ngữ cảnh lên lịch/sắp xếp hoạt động đồng nghĩa với 'organize / coordinate'.",
-            "evidence": "our team has arranged to In print all key activities with precision",
-            "translation": "Từ \"In print\" trong đoạn 1 gần nghĩa nhất với từ nào?"
-          },
-          {
-            "id": 179,
-            "questionNumber": 179,
-            "question": "What is indicated about the representatives?",
-            "options": [
-              {
-                "key": "A",
-                "text": "They will be available to provide assistance during the transition"
-              },
-              {
-                "key": "B",
-                "text": "They will be working exclusively from international branch offices"
-              },
-              {
-                "key": "C",
-                "text": "They have already completed all annual evaluations"
-              },
-              {
-                "key": "D",
-                "text": "They are scheduled to retire by next month"
-              }
-            ],
-            "correctAnswer": "A",
-            "explanation": "Bài đọc xác nhận: 'Representatives will be on hand to assist throughout the transition period'.",
-            "evidence": "Representatives will be on hand to assist throughout the transition period.",
-            "translation": "Điều gì được chỉ ra về các đại diện?"
-          },
-          {
-            "id": 180,
-            "questionNumber": 180,
-            "question": "How should recipients handle urgent matters?",
-            "options": [
-              {
-                "key": "A",
-                "text": "By contacting contact@enterprise-solutions.com"
-              },
-              {
-                "key": "B",
-                "text": "By filing a formal legal complaint"
-              },
-              {
-                "key": "C",
-                "text": "By submitting a paper application form"
-              },
-              {
-                "key": "D",
-                "text": "By contacting the local newspaper"
-              }
-            ],
-            "correctAnswer": "A",
-            "explanation": "Đoạn cuối nêu rõ địa chỉ email liên hệ cho các trường hợp khẩn cấp: contact@enterprise-solutions.com.",
-            "evidence": "For urgent matters, please contact the administrative coordinator at contact@enterprise-solutions.com.",
-            "translation": "Người nhận nên xử lý các vấn đề khẩn cấp bằng cách nào?"
-          }
-        ]
-      },
-      {
-        "passageId": 11,
-        "passageType": "Double Passage (Notice & Inquiry)",
-        "title": "Office Relocation Timeline & Department Request",
-        "passage": "DOCUMENT: OFFICE RELOCATION TIMELINE & DEPARTMENT REQUEST\nDocument Reference: REF-202611\nCategory: Double Passage (Notice & Inquiry)\n\nTo Whom It May Concern,\n\nWe are pleased to announce our latest updates regarding office relocation timeline & department request. As part of our commitment to excellence, our team has arranged to Renovation all key activities with precision. Clients wishing to Certification about additional details are advised to submit an online inquiry through our primary portal.\n\nPlease ensure that all documentation is verified prior to the designated deadline. Representatives will be on hand to assist throughout the transition period.\n\nFor urgent matters, please contact the administrative coordinator at contact@enterprise-solutions.com.",
-        "passageTranslation": "TÀI LIỆU: OFFICE RELOCATION TIMELINE & DEPARTMENT REQUEST\nMã tham chiếu: REF-202611\nThể loại: Double Passage (Notice & Inquiry)\n\nKính gửi các bên liên quan,\n\nChúng tôi vui mừng thông báo những cập nhật mới nhất liên quan đến office relocation timeline & department request. Nhằm thực hiện cam kết về chất lượng, đội ngũ của chúng tôi đã sắp xếp để [Renovation - Sự cải tạo, nâng cấp] tất cả các hoạt động chính một cách chuẩn xác. Khách hàng muốn [Certification - Sự cấp chứng chỉ] thêm chi tiết nên gửi biểu mẫu trực tuyến qua cổng thông tin chính của chúng tôi.\n\nVui lòng đảm bảo mọi tài liệu được kiểm tra trước thời hạn quy định. Các đại diện sẽ luôn có mặt để hỗ trợ trong suốt giai đoạn này.\n\nĐối với các vấn đề khẩn cấp, vui lòng liên hệ điều phối viên hành chính tại contact@enterprise-solutions.com.",
-        "questions": [
-          {
-            "id": 181,
-            "questionNumber": 181,
-            "question": "What is the main purpose of this double?",
-            "options": [
-              {
-                "key": "A",
-                "text": "To announce updates regarding office relocation timeline & department request"
-              },
-              {
-                "key": "B",
-                "text": "To dispute a recent billing invoice"
-              },
-              {
-                "key": "C",
-                "text": "To cancel an existing service contract"
-              },
-              {
-                "key": "D",
-                "text": "To advertise an upcoming clearance sale"
-              }
-            ],
-            "correctAnswer": "A",
-            "explanation": "Đoạn mở đầu nêu rõ mục đích thông báo về office relocation timeline & department request.",
-            "evidence": "We are pleased to announce our latest updates regarding office relocation timeline & department request.",
-            "translation": "Mục đích chính của văn bản này là gì?"
-          },
-          {
-            "id": 182,
-            "questionNumber": 182,
-            "question": "According to the document, what are clients advised to do if they need more information?",
-            "options": [
-              {
-                "key": "A",
-                "text": "Submit an online inquiry via the primary portal"
-              },
-              {
-                "key": "B",
-                "text": "Visit the corporate headquarters in person"
-              },
-              {
-                "key": "C",
-                "text": "Request an immediate refund from finance"
-              },
-              {
-                "key": "D",
-                "text": "Send a physical letter via registered mail"
-              }
-            ],
-            "correctAnswer": "A",
-            "explanation": "Văn bản ghi rõ: Khách hàng muốn tìm hiểu thêm thông tin cần gửi biểu mẫu trực tuyến ('submit an online inquiry through our primary portal').",
-            "evidence": "Clients wishing to inquire about additional details are advised to submit an online inquiry through our primary portal.",
-            "translation": "Theo tài liệu, khách hàng được khuyên nên làm gì nếu muốn biết thêm thông tin?"
-          },
-          {
-            "id": 183,
-            "questionNumber": 183,
-            "question": "The word \"Renovation\" in paragraph 1 is closest in meaning to:",
-            "options": [
-              {
-                "key": "A",
-                "text": "organize / coordinate"
-              },
-              {
-                "key": "B",
-                "text": "discontinue"
-              },
-              {
-                "key": "C",
-                "text": "prohibit"
-              },
-              {
-                "key": "D",
-                "text": "misplace"
-              }
-            ],
-            "correctAnswer": "A",
-            "explanation": "Từ \"Renovation\" (Sự cải tạo, nâng cấp) trong ngữ cảnh lên lịch/sắp xếp hoạt động đồng nghĩa với 'organize / coordinate'.",
-            "evidence": "our team has arranged to Renovation all key activities with precision",
-            "translation": "Từ \"Renovation\" trong đoạn 1 gần nghĩa nhất với từ nào?"
-          },
-          {
-            "id": 184,
-            "questionNumber": 184,
-            "question": "What is indicated about the representatives?",
-            "options": [
-              {
-                "key": "A",
-                "text": "They will be available to provide assistance during the transition"
-              },
-              {
-                "key": "B",
-                "text": "They will be working exclusively from international branch offices"
-              },
-              {
-                "key": "C",
-                "text": "They have already completed all annual evaluations"
-              },
-              {
-                "key": "D",
-                "text": "They are scheduled to retire by next month"
-              }
-            ],
-            "correctAnswer": "A",
-            "explanation": "Bài đọc xác nhận: 'Representatives will be on hand to assist throughout the transition period'.",
-            "evidence": "Representatives will be on hand to assist throughout the transition period.",
-            "translation": "Điều gì được chỉ ra về các đại diện?"
-          },
-          {
-            "id": 185,
-            "questionNumber": 185,
-            "question": "How should recipients handle urgent matters?",
-            "options": [
-              {
-                "key": "A",
-                "text": "By contacting contact@enterprise-solutions.com"
-              },
-              {
-                "key": "B",
-                "text": "By filing a formal legal complaint"
-              },
-              {
-                "key": "C",
-                "text": "By submitting a paper application form"
-              },
-              {
-                "key": "D",
-                "text": "By contacting the local newspaper"
-              }
-            ],
-            "correctAnswer": "A",
-            "explanation": "Đoạn cuối nêu rõ địa chỉ email liên hệ cho các trường hợp khẩn cấp: contact@enterprise-solutions.com.",
-            "evidence": "For urgent matters, please contact the administrative coordinator at contact@enterprise-solutions.com.",
-            "translation": "Người nhận nên xử lý các vấn đề khẩn cấp bằng cách nào?"
-          }
-        ]
-      },
-      {
-        "passageId": 12,
-        "passageType": "Triple Passage (Announcement, Schedule & Review)",
-        "title": "International Trade Expo Participation",
-        "passage": "DOCUMENT: INTERNATIONAL TRADE EXPO PARTICIPATION\nDocument Reference: REF-202612\nCategory: Triple Passage (Announcement, Schedule & Review)\n\nTo Whom It May Concern,\n\nWe are pleased to announce our latest updates regarding international trade expo participation. As part of our commitment to excellence, our team has arranged to Deposit all key activities with precision. Clients wishing to On short notice about additional details are advised to submit an online inquiry through our primary portal.\n\nPlease ensure that all documentation is verified prior to the designated deadline. Representatives will be on hand to assist throughout the transition period.\n\nFor urgent matters, please contact the administrative coordinator at contact@enterprise-solutions.com.",
-        "passageTranslation": "TÀI LIỆU: INTERNATIONAL TRADE EXPO PARTICIPATION\nMã tham chiếu: REF-202612\nThể loại: Triple Passage (Announcement, Schedule & Review)\n\nKính gửi các bên liên quan,\n\nChúng tôi vui mừng thông báo những cập nhật mới nhất liên quan đến international trade expo participation. Nhằm thực hiện cam kết về chất lượng, đội ngũ của chúng tôi đã sắp xếp để [Deposit - Tiền đặt cọc] tất cả các hoạt động chính một cách chuẩn xác. Khách hàng muốn [On short notice - Thông báo gấp, thời gian gấp] thêm chi tiết nên gửi biểu mẫu trực tuyến qua cổng thông tin chính của chúng tôi.\n\nVui lòng đảm bảo mọi tài liệu được kiểm tra trước thời hạn quy định. Các đại diện sẽ luôn có mặt để hỗ trợ trong suốt giai đoạn này.\n\nĐối với các vấn đề khẩn cấp, vui lòng liên hệ điều phối viên hành chính tại contact@enterprise-solutions.com.",
-        "questions": [
-          {
-            "id": 186,
-            "questionNumber": 186,
-            "question": "What is the main purpose of this triple?",
-            "options": [
-              {
-                "key": "A",
-                "text": "To announce updates regarding international trade expo participation"
-              },
-              {
-                "key": "B",
-                "text": "To dispute a recent billing invoice"
-              },
-              {
-                "key": "C",
-                "text": "To cancel an existing service contract"
-              },
-              {
-                "key": "D",
-                "text": "To advertise an upcoming clearance sale"
-              }
-            ],
-            "correctAnswer": "A",
-            "explanation": "Đoạn mở đầu nêu rõ mục đích thông báo về international trade expo participation.",
-            "evidence": "We are pleased to announce our latest updates regarding international trade expo participation.",
-            "translation": "Mục đích chính của văn bản này là gì?"
-          },
-          {
-            "id": 187,
-            "questionNumber": 187,
-            "question": "According to the document, what are clients advised to do if they need more information?",
-            "options": [
-              {
-                "key": "A",
-                "text": "Submit an online inquiry via the primary portal"
-              },
-              {
-                "key": "B",
-                "text": "Visit the corporate headquarters in person"
-              },
-              {
-                "key": "C",
-                "text": "Request an immediate refund from finance"
-              },
-              {
-                "key": "D",
-                "text": "Send a physical letter via registered mail"
-              }
-            ],
-            "correctAnswer": "A",
-            "explanation": "Văn bản ghi rõ: Khách hàng muốn tìm hiểu thêm thông tin cần gửi biểu mẫu trực tuyến ('submit an online inquiry through our primary portal').",
-            "evidence": "Clients wishing to inquire about additional details are advised to submit an online inquiry through our primary portal.",
-            "translation": "Theo tài liệu, khách hàng được khuyên nên làm gì nếu muốn biết thêm thông tin?"
-          },
-          {
-            "id": 188,
-            "questionNumber": 188,
-            "question": "The word \"Deposit\" in paragraph 1 is closest in meaning to:",
-            "options": [
-              {
-                "key": "A",
-                "text": "organize / coordinate"
-              },
-              {
-                "key": "B",
-                "text": "discontinue"
-              },
-              {
-                "key": "C",
-                "text": "prohibit"
-              },
-              {
-                "key": "D",
-                "text": "misplace"
-              }
-            ],
-            "correctAnswer": "A",
-            "explanation": "Từ \"Deposit\" (Tiền đặt cọc) trong ngữ cảnh lên lịch/sắp xếp hoạt động đồng nghĩa với 'organize / coordinate'.",
-            "evidence": "our team has arranged to Deposit all key activities with precision",
-            "translation": "Từ \"Deposit\" trong đoạn 1 gần nghĩa nhất với từ nào?"
-          },
-          {
-            "id": 189,
-            "questionNumber": 189,
-            "question": "What is indicated about the representatives?",
-            "options": [
-              {
-                "key": "A",
-                "text": "They will be available to provide assistance during the transition"
-              },
-              {
-                "key": "B",
-                "text": "They will be working exclusively from international branch offices"
-              },
-              {
-                "key": "C",
-                "text": "They have already completed all annual evaluations"
-              },
-              {
-                "key": "D",
-                "text": "They are scheduled to retire by next month"
-              }
-            ],
-            "correctAnswer": "A",
-            "explanation": "Bài đọc xác nhận: 'Representatives will be on hand to assist throughout the transition period'.",
-            "evidence": "Representatives will be on hand to assist throughout the transition period.",
-            "translation": "Điều gì được chỉ ra về các đại diện?"
-          },
-          {
-            "id": 190,
-            "questionNumber": 190,
-            "question": "How should recipients handle urgent matters?",
-            "options": [
-              {
-                "key": "A",
-                "text": "By contacting contact@enterprise-solutions.com"
-              },
-              {
-                "key": "B",
-                "text": "By filing a formal legal complaint"
-              },
-              {
-                "key": "C",
-                "text": "By submitting a paper application form"
-              },
-              {
-                "key": "D",
-                "text": "By contacting the local newspaper"
-              }
-            ],
-            "correctAnswer": "A",
-            "explanation": "Đoạn cuối nêu rõ địa chỉ email liên hệ cho các trường hợp khẩn cấp: contact@enterprise-solutions.com.",
-            "evidence": "For urgent matters, please contact the administrative coordinator at contact@enterprise-solutions.com.",
-            "translation": "Người nhận nên xử lý các vấn đề khẩn cấp bằng cách nào?"
-          }
-        ]
-      },
-      {
-        "passageId": 13,
-        "passageType": "Triple Passage (Job Ad, Candidate Email & Schedule)",
-        "title": "Regional Manager Recruitment Process",
-        "passage": "DOCUMENT: REGIONAL MANAGER RECRUITMENT PROCESS\nDocument Reference: REF-202613\nCategory: Triple Passage (Job Ad, Candidate Email & Schedule)\n\nTo Whom It May Concern,\n\nWe are pleased to announce our latest updates regarding regional manager recruitment process. As part of our commitment to excellence, our team has arranged to Pollution all key activities with precision. Clients wishing to Off-site venue about additional details are advised to submit an online inquiry through our primary portal.\n\nPlease ensure that all documentation is verified prior to the designated deadline. Representatives will be on hand to assist throughout the transition period.\n\nFor urgent matters, please contact the administrative coordinator at contact@enterprise-solutions.com.",
-        "passageTranslation": "TÀI LIỆU: REGIONAL MANAGER RECRUITMENT PROCESS\nMã tham chiếu: REF-202613\nThể loại: Triple Passage (Job Ad, Candidate Email & Schedule)\n\nKính gửi các bên liên quan,\n\nChúng tôi vui mừng thông báo những cập nhật mới nhất liên quan đến regional manager recruitment process. Nhằm thực hiện cam kết về chất lượng, đội ngũ của chúng tôi đã sắp xếp để [Pollution - Sự ô nhiễm] tất cả các hoạt động chính một cách chuẩn xác. Khách hàng muốn [Off-site venue - Địa điểm bên ngoài công ty] thêm chi tiết nên gửi biểu mẫu trực tuyến qua cổng thông tin chính của chúng tôi.\n\nVui lòng đảm bảo mọi tài liệu được kiểm tra trước thời hạn quy định. Các đại diện sẽ luôn có mặt để hỗ trợ trong suốt giai đoạn này.\n\nĐối với các vấn đề khẩn cấp, vui lòng liên hệ điều phối viên hành chính tại contact@enterprise-solutions.com.",
-        "questions": [
-          {
-            "id": 191,
-            "questionNumber": 191,
-            "question": "What is the main purpose of this triple?",
-            "options": [
-              {
-                "key": "A",
-                "text": "To announce updates regarding regional manager recruitment process"
-              },
-              {
-                "key": "B",
-                "text": "To dispute a recent billing invoice"
-              },
-              {
-                "key": "C",
-                "text": "To cancel an existing service contract"
-              },
-              {
-                "key": "D",
-                "text": "To advertise an upcoming clearance sale"
-              }
-            ],
-            "correctAnswer": "A",
-            "explanation": "Đoạn mở đầu nêu rõ mục đích thông báo về regional manager recruitment process.",
-            "evidence": "We are pleased to announce our latest updates regarding regional manager recruitment process.",
-            "translation": "Mục đích chính của văn bản này là gì?"
-          },
-          {
-            "id": 192,
-            "questionNumber": 192,
-            "question": "According to the document, what are clients advised to do if they need more information?",
-            "options": [
-              {
-                "key": "A",
-                "text": "Submit an online inquiry via the primary portal"
-              },
-              {
-                "key": "B",
-                "text": "Visit the corporate headquarters in person"
-              },
-              {
-                "key": "C",
-                "text": "Request an immediate refund from finance"
-              },
-              {
-                "key": "D",
-                "text": "Send a physical letter via registered mail"
-              }
-            ],
-            "correctAnswer": "A",
-            "explanation": "Văn bản ghi rõ: Khách hàng muốn tìm hiểu thêm thông tin cần gửi biểu mẫu trực tuyến ('submit an online inquiry through our primary portal').",
-            "evidence": "Clients wishing to inquire about additional details are advised to submit an online inquiry through our primary portal.",
-            "translation": "Theo tài liệu, khách hàng được khuyên nên làm gì nếu muốn biết thêm thông tin?"
-          },
-          {
-            "id": 193,
-            "questionNumber": 193,
-            "question": "The word \"Pollution\" in paragraph 1 is closest in meaning to:",
-            "options": [
-              {
-                "key": "A",
-                "text": "organize / coordinate"
-              },
-              {
-                "key": "B",
-                "text": "discontinue"
-              },
-              {
-                "key": "C",
-                "text": "prohibit"
-              },
-              {
-                "key": "D",
-                "text": "misplace"
-              }
-            ],
-            "correctAnswer": "A",
-            "explanation": "Từ \"Pollution\" (Sự ô nhiễm) trong ngữ cảnh lên lịch/sắp xếp hoạt động đồng nghĩa với 'organize / coordinate'.",
-            "evidence": "our team has arranged to Pollution all key activities with precision",
-            "translation": "Từ \"Pollution\" trong đoạn 1 gần nghĩa nhất với từ nào?"
-          },
-          {
-            "id": 194,
-            "questionNumber": 194,
-            "question": "What is indicated about the representatives?",
-            "options": [
-              {
-                "key": "A",
-                "text": "They will be available to provide assistance during the transition"
-              },
-              {
-                "key": "B",
-                "text": "They will be working exclusively from international branch offices"
-              },
-              {
-                "key": "C",
-                "text": "They have already completed all annual evaluations"
-              },
-              {
-                "key": "D",
-                "text": "They are scheduled to retire by next month"
-              }
-            ],
-            "correctAnswer": "A",
-            "explanation": "Bài đọc xác nhận: 'Representatives will be on hand to assist throughout the transition period'.",
-            "evidence": "Representatives will be on hand to assist throughout the transition period.",
-            "translation": "Điều gì được chỉ ra về các đại diện?"
-          },
-          {
-            "id": 195,
-            "questionNumber": 195,
-            "question": "How should recipients handle urgent matters?",
-            "options": [
-              {
-                "key": "A",
-                "text": "By contacting contact@enterprise-solutions.com"
-              },
-              {
-                "key": "B",
-                "text": "By filing a formal legal complaint"
-              },
-              {
-                "key": "C",
-                "text": "By submitting a paper application form"
-              },
-              {
-                "key": "D",
-                "text": "By contacting the local newspaper"
-              }
-            ],
-            "correctAnswer": "A",
-            "explanation": "Đoạn cuối nêu rõ địa chỉ email liên hệ cho các trường hợp khẩn cấp: contact@enterprise-solutions.com.",
-            "evidence": "For urgent matters, please contact the administrative coordinator at contact@enterprise-solutions.com.",
-            "translation": "Người nhận nên xử lý các vấn đề khẩn cấp bằng cách nào?"
-          }
-        ]
-      },
-      {
-        "passageId": 14,
-        "passageType": "Triple Passage (Flight Itinerary, Hotel Voucher & Expense)",
-        "title": "Corporate Delegation Travel & Reimbursement",
-        "passage": "DOCUMENT: CORPORATE DELEGATION TRAVEL & REIMBURSEMENT\nDocument Reference: REF-202614\nCategory: Triple Passage (Flight Itinerary, Hotel Voucher & Expense)\n\nTo Whom It May Concern,\n\nWe are pleased to announce our latest updates regarding corporate delegation travel & reimbursement. As part of our commitment to excellence, our team has arranged to Deposit all key activities with precision. Clients wishing to Boutique about additional details are advised to submit an online inquiry through our primary portal.\n\nPlease ensure that all documentation is verified prior to the designated deadline. Representatives will be on hand to assist throughout the transition period.\n\nFor urgent matters, please contact the administrative coordinator at contact@enterprise-solutions.com.",
-        "passageTranslation": "TÀI LIỆU: CORPORATE DELEGATION TRAVEL & REIMBURSEMENT\nMã tham chiếu: REF-202614\nThể loại: Triple Passage (Flight Itinerary, Hotel Voucher & Expense)\n\nKính gửi các bên liên quan,\n\nChúng tôi vui mừng thông báo những cập nhật mới nhất liên quan đến corporate delegation travel & reimbursement. Nhằm thực hiện cam kết về chất lượng, đội ngũ của chúng tôi đã sắp xếp để [Deposit - Tiền cọc; đặt cọc] tất cả các hoạt động chính một cách chuẩn xác. Khách hàng muốn [Boutique - Cửa hàng thời trang nhỏ] thêm chi tiết nên gửi biểu mẫu trực tuyến qua cổng thông tin chính của chúng tôi.\n\nVui lòng đảm bảo mọi tài liệu được kiểm tra trước thời hạn quy định. Các đại diện sẽ luôn có mặt để hỗ trợ trong suốt giai đoạn này.\n\nĐối với các vấn đề khẩn cấp, vui lòng liên hệ điều phối viên hành chính tại contact@enterprise-solutions.com.",
-        "questions": [
-          {
-            "id": 196,
-            "questionNumber": 196,
-            "question": "What is the main purpose of this triple?",
-            "options": [
-              {
-                "key": "A",
-                "text": "To announce updates regarding corporate delegation travel & reimbursement"
-              },
-              {
-                "key": "B",
-                "text": "To dispute a recent billing invoice"
-              },
-              {
-                "key": "C",
-                "text": "To cancel an existing service contract"
-              },
-              {
-                "key": "D",
-                "text": "To advertise an upcoming clearance sale"
-              }
-            ],
-            "correctAnswer": "A",
-            "explanation": "Đoạn mở đầu nêu rõ mục đích thông báo về corporate delegation travel & reimbursement.",
-            "evidence": "We are pleased to announce our latest updates regarding corporate delegation travel & reimbursement.",
-            "translation": "Mục đích chính của văn bản này là gì?"
-          },
-          {
-            "id": 197,
-            "questionNumber": 197,
-            "question": "According to the document, what are clients advised to do if they need more information?",
-            "options": [
-              {
-                "key": "A",
-                "text": "Submit an online inquiry via the primary portal"
-              },
-              {
-                "key": "B",
-                "text": "Visit the corporate headquarters in person"
-              },
-              {
-                "key": "C",
-                "text": "Request an immediate refund from finance"
-              },
-              {
-                "key": "D",
-                "text": "Send a physical letter via registered mail"
-              }
-            ],
-            "correctAnswer": "A",
-            "explanation": "Văn bản ghi rõ: Khách hàng muốn tìm hiểu thêm thông tin cần gửi biểu mẫu trực tuyến ('submit an online inquiry through our primary portal').",
-            "evidence": "Clients wishing to inquire about additional details are advised to submit an online inquiry through our primary portal.",
-            "translation": "Theo tài liệu, khách hàng được khuyên nên làm gì nếu muốn biết thêm thông tin?"
-          },
-          {
-            "id": 198,
-            "questionNumber": 198,
-            "question": "The word \"Deposit\" in paragraph 1 is closest in meaning to:",
-            "options": [
-              {
-                "key": "A",
-                "text": "organize / coordinate"
-              },
-              {
-                "key": "B",
-                "text": "discontinue"
-              },
-              {
-                "key": "C",
-                "text": "prohibit"
-              },
-              {
-                "key": "D",
-                "text": "misplace"
-              }
-            ],
-            "correctAnswer": "A",
-            "explanation": "Từ \"Deposit\" (Tiền cọc; đặt cọc) trong ngữ cảnh lên lịch/sắp xếp hoạt động đồng nghĩa với 'organize / coordinate'.",
-            "evidence": "our team has arranged to Deposit all key activities with precision",
-            "translation": "Từ \"Deposit\" trong đoạn 1 gần nghĩa nhất với từ nào?"
-          },
-          {
-            "id": 199,
-            "questionNumber": 199,
-            "question": "What is indicated about the representatives?",
-            "options": [
-              {
-                "key": "A",
-                "text": "They will be available to provide assistance during the transition"
-              },
-              {
-                "key": "B",
-                "text": "They will be working exclusively from international branch offices"
-              },
-              {
-                "key": "C",
-                "text": "They have already completed all annual evaluations"
-              },
-              {
-                "key": "D",
-                "text": "They are scheduled to retire by next month"
-              }
-            ],
-            "correctAnswer": "A",
-            "explanation": "Bài đọc xác nhận: 'Representatives will be on hand to assist throughout the transition period'.",
-            "evidence": "Representatives will be on hand to assist throughout the transition period.",
-            "translation": "Điều gì được chỉ ra về các đại diện?"
-          },
-          {
-            "id": 200,
-            "questionNumber": 200,
-            "question": "How should recipients handle urgent matters?",
-            "options": [
-              {
-                "key": "A",
-                "text": "By contacting contact@enterprise-solutions.com"
-              },
-              {
-                "key": "B",
-                "text": "By filing a formal legal complaint"
-              },
-              {
-                "key": "C",
-                "text": "By submitting a paper application form"
-              },
-              {
-                "key": "D",
-                "text": "By contacting the local newspaper"
-              }
-            ],
-            "correctAnswer": "A",
-            "explanation": "Đoạn cuối nêu rõ địa chỉ email liên hệ cho các trường hợp khẩn cấp: contact@enterprise-solutions.com.",
-            "evidence": "For urgent matters, please contact the administrative coordinator at contact@enterprise-solutions.com.",
-            "translation": "Người nhận nên xử lý các vấn đề khẩn cấp bằng cách nào?"
+            "explanation": "Vị trí [146] yêu cầu danh từ/tính từ \"Nomination\" (Sự đề cử, sự bổ nhiệm) thể hiện cam kết chất lượng môi trường làm việc.",
+            "targetWord": "Nomination"
           }
         ]
       }

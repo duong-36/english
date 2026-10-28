@@ -356,147 +356,7 @@ function generatePart6(vocabs, sheetName) {
   };
 }
 
-// Generate Part 7: Passages totaling 54 questions (147 - 200)
-// 9 Single Passages (29 questions) + 5 Multi Passages (25 questions)
-function generatePart7(vocabs, sheetName) {
-  const safeVocabs = vocabs.filter(v => v.word && v.meaning);
-  const shuffled = shuffle(safeVocabs);
-
-  // Configuration of 14 Passage Sets totaling exactly 54 questions
-  const passageConfigs = [
-    // --- SINGLE PASSAGES (29 questions: 147 - 175) ---
-    { id: 1, type: "Advertisement", title: "Commercial Space for Lease", qCount: 2, startQ: 147 },
-    { id: 2, type: "Text Message Chain", title: "Delivery Logistics Coordination", qCount: 2, startQ: 149 },
-    { id: 3, type: "Business Email", title: "Request for Quotation on Bulk Supplies", qCount: 3, startQ: 151 },
-    { id: 4, type: "Online Review & Response", title: "Customer Experience at Grand Horizon Hotel", qCount: 3, startQ: 154 },
-    { id: 5, type: "Job Posting & Schedule", title: "Senior Logistics Coordinator Vacancy", qCount: 3, startQ: 157 },
-    { id: 6, type: "Executive Memo", title: "Implementation of Cloud Database System", qCount: 4, startQ: 160 },
-    { id: 7, type: "Customer Support Communication", title: "Resolution of Software Subscription Inquiry", qCount: 4, startQ: 164 },
-    { id: 8, type: "Product Warranty & Policy", title: "Enterprise Hardware Warranty Terms", qCount: 4, startQ: 168 },
-    { id: 9, type: "Conference Program & Guidelines", title: "Annual Innovation Summit Agenda", qCount: 4, startQ: 172 },
-
-    // --- MULTIPLE PASSAGES (25 questions: 176 - 200) ---
-    { id: 10, type: "Double Passage (Brochure & Email)", title: "Equipment Catalog & Purchase Order", qCount: 5, startQ: 176 },
-    { id: 11, type: "Double Passage (Notice & Inquiry)", title: "Office Relocation Timeline & Department Request", qCount: 5, startQ: 181 },
-    { id: 12, type: "Triple Passage (Announcement, Schedule & Review)", title: "International Trade Expo Participation", qCount: 5, startQ: 186 },
-    { id: 13, type: "Triple Passage (Job Ad, Candidate Email & Schedule)", title: "Regional Manager Recruitment Process", qCount: 5, startQ: 191 },
-    { id: 14, type: "Triple Passage (Flight Itinerary, Hotel Voucher & Expense)", title: "Corporate Delegation Travel & Reimbursement", qCount: 5, startQ: 196 }
-  ];
-
-  const passages = passageConfigs.map((cfg, idx) => {
-    const vocabChunk = shuffled.slice(idx * 5, (idx + 1) * 5);
-    const keyWord1 = vocabChunk[0] || { word: "schedule", meaning: "lên lịch trình" };
-    const keyWord2 = vocabChunk[1] || { word: "inquire", meaning: "hỏi thăm, yêu cầu thông tin" };
-    const keyWord3 = vocabChunk[2] || { word: "submit", meaning: "nộp hồ sơ" };
-
-    const passageText = `DOCUMENT: ${cfg.title.toUpperCase()}\nDocument Reference: REF-${202600 + cfg.id}\nCategory: ${cfg.type}\n\nTo Whom It May Concern,\n\nWe are pleased to announce our latest updates regarding ${cfg.title.toLowerCase()}. As part of our commitment to excellence, our team has arranged to ${keyWord1.word} all key activities with precision. Clients wishing to ${keyWord2.word} about additional details are advised to submit an online inquiry through our primary portal.\n\nPlease ensure that all documentation is verified prior to the designated deadline. Representatives will be on hand to assist throughout the transition period.\n\nFor urgent matters, please contact the administrative coordinator at contact@enterprise-solutions.com.`;
-
-    const translationText = `TÀI LIỆU: ${cfg.title.toUpperCase()}\nMã tham chiếu: REF-${202600 + cfg.id}\nThể loại: ${cfg.type}\n\nKính gửi các bên liên quan,\n\nChúng tôi vui mừng thông báo những cập nhật mới nhất liên quan đến ${cfg.title.toLowerCase()}. Nhằm thực hiện cam kết về chất lượng, đội ngũ của chúng tôi đã sắp xếp để [${keyWord1.word} - ${keyWord1.meaning}] tất cả các hoạt động chính một cách chuẩn xác. Khách hàng muốn [${keyWord2.word} - ${keyWord2.meaning}] thêm chi tiết nên gửi biểu mẫu trực tuyến qua cổng thông tin chính của chúng tôi.\n\nVui lòng đảm bảo mọi tài liệu được kiểm tra trước thời hạn quy định. Các đại diện sẽ luôn có mặt để hỗ trợ trong suốt giai đoạn này.\n\nĐối với các vấn đề khẩn cấp, vui lòng liên hệ điều phối viên hành chính tại contact@enterprise-solutions.com.`;
-
-    // Generate cfg.qCount questions
-    const qList = [];
-    for (let qI = 0; qI < cfg.qCount; qI++) {
-      const qNum = cfg.startQ + qI;
-      let qText = "";
-      let opts = [];
-      let correctKey = "A";
-      let explanation = "";
-      let evidence = "";
-      let trText = "";
-
-      if (qI === 0) {
-        qText = `What is the main purpose of this ${cfg.type.toLowerCase().split(' ')[0]}?`;
-        opts = [
-          { key: "A", text: `To announce updates regarding ${cfg.title.toLowerCase()}` },
-          { key: "B", text: "To dispute a recent billing invoice" },
-          { key: "C", text: "To cancel an existing service contract" },
-          { key: "D", text: "To advertise an upcoming clearance sale" }
-        ];
-        correctKey = "A";
-        explanation = `Đoạn mở đầu nêu rõ mục đích thông báo về ${cfg.title.toLowerCase()}.`;
-        evidence = `We are pleased to announce our latest updates regarding ${cfg.title.toLowerCase()}.`;
-        trText = `Mục đích chính của văn bản này là gì?`;
-      } else if (qI === 1) {
-        qText = `According to the document, what are clients advised to do if they need more information?`;
-        opts = [
-          { key: "A", text: "Submit an online inquiry via the primary portal" },
-          { key: "B", text: "Visit the corporate headquarters in person" },
-          { key: "C", text: "Request an immediate refund from finance" },
-          { key: "D", text: "Send a physical letter via registered mail" }
-        ];
-        correctKey = "A";
-        explanation = `Văn bản ghi rõ: Khách hàng muốn tìm hiểu thêm thông tin cần gửi biểu mẫu trực tuyến ('submit an online inquiry through our primary portal').`;
-        evidence = `Clients wishing to inquire about additional details are advised to submit an online inquiry through our primary portal.`;
-        trText = `Theo tài liệu, khách hàng được khuyên nên làm gì nếu muốn biết thêm thông tin?`;
-      } else if (qI === 2) {
-        qText = `The word "${keyWord1.word}" in paragraph 1 is closest in meaning to:`;
-        opts = [
-          { key: "A", text: "organize / coordinate" },
-          { key: "B", text: "discontinue" },
-          { key: "C", text: "prohibit" },
-          { key: "D", text: "misplace" }
-        ];
-        correctKey = "A";
-        explanation = `Từ "${keyWord1.word}" (${keyWord1.meaning}) trong ngữ cảnh lên lịch/sắp xếp hoạt động đồng nghĩa với 'organize / coordinate'.`;
-        evidence = `our team has arranged to ${keyWord1.word} all key activities with precision`;
-        trText = `Từ "${keyWord1.word}" trong đoạn 1 gần nghĩa nhất với từ nào?`;
-      } else if (qI === 3) {
-        qText = `What is indicated about the representatives?`;
-        opts = [
-          { key: "A", text: "They will be available to provide assistance during the transition" },
-          { key: "B", text: "They will be working exclusively from international branch offices" },
-          { key: "C", text: "They have already completed all annual evaluations" },
-          { key: "D", text: "They are scheduled to retire by next month" }
-        ];
-        correctKey = "A";
-        explanation = `Bài đọc xác nhận: 'Representatives will be on hand to assist throughout the transition period'.`;
-        evidence = `Representatives will be on hand to assist throughout the transition period.`;
-        trText = `Điều gì được chỉ ra về các đại diện?`;
-      } else {
-        qText = `How should recipients handle urgent matters?`;
-        opts = [
-          { key: "A", text: "By contacting contact@enterprise-solutions.com" },
-          { key: "B", text: "By filing a formal legal complaint" },
-          { key: "C", text: "By submitting a paper application form" },
-          { key: "D", text: "By contacting the local newspaper" }
-        ];
-        correctKey = "A";
-        explanation = `Đoạn cuối nêu rõ địa chỉ email liên hệ cho các trường hợp khẩn cấp: contact@enterprise-solutions.com.`;
-        evidence = `For urgent matters, please contact the administrative coordinator at contact@enterprise-solutions.com.`;
-        trText = `Người nhận nên xử lý các vấn đề khẩn cấp bằng cách nào?`;
-      }
-
-      qList.push({
-        id: qNum,
-        questionNumber: qNum,
-        question: qText,
-        options: opts,
-        correctAnswer: correctKey,
-        explanation,
-        evidence,
-        translation: trText
-      });
-    }
-
-    return {
-      passageId: cfg.id,
-      passageType: cfg.type,
-      title: cfg.title,
-      passage: passageText,
-      passageTranslation: translationText,
-      questions: qList
-    };
-  });
-
-  return {
-    title: `TOEIC Reading Part 7 - Reading Comprehension (${sheetName})`,
-    totalPassages: passageConfigs.length,
-    totalQuestions: 54,
-    passages
-  };
-}
-
-// Main generation execution
+// Main generation execution (Part 5 + Part 6 = 46 questions)
 function buildBankForFile(filePath, folderName) {
   if (!fs.existsSync(filePath)) {
     console.warn(`File not found: ${filePath}`);
@@ -510,7 +370,7 @@ function buildBankForFile(filePath, folderName) {
   }
 
   console.log(`\n========================================`);
-  console.log(`Generating Reading Question Bank for: ${path.basename(filePath)}`);
+  console.log(`Generating Reading Question Bank for: ${path.basename(filePath)} (Part 5 & Part 6 only)`);
   console.log(`Target folder: ${outDir}`);
   console.log(`Sheets count: ${wb.SheetNames.length}`);
 
@@ -537,18 +397,15 @@ function buildBankForFile(filePath, folderName) {
 
     const part5Data = generatePart5(vocabs, cleanSheetName);
     const part6Data = generatePart6(vocabs, cleanSheetName);
-    const part7Data = generatePart7(vocabs, cleanSheetName);
 
     // Verification of question counts
     const p5Count = part5Data.questions.length;
     const p6Count = part6Data.passages.reduce((acc, p) => acc + p.questions.length, 0);
-    const p7Count = part7Data.passages.reduce((acc, p) => acc + p.questions.length, 0);
-    const totalCount = p5Count + p6Count + p7Count;
+    const totalCount = p5Count + p6Count;
 
     console.log(`  - Part 5: ${p5Count} questions (101 - 130)`);
     console.log(`  - Part 6: ${part6Data.passages.length} passages, ${p6Count} questions (131 - 146)`);
-    console.log(`  - Part 7: ${part7Data.passages.length} passages, ${p7Count} questions (147 - 200)`);
-    console.log(`  => TOTAL: ${totalCount} questions (Target: 100). Status: ${totalCount === 100 ? "OK! Standard TOEIC" : "WARNING"}`);
+    console.log(`  => TOTAL: ${totalCount} questions (Target: 46). Status: ${totalCount === 46 ? "OK! Exact 46 questions" : "WARNING"}`);
 
     const completeTest = {
       metadata: {
@@ -557,11 +414,11 @@ function buildBankForFile(filePath, folderName) {
         sheetName: cleanSheetName,
         sheetSlug: sheetSlug,
         totalVocabs: vocabs.length,
+        totalQuestions: 46,
         createdAt: new Date().toISOString()
       },
       part5: part5Data,
-      part6: part6Data,
-      part7: part7Data
+      part6: part6Data
     };
 
     const targetFile = path.join(outDir, `${sheetSlug}.json`);
@@ -574,4 +431,4 @@ function buildBankForFile(filePath, folderName) {
 buildBankForFile(path.join(__dirname, '..', '..', 'data', 'TỪ VỰNG VER 13_FIXED.xlsx'), 'TU_VUNG_VER_13_FIXED');
 buildBankForFile(path.join(__dirname, '..', '..', 'data', 'TỪ MỚI V12_FIXED.xlsx'), 'TU_MOI_V12_FIXED');
 
-console.log("\nAll Reading Question Banks generated successfully!");
+console.log("\nAll Reading Question Banks (Part 5 & Part 6 only - 46 questions) generated successfully!");

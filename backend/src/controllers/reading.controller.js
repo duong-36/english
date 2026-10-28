@@ -19,7 +19,7 @@ function normalizeSlug(name) {
 
 const SEEDS_DIR = path.join(__dirname, "..", "..", "data", "reading_seeds");
 
-// Get pre-defined static test by sessionName + topicName or topicId
+// Get pre-defined static test by sessionName + topicName or topicId (Part 5: 30q, Part 6: 16q, Full: 46q)
 exports.getReadingTest = async (req, res) => {
   try {
     let { sessionName, topicName, topicId, part = "part5" } = req.query;
@@ -90,7 +90,7 @@ exports.getReadingTest = async (req, res) => {
       });
     }
 
-    // If part requested specifically
+    // Part 5: 30 questions (101 - 130)
     if (part === "part5") {
       return res.json({
         success: true,
@@ -101,6 +101,7 @@ exports.getReadingTest = async (req, res) => {
       });
     }
 
+    // Part 6: 4 passages, 16 questions (131 - 146)
     if (part === "part6") {
       return res.json({
         success: true,
@@ -111,28 +112,17 @@ exports.getReadingTest = async (req, res) => {
       });
     }
 
-    if (part === "part7") {
-      return res.json({
-        success: true,
-        source: "seed",
-        metadata: testData.metadata,
-        part: "part7",
-        data: testData.part7
-      });
-    }
-
-    // If full test (all 100 questions)
+    // Full test: Part 5 (30 questions) + Part 6 (16 questions) = 46 questions
     return res.json({
       success: true,
       source: "seed",
       metadata: testData.metadata,
       part: "full",
       data: {
-        title: `TOEIC Reading Full Test (100 câu) - ${topicName}`,
-        totalQuestions: 100,
+        title: `TOEIC Reading Test (Part 5 + Part 6 - 46 câu) - ${topicName}`,
+        totalQuestions: 46,
         part5: testData.part5,
-        part6: testData.part6,
-        part7: testData.part7
+        part6: testData.part6
       }
     });
 
@@ -171,18 +161,17 @@ exports.getAvailableTests = async (req, res) => {
 
 // Fallback legacy generate endpoint (kept for backward compatibility)
 exports.generateReading = async (req, res) => {
-  // Redirect to getReadingTest logic
   const { topicId, part = "part5" } = req.body;
-  req.query = { topicId, part };
+  req.query = { topicId, part: part === "part7" ? "part6" : part };
   return exports.getReadingTest(req, res);
 };
 
-// Get list of saved exercises for a topic
+// Get list of saved exercises for a topic (excluding part7)
 exports.getTopicExercises = async (req, res) => {
   const { topicId } = req.params;
   try {
     const [rows] = await pool.execute(
-      "SELECT exercise_id, topic_id, part, title, created_at FROM reading_exercises WHERE topic_id = ? ORDER BY exercise_id DESC",
+      "SELECT exercise_id, topic_id, part, title, created_at FROM reading_exercises WHERE topic_id = ? AND part != 'part7' ORDER BY exercise_id DESC",
       [topicId]
     );
     res.json({ success: true, data: rows });
@@ -195,7 +184,7 @@ exports.getTopicExercises = async (req, res) => {
 exports.getExerciseById = async (req, res) => {
   const { exerciseId } = req.params;
   try {
-    const [rows] = await pool.execute("SELECT * FROM reading_exercises WHERE exercise_id = ?", [exerciseId]);
+    const [rows] = await pool.execute("SELECT * FROM reading_exercises WHERE exercise_id = ? AND part != 'part7'", [exerciseId]);
     if (rows.length === 0) {
       return res.status(404).json({ success: false, message: "Không tìm thấy bài luyện đọc." });
     }
