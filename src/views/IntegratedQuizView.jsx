@@ -133,27 +133,35 @@ export default function IntegratedQuizView({ vocabList, setIsQuizOngoing, onBack
         const uniqueWrong = Array.from(new Set(wrongPool)).sort(() => 0.5 - Math.random());
         const chosenOptions = [(w.meaning || "").trim()];
 
-        // Nếu trong danh sách từ có mục khác cùng từ tiếng Anh nhưng khác nghĩa tiếng Việt:
-        // Đôi khi cho xuất hiện cùng câu trắc nghiệm (theo yêu cầu của user)
-        const otherEntriesSameWord = vocabList.filter(x => 
-          x.vocabulary_id !== w.vocabulary_id && 
-          (x.word || "").trim().toLowerCase() === (w.word || "").trim().toLowerCase() &&
-          (x.meaning || "").trim().toLowerCase() !== (w.meaning || "").trim().toLowerCase()
-        );
-
-        if (otherEntriesSameWord.length > 0 && Math.random() < 0.6) {
-          const randOther = otherEntriesSameWord[Math.floor(Math.random() * otherEntriesSameWord.length)];
-          const m = (randOther.meaning || "").trim();
-          if (m && !chosenOptions.includes(m)) {
-            chosenOptions.push(m);
+        // Điền các phương án sai cho đủ 4 lựa chọn, đảm bảo KHÔNG tương đương nghĩa với đáp án đúng hoặc các lựa chọn đã chọn
+        for (const wr of uniqueWrong) {
+          if (chosenOptions.length >= 4) break;
+          const isSimilarToChosen = chosenOptions.some(co => isMeaningMatch(co, wr));
+          if (!isSimilarToChosen && !validMeanings.some(vm => isMeaningMatch(vm, wr))) {
+            chosenOptions.push(wr);
           }
         }
 
-        // Điền các phương án sai cho đủ 4 lựa chọn không trùng lặp
-        for (const wr of uniqueWrong) {
-          if (chosenOptions.length >= 4) break;
-          if (!chosenOptions.includes(wr)) {
-            chosenOptions.push(wr);
+        // Nếu danh sách từ ôn tập quá ít (không đủ 4 lựa chọn), lấy thêm từ kho nghĩa toàn cục (globalMeaningsMap)
+        if (chosenOptions.length < 4 && Object.keys(globalMeaningsMap).length > 0) {
+          const allGlobalMeanings = Object.values(globalMeaningsMap).flat();
+          const shuffledGlobal = Array.from(new Set(allGlobalMeanings)).sort(() => 0.5 - Math.random());
+          for (const gm of shuffledGlobal) {
+            if (chosenOptions.length >= 4) break;
+            const isSimilarToChosen = chosenOptions.some(co => isMeaningMatch(co, gm));
+            if (!isSimilarToChosen && !validMeanings.some(vm => isMeaningMatch(vm, gm))) {
+              chosenOptions.push(gm);
+            }
+          }
+        }
+
+        // Dự phòng tối đa: nếu vẫn chưa đủ 4 (rất hiếm khi xảy ra), lấy từ uniqueWrong ban đầu miễn không trùng chuỗi
+        if (chosenOptions.length < 4) {
+          for (const wr of uniqueWrong) {
+            if (chosenOptions.length >= 4) break;
+            if (!chosenOptions.includes(wr)) {
+              chosenOptions.push(wr);
+            }
           }
         }
 
@@ -273,7 +281,7 @@ export default function IntegratedQuizView({ vocabList, setIsQuizOngoing, onBack
     let reason = "";
     if (isCorrect) {
       if (validOptionsInQuestion.length > 1) {
-        reason = `Chính xác! (Từ "${q.word}" có ${validOptionsInQuestion.length} nghĩa đúng trong câu này)`;
+        reason = `Chính xác! (Cả 2 đáp án đều đúng)`;
       } else {
         reason = "Chính xác!";
       }
