@@ -8,13 +8,27 @@ axios.interceptors.request.use((config) => {
   return config;
 }, (error) => Promise.reject(error));
 
-axios.interceptors.response.use((response) => response, (error) => {
-  if (error.response?.status === 401 || error.response?.status === 403) {
-    localStorage.removeItem("engmaster-token");
-    localStorage.removeItem("engmaster-user");
-    window.dispatchEvent(new Event("auth-expired"));
+axios.interceptors.response.use(
+  (response) => response,
+  async (error) => {
+    const config = error.config;
+    // Tự động thử lại khi Render đang khởi động (Cold Start) hoặc gặp lỗi mạng tạm thời
+    if (config && (!error.response || [502, 503, 504].includes(error.response.status))) {
+      config._retryCount = (config._retryCount || 0) + 1;
+      if (config._retryCount <= 3) {
+        console.warn(`[API Retry ${config._retryCount}/3] Đang thử kết nối lại do server đang khởi động...`);
+        await new Promise(resolve => setTimeout(resolve, 2000 * config._retryCount));
+        return axios(config);
+      }
+    }
+
+    if (error.response?.status === 401 || error.response?.status === 403) {
+      localStorage.removeItem("engmaster-token");
+      localStorage.removeItem("engmaster-user");
+      window.dispatchEvent(new Event("auth-expired"));
+    }
+    return Promise.reject(error);
   }
-  return Promise.reject(error);
-});
+);
 
 export default axios;
