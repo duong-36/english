@@ -12,8 +12,9 @@ axios.interceptors.response.use(
   (response) => response,
   async (error) => {
     const config = error.config;
-    // Tự động thử lại khi Render đang khởi động (Cold Start) hoặc gặp lỗi mạng tạm thời
-    if (config && (!error.response || [502, 503, 504].includes(error.response.status))) {
+    const isFormData = typeof FormData !== "undefined" && config?.data instanceof FormData;
+    // Tự động thử lại khi Render đang khởi động (Cold Start) cho các request thông thường (KHÔNG retry file upload lớn)
+    if (config && !isFormData && (!error.response || [502, 503, 504].includes(error.response.status))) {
       config._retryCount = (config._retryCount || 0) + 1;
       if (config._retryCount <= 3) {
         console.warn(`[API Retry ${config._retryCount}/3] Đang thử kết nối lại do server đang khởi động...`);

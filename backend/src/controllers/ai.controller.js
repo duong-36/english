@@ -1,4 +1,6 @@
 const { GoogleGenerativeAI } = require("@google/generative-ai");
+const { GoogleAIFileManager } = require("@google/generative-ai/server");
+const fs = require("fs");
 
 exports.chat = async (req, res) => {
   const { messages, selectedTopic } = req.body;
@@ -42,11 +44,15 @@ exports.chat = async (req, res) => {
 exports.transcribe = async (req, res) => {
   if (!req.file) return res.status(400).json({ success: false, message: "Không tìm thấy file âm thanh." });
 
+  let remoteFileName = null;
+  const filePath = req.file.path;
+
   try {
     const apiKey = process.env.GEMINI_API_KEY;
     if (!apiKey) throw new Error("Chưa cấu hình GEMINI_API_KEY.");
 
     const genAI = new GoogleGenerativeAI(apiKey);
+    const fileManager = new GoogleAIFileManager(apiKey);
     
     const prompt = `Please transcribe the spoken English in this audio file. Format your response clearly. 
 For each spoken segment, write ONLY the English transcription. Do NOT provide any translations. If there are multiple speakers, format it clearly.
@@ -56,12 +62,42 @@ Example Format:
 She is <u>holding a pen</u>.
 They are talking about the project.`;
 
-    const audioPart = {
-      inlineData: {
-        data: req.file.buffer.toString("base64"),
-        mimeType: req.file.mimetype
+    let audioPart;
+    if (filePath && fs.existsSync(filePath)) {
+      // Dùng GoogleAIFileManager (Files API) hỗ trợ file lớn tới 2GB, không tốn RAM máy chủ
+      console.log(`Uploading audio to Google AI File API (${req.file.size} bytes)...`);
+      const uploadResult = await fileManager.uploadFile(filePath, {
+        mimeType: req.file.mimetype || "audio/mp3",
+        displayName: req.file.originalname || "audio_transcription",
+      });
+      remoteFileName = uploadResult.file.name;
+
+      // Đợi file sẵn sàng nếu đang xử lý
+      let fileInfo = await fileManager.getFile(remoteFileName);
+      while (fileInfo.state === "PROCESSING") {
+        await new Promise(resolve => setTimeout(resolve, 2000));
+        fileInfo = await fileManager.getFile(remoteFileName);
       }
-    };
+      if (fileInfo.state === "FAILED") {
+        throw new Error("Google AI không thể xử lý định dạng file âm thanh này.");
+      }
+
+      audioPart = {
+        fileData: {
+          fileUri: uploadResult.file.uri,
+          mimeType: uploadResult.file.mimeType,
+        },
+      };
+    } else if (req.file.buffer) {
+      audioPart = {
+        inlineData: {
+          data: req.file.buffer.toString("base64"),
+          mimeType: req.file.mimetype || "audio/mp3"
+        }
+      };
+    } else {
+      throw new Error("Không thể đọc tệp âm thanh đã tải lên.");
+    }
 
     let result;
     let retries = 3;
@@ -95,6 +131,21 @@ They are talking about the project.`;
       errorMsg = "Đã vượt quá giới hạn lượt sử dụng AI miễn phí (Rate Limit). Vui lòng đợi khoảng 1 phút rồi thử lại.";
     }
     res.status(500).json({ success: false, message: "Lỗi nhận diện âm thanh: " + errorMsg });
+  } finally {
+    // Luôn dọn dẹp file tạm trên Google AI và ổ đĩa server
+    if (remoteFileName) {
+      try {
+        const fileManager = new GoogleAIFileManager(process.env.GEMINI_API_KEY);
+        await fileManager.deleteFile(remoteFileName);
+      } catch (delErr) {
+        console.warn("Dọn dẹp file Google AI:", delErr.message);
+      }
+    }
+    if (filePath && fs.existsSync(filePath)) {
+      try {
+        fs.unlinkSync(filePath);
+      } catch (e) {}
+    }
   }
 };
 

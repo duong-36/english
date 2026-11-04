@@ -69,7 +69,7 @@ export default function AudioTranscriptionView() {
 
     try {
       const res = await axios.post(`${API_BASE}/transcribe`, formData, {
-        headers: { 'Content-Type': 'multipart/form-data' }
+        timeout: 300000 // 5 phút cho file nghe lớn
       });
       if (res.data.success) {
         setResult(res.data.text);
@@ -122,7 +122,7 @@ export default function AudioTranscriptionView() {
           className="vip-btn w-full py-4 bg-gradient-to-r from-brand-600 to-brand-500 text-white font-bold rounded-2xl hover:from-brand-700 hover:to-brand-600 transition-all disabled:opacity-50 disabled:cursor-not-allowed flex justify-center items-center gap-2 shadow-lg shadow-brand-500/20"
         >
           {isTranscribing ? <Loader2 size={20} className="animate-spin" /> : <Sparkles size={20} />}
-          {isTranscribing ? "AI đang phân tích âm thanh..." : "Trích xuất Văn bản"}
+          {isTranscribing ? "AI đang tải và phân tích âm thanh (có thể mất 1-2 phút với file lớn)..." : "Trích xuất Văn bản"}
         </button>
 
         {result && (
