@@ -31,8 +31,8 @@ export default function AudioTranscriptionView() {
   const handleFileChange = (e) => {
     const selected = e.target.files[0];
     if (selected) {
-      if (selected.size > 50 * 1024 * 1024) {
-        showToast("File quá lớn (tối đa 50MB)", "error");
+      if (selected.size > 70 * 1024 * 1024) {
+        showToast("File quá lớn (tối đa 70MB)", "error");
         return;
       }
       setFile(selected);
@@ -107,7 +107,7 @@ export default function AudioTranscriptionView() {
           <p className="font-semibold text-slate-700 dark:text-slate-300">
             {file ? file.name : "Nhấp vào đây để chọn file âm thanh"}
           </p>
-          <p className="text-xs text-slate-400 mt-2">Hỗ trợ: mp3, wav, m4a, ogg (Tối đa 10MB)</p>
+          <p className="text-xs text-slate-400 mt-2">Hỗ trợ: mp3, wav, m4a, ogg (Tối đa 70MB)</p>
         </div>
 
         {audioUrl && (

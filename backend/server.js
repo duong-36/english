@@ -19,7 +19,8 @@ app.use(cors({
     "https://english-brown-seven.vercel.app"
   ]
 }));
-app.use(express.json({ limit: "50mb" }));
+app.use(express.json({ limit: "70mb" }));
+app.use(express.urlencoded({ limit: "70mb", extended: true }));
 
 // Handle JSON syntax errors
 app.use((err, req, res, next) => {
