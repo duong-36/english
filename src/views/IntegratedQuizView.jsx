@@ -215,7 +215,6 @@ export default function IntegratedQuizView({ vocabList, setIsQuizOngoing, onBack
     setIsChecking(false);
 
     if (isCorrect) {
-      playSound('correct');
       if (!q.hasFailed) setScore(s => s + 1);
       setStreak(prev => {
         const next = prev + 1;
@@ -223,7 +222,6 @@ export default function IntegratedQuizView({ vocabList, setIsQuizOngoing, onBack
         return next;
       });
     } else {
-      playSound('wrong');
       setStreak(0);
       setMistakes(prev => {
         if (prev.find(m => m.vocabulary_id === q.vocabulary_id)) return prev;
